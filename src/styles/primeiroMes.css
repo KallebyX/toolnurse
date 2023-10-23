@@ -1,0 +1,437 @@
+.img {
+  display: flex;
+  margin-top: 60px;
+  margin-left: 128px;
+  width: 220px;
+  height: 170px;
+  flex-shrink: 0;
+}
+
+.cabecalho {
+  flex-shrink: 0;
+  background: #ffff;
+  color: #000;
+}
+
+.tudo {
+  border-radius: 5px;
+  display: grid;
+  flex-shrink: 0;
+  background-color: #f9f4df;
+  color: #322a79;
+  font: 18px / normal Lato;
+  margin: 0 152px;
+}
+
+.copiar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 151px;
+  height: 30px;
+  flex-shrink: 0;
+  background-color: #fb8484;
+  color: #322a79;
+  text-align: right;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 5px;
+}
+
+.copiar:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 151px;
+  height: 30px;
+  flex-shrink: 0;
+  background-color: #fb8470;
+  color: #322a79;
+  text-align: right;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 5px;
+}
+
+.hr {
+  width: 2px;
+  height: 0;
+  flex-shrink: 0;
+  background-color: #fb8484;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.box1 {
+  display: inline-flex;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.box2 {
+  display: inline-flex;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  align-items: flex-end;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.boxm {
+  display: grid;
+}
+
+.tem {
+  margin-left: 63px;
+  margin-right: 100px;
+}
+
+.fr {
+  margin-right: 138px;
+}
+
+.identificacao {
+  border-top: 2px solid #fb8484;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.exameFisico {
+  margin-top: 20px;
+  border-top: 2px solid #fb8484;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.identAll {
+  display: grid;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  align-items: start;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  justify-items: start;
+  justify-content: start;
+  margin-top: 10px;
+}
+
+.geral {
+  margin-bottom: 20px;
+}
+
+.pele {
+  margin-bottom: 20px;
+}
+
+.krammer {
+  margin-bottom: 20px;
+}
+
+.millium {
+  margin-bottom: 20px;
+}
+
+.hemangioma {
+  margin-bottom: 20px;
+}
+
+.manchas {
+  margin-bottom: 20px;
+}
+
+.eritema {
+  margin-bottom: 20px;
+}
+
+.cabeca {
+  display: grid;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  align-items: start;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  justify-items: start;
+  justify-content: start;
+  margin-top: 10px;
+}
+
+.fontenelas {
+  margin-bottom: 20px;
+}
+
+.bossa {
+  margin-bottom: 20px;
+}
+
+.cefalo {
+  margin-bottom: 20px;
+}
+
+.linfonodos {
+  margin-bottom: 20px;
+}
+
+.pescoco {
+  margin-top: 0px;
+  border-top: 2px solid #fb8484;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.torcicolo {
+  margin-bottom: 20px;
+}
+
+.deformidades {
+  margin-bottom: 20px;
+}
+
+.palpeavel {
+  margin-bottom: 20px;
+}
+
+.axilar {
+  margin-bottom: 20px;
+}
+
+.mamilos {
+  margin-bottom: 20px;
+}
+
+.pulmonar {
+  margin-bottom: 20px;
+}
+
+.retracao {
+  margin-bottom: 20px;
+}
+
+.gemidos {
+  margin-bottom: 20px;
+}
+
+.estridor {
+  margin-bottom: 20px;
+}
+
+.reforco {
+  margin-bottom: 20px;
+}
+
+.asculta {
+  margin-bottom: 20px;
+}
+
+.abdome {
+  margin-top: 0px;
+  border-top: 2px solid #fb8484;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.abs {
+  margin-bottom: 20px;
+}
+
+.hernia {
+  margin-bottom: 20px;
+}
+
+.ruidos {
+  margin-bottom: 20px;
+}
+
+.coto {
+  margin-bottom: 20px;
+}
+
+.secrecao {
+  margin-bottom: 20px;
+}
+
+.hiperemia {
+  margin-bottom: 20px;
+}
+
+.odor {
+  margin-bottom: 20px;
+}
+
+.granuloma {
+  margin-bottom: 20px;
+}
+
+.dorap {
+  margin-bottom: 20px;
+}
+
+.membros {
+  margin-top: 0px;
+  border-top: 2px solid #fb8484;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.membros-superiores {
+  margin-bottom: 20px;
+}
+
+.deformidadess {
+  margin-bottom: 20px;
+}
+
+.malformacao {
+  margin-bottom: 20px;
+}
+
+.linha-palmar {
+  margin-bottom: 20px;
+}
+
+.membros-inferiores {
+  margin-bottom: 20px;
+}
+
+.deformidades {
+  margin-bottom: 20px;
+}
+
+.malformacao {
+  margin-bottom: 20px;
+}
+
+.pe-torto {
+  margin-bottom: 20px;
+}
+
+.polidactilia {
+  margin-bottom: 20px;
+}
+
+.genitalia {
+  margin-top: 0px;
+  border-top: 2px solid #fb8484;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.genital-feminina {
+  margin-bottom: 20px;
+}
+
+.pequenos-labios {
+  margin-bottom: 20px;
+}
+
+.secrecao {
+  margin-bottom: 20px;
+}
+
+.sinequia {
+  margin-bottom: 20px;
+}
+
+.hernia-inguinal {
+  margin-bottom: 20px;
+}
+
+.genital-masculina {
+  margin-bottom: 20px;
+}
+
+.hernia-inguinal {
+  margin-bottom: 20px;
+}
+
+.genital-masculina {
+  margin-bottom: 20px;
+}
+
+.hernia-inguinal {
+  margin-bottom: 20px;
+}
+
+.hidrocele {
+  margin-bottom: 20px;
+}
+
+.fimose {
+  margin-bottom: 20px;
+}
+
+.testiculos {
+  margin-bottom: 20px;
+}
+
+.meato-urinario {
+  margin-bottom: 20px;
+}
+
+.orificio {
+  margin-top: 0px;
+  border-top: 2px solid #fb8484;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.anomalias {
+  margin-bottom: 20px;
+}
+
+.fissuras {
+  margin-bottom: 20px;
+}
+
+.assaduras {
+  margin-bottom: 20px;
+}
+
+.marcos {
+  margin-top: 0px;
+  border-top: 2px solid #fb8484;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.pernas-braços {
+  margin-bottom: 20px;
+}
+
+.rosto {
+  margin-bottom: 20px;
+}
+
+.cabeca {
+  margin-bottom: 20px;
+}
+
+.la {
+  margin-bottom: 20px;
+}
+
+label {
+    margin-left: 10px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+  }
