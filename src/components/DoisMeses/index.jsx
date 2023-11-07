@@ -110,20 +110,6 @@ function FormularioD() {
     const textData = Object.entries(dados)
       .map(([key, value]) => `${key}: ${value}`)
       .join("\n");
-
-    navigator.clipboard
-      .writeText(textData)
-      .then(() => {
-        alert(
-          "Dados copiados com sucesso! Cole-os em um editor de texto para impressão."
-        );
-      })
-      .catch((error) => {
-        console.error("Erro ao copiar os dados:", error);
-        alert(
-          "Ocorreu um erro ao copiar os dados. Por favor, tente novamente."
-        );
-      });
   };
 
   return (
