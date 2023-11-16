@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import toolNurseImage from "../../assets/toolNurse.jpg";
+import Menu from "../Menu";
 
 const formData = new FormData();
 
-function FormularioR() {
+function FormularioH() {
   const [dados, setDados] = useState({
     peso: "",
     estatura: "",
     pc: "",
     temperatura: "",
     fr: "",
-    estadoGeral: "",
-    estadoPele: "",
-    krammerZone: "",
+    estadoGeral: "Ativo",
+    estadoPele: "Lisa",
+    krammerZone: "1",
     milliumSebaceo: "Não",
     hemangioma: "Não",
     manchaMongolica: "Não",
@@ -152,7 +153,7 @@ function FormularioR() {
                   hidden
                   onChange={handleChange}
                 />
-                <label> Peso (Kg):</label>
+                 <label> Peso (Kg):</label>
                 <input
                   type="number"
                   step="0.0010"
@@ -161,7 +162,7 @@ function FormularioR() {
                   min="0"
                   max="15"
                   name="peso"
-                  value={formData.peso}
+                  value={dados.peso}
                   onChange={handleChange}
                 />
                 <label> Estatura (cm):</label>
@@ -173,7 +174,7 @@ function FormularioR() {
                   min="0"
                   max="150"
                   name="estatura"
-                  value={formData.estatura}
+                  value={dados.estatura}
                   onChange={handleChange}
                 />
                 <label> PC (cm):</label>
@@ -185,7 +186,7 @@ function FormularioR() {
                   min="0"
                   max="150"
                   name="pc"
-                  value={formData.pc}
+                  value={dados.pc}
                   onChange={handleChange}
                 />
               </div>
@@ -200,7 +201,7 @@ function FormularioR() {
                   min="0"
                   max="50"
                   name="tempaux"
-                  value={formData.tempaux}
+                  value={dados.tempaux}
                   onChange={handleChange}
                 />
                 <label className="fr"> FR (irpm):</label>
@@ -212,7 +213,7 @@ function FormularioR() {
                   min="0"
                   max="200"
                   name="fr"
-                  value={formData.fr}
+                  value={dados.fr}
                   onChange={handleChange}
                 />
               </div>
@@ -223,7 +224,7 @@ function FormularioR() {
                     type="radio"
                     name="estgeral"
                     value="Ativo"
-                    checked={formData.estgeral === "Ativo"}
+                    checked={dados.estgeral === "Ativo"}
                     onChange={handleChange}
                   />
                   <label>Ativo</label>
@@ -231,7 +232,7 @@ function FormularioR() {
                     type="radio"
                     name="estgeral"
                     value="Outro"
-                    checked={formData.estgeral === "Outro"}
+                    checked={dados.estgeral === "Outro"}
                     onChange={handleChange}
                   />
                   <label>Outro</label>
@@ -242,7 +243,7 @@ function FormularioR() {
                     type="radio"
                     name="estpele"
                     value="Lisa"
-                    checked={formData.estpele === "Lisa"}
+                    checked={dados.estpele === "Lisa"}
                     onChange={handleChange}
                   />
                   <label>Lisa</label>
@@ -250,7 +251,7 @@ function FormularioR() {
                     type="radio"
                     name="estpele"
                     value="Outro"
-                    checked={formData.estpele === "Outro"}
+                    checked={dados.estpele === "Outro"}
                     onChange={handleChange}
                   />
                   <label>Outro</label>
@@ -261,7 +262,7 @@ function FormularioR() {
                     type="radio"
                     name="krammer"
                     value="1"
-                    checked={formData.krammer === "1"}
+                    checked={dados.krammer === "1"}
                     onChange={handleChange}
                   />
                   <label>1</label>
@@ -269,7 +270,7 @@ function FormularioR() {
                     type="radio"
                     name="krammer"
                     value="2"
-                    checked={formData.krammer === "2"}
+                    checked={dados.krammer === "2"}
                     onChange={handleChange}
                   />
                   <label>2</label>
@@ -277,7 +278,7 @@ function FormularioR() {
                     type="radio"
                     name="krammer"
                     value="3"
-                    checked={formData.krammer === "3"}
+                    checked={dados.krammer === "3"}
                     onChange={handleChange}
                   />
                   <label>3</label>
@@ -285,7 +286,7 @@ function FormularioR() {
                     type="radio"
                     name="krammer"
                     value="4"
-                    checked={formData.krammer === "4"}
+                    checked={dados.krammer === "4"}
                     onChange={handleChange}
                   />
                   <label>4</label>
@@ -296,7 +297,7 @@ function FormularioR() {
                     type="radio"
                     name="millium"
                     value="nao"
-                    checked={formData.millium === "nao"}
+                    checked={dados.millium === "nao"}
                     onChange={handleChange}
                   />
                   <label>Não</label>
@@ -304,7 +305,7 @@ function FormularioR() {
                     type="radio"
                     name="millium"
                     value="sim"
-                    checked={formData.millium === "sim"}
+                    checked={dados.millium === "sim"}
                     onChange={handleChange}
                   />
                   <label>Sim</label>
@@ -315,7 +316,7 @@ function FormularioR() {
                     type="radio"
                     name="hemangioma"
                     value="nao"
-                    checked={formData.hemangioma === "nao"}
+                    checked={dados.hemangioma === "nao"}
                     onChange={handleChange}
                   />
                   <label>Não</label>
@@ -323,7 +324,7 @@ function FormularioR() {
                     type="radio"
                     name="hemangioma"
                     value="sim"
-                    checked={formData.hemangioma === "sim"}
+                    checked={dados.hemangioma === "sim"}
                     onChange={handleChange}
                   />
                   <label>Sim</label>
@@ -334,7 +335,7 @@ function FormularioR() {
                     type="radio"
                     name="mancham"
                     value="nao"
-                    checked={formData.mancham === "nao"}
+                    checked={dados.mancham === "nao"}
                     onChange={handleChange}
                   />
                   <label>Não</label>
@@ -342,7 +343,7 @@ function FormularioR() {
                     type="radio"
                     name="mancham"
                     value="sim"
-                    checked={formData.mancham === "sim"}
+                    checked={dados.mancham === "sim"}
                     onChange={handleChange}
                   />
                   <label>Sim</label>
@@ -353,7 +354,7 @@ function FormularioR() {
                     type="radio"
                     name="eritema"
                     value="nao"
-                    checked={formData.eritema === "nao"}
+                    checked={dados.eritema === "nao"}
                     onChange={handleChange}
                   />
                   <label>Não</label>
@@ -361,7 +362,7 @@ function FormularioR() {
                     type="radio"
                     name="eritema"
                     value="sim"
-                    checked={formData.eritema === "sim"}
+                    checked={dados.eritema === "sim"}
                     onChange={handleChange}
                   />
                   <label>Sim</label>
@@ -1713,4 +1714,4 @@ function FormularioR() {
   );
 }
 
-export default FormularioR;
+export default FormularioH;

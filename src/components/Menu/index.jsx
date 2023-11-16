@@ -6,7 +6,7 @@ const Menu = () => {
         <nav id="menu">
             <h1>Menu Principal</h1>
             <ul className="ul">
-                <li><Link to="/" className="buttons">Recém-nascido</Link></li>
+                <li><Link to="/recem" className="buttons">Recém-nascido</Link></li>
                 <li><Link to="/ummes" className="buttons">Primeiro Mês</Link></li>
                 <li><Link to="/doismeses" className="buttons">2 - 3 Meses</Link></li>
                 <li><Link to="/quatromeses" className="buttons">4 - 5 Meses</Link></li>

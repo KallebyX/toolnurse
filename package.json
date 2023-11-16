@@ -15,7 +15,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "preview": "vite preview --port 80"
   },
   "author": "",
   "license": "ISC"
