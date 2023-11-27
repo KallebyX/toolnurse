@@ -14,90 +14,90 @@ function FormularioH() {
     estadoGeral: "Ativo",
     estadoPele: "Lisa",
     krammerZone: "1",
-    milliumSebaceo: "Não",
-    hemangioma: "Não",
-    manchaMongolica: "Não",
-    eritemaToxico: "Não",
+    milliumSebaceo: "Nao",
+    hemangioma: "Nao",
+    manchaMongolica: "Nao",
+    eritemaToxico: "Nao",
     fontenelas: "Abauladas",
-    bossa: "Não",
-    cefalohematoma: "Não",
-    linfonodosCervicais: "Não",
-    faceSimetria: "Simétrica",
-    aparenciaSindromica: "Não",
-    malformacaoFace: "Não",
-    olhosSimetria: "Simétricos",
-    olhosSecrecao: "Não",
-    olhosEstrabismo: "Não",
-    esclera: "Anictérica",
-    pupilas: "Isocóricas",
-    narizSecrecao: "Não",
-    narizBatimentos: "Não",
-    narizObstrucao: "Não",
+    bossa: "Nao",
+    cefalohematoma: "Nao",
+    linfonodosCervicais: "Nao",
+    faceSimetria: "Simetrica",
+    aparenciaSindromica: "Nao",
+    malformacaoFace: "Nao",
+    olhosSimetria: "Simetricos",
+    olhosSecrecao: "Nao",
+    olhosEstrabismo: "Nao",
+    esclera: "Anicterica",
+    pupilas: "Isocoricas",
+    narizSecrecao: "Nao",
+    narizBatimentos: "Nao",
+    narizObstrucao: "Nao",
     palatoIntegro: "Sim",
-    fendaLabial: "Não",
+    fendaLabial: "Nao",
     tamanhoLingua: "Normal",
     freioLingual: "Normal",
     mucosaCor: "Corada",
-    mucosaPálida: "Não",
-    mucosaIctérica: "Não",
-    mucosaCianótica: "Não",
-    mucosaAcianótica: "Não",
-    mucosaÚmida: "Não",
-    mucosaSeca: "Não",
-    ouvidosSecrecao: "Não",
-    linfonodoRetroauricular: "Não",
-    torcicoloCongenito: "Não",
-    toraxSimetria: "Simétrico",
-    toraxDeformidades: "Não",
-    linfonodoSupraclavicular: "Não",
-    linfonodoAxilar: "Não",
-    brotoMamario: "Não",
-    auscultaPulmonarTiragem: "Não",
-    auscultaPulmonarRetração: "Não",
-    auscultaPulmonarGemidos: "Não",
-    auscultaPulmonarEstridor: "Não",
-    auscultaPulmonarSinaisEsforco: "Não",
-    auscultaCardiacaSopro: "Não",
-    abdomenDilatado: "Não",
-    abdomenEscavado: "Não",
-    abdomenGloboso: "Não",
-    herniaUmbilical: "Não",
-    ruidosHidroaereos: "Não",
-    cotoUmbilical: "Não",
-    cotoUmbilicalSecrecao: "Não",
-    cotoUmbilicalHiperemia: "Não",
-    cotoUmbilicalOdor: "Não",
-    cotoUmbilicalGranuloma: "Não",
-    cotoUmbilicalDorPalpacao: "Não",
-    membrosSuperioresDeformidades: "Não",
-    membrosSuperioresMalformacao: "Não",
-    membrosSuperioresLinhaPalmar: "Não",
-    membrosInferioresDeformidades: "Não",
-    membrosInferioresMalformacao: "Não",
-    membrosInferioresPéTorto: "Não",
-    membrosInferioresPolidactilia: "Não",
-    genitaliaFemininaLábiosClitóris: "Não",
-    genitaliaFemininaSecrecao: "Não",
-    genitaliaFemininaSinequia: "Não",
-    genitaliaFemininaHerniaInguinal: "Não",
-    genitaliaMasculinaHerniaInguinal: "Não",
-    genitaliaMasculinaHidrocele: "Não",
-    genitaliaMasculinaFimoseFisiologica: "Não",
-    genitaliaMasculinaTesticulos: "Não",
-    genitaliaMasculinaMeatoUrinario: "Não",
-    genitaliaMasculinaOrificioVisualizado: "Não",
-    genitaliaMasculinaHipospadia: "Não",
-    genitaliaMasculinaEpispadia: "Não",
-    orificioAnalAnomalias: "Não",
-    orificioAnalFissuras: "Não",
-    orificioAnalAssaduras: "Não",
-    reflexoBusca: "Não",
-    reflexoSuccao: "Não",
-    reflexoMoro: "Não",
-    reflexoBabinski: "Não",
-    reflexoPreensaoPalmar: "Não",
-    reflexoPreensaoPlantar: "Não",
-    reflexoMarcha: "Não",
+    mucosaPalida: "Nao",
+    mucosaIcterica: "Nao",
+    mucosaCianotica: "Nao",
+    mucosaAcianotica: "Nao",
+    mucosaUmida: "Nao",
+    mucosaSeca: "Nao",
+    ouvidosSecrecao: "Nao",
+    linfonodoRetroauricular: "Nao",
+    torcicoloCongenito: "Nao",
+    toraxSimetria: "Simetrico",
+    toraxDeformidades: "Nao",
+    linfonodoSupraclavicular: "Nao",
+    linfonodoAxilar: "Nao",
+    brotoMamario: "Nao",
+    auscultaPulmonarTiragem: "Nao",
+    auscultaPulmonarRetracao: "Nao",
+    auscultaPulmonarGemidos: "Nao",
+    auscultaPulmonarEstridor: "Nao",
+    auscultaPulmonarSinaisEsforco: "Nao",
+    auscultaCardiacaSopro: "Nao",
+    abdomenDilatado: "Nao",
+    abdomenEscavado: "Nao",
+    abdomenGloboso: "Nao",
+    herniaUmbilical: "Nao",
+    ruidosHidroaereos: "Nao",
+    cotoUmbilical: "Nao",
+    cotoUmbilicalSecrecao: "Nao",
+    cotoUmbilicalHiperemia: "Nao",
+    cotoUmbilicalOdor: "Nao",
+    cotoUmbilicalGranuloma: "Nao",
+    cotoUmbilicalDorPalpacao: "Nao",
+    membrosSuperioresDeformidades: "Nao",
+    membrosSuperioresMalformacao: "Nao",
+    membrosSuperioresLinhaPalmar: "Nao",
+    membrosInferioresDeformidades: "Nao",
+    membrosInferioresMalformacao: "Nao",
+    membrosInferioresPeTorto: "Nao",
+    membrosInferioresPolidactilia: "Nao",
+    genitaliaFemininaLabiosClitoris: "Nao",
+    genitaliaFemininaSecrecao: "Nao",
+    genitaliaFemininaSinequia: "Nao",
+    genitaliaFemininaHerniaInguinal: "Nao",
+    genitaliaMasculinaHerniaInguinal: "Nao",
+    genitaliaMasculinaHidrocele: "Nao",
+    genitaliaMasculinaFimoseFisiologica: "Nao",
+    genitaliaMasculinaTesticulos: "Nao",
+    genitaliaMasculinaMeatoUrinario: "Nao",
+    genitaliaMasculinaOrificioVisualizado: "Nao",
+    genitaliaMasculinaHipospadia: "Nao",
+    genitaliaMasculinaEpispadia: "Nao",
+    orificioAnalAnomalias: "Nao",
+    orificioAnalFissuras: "Nao",
+    orificioAnalAssaduras: "Nao",
+    reflexoBusca: "Nao",
+    reflexoSuccao: "Nao",
+    reflexoMoro: "Nao",
+    reflexoBabinski: "Nao",
+    reflexoPreensaoPalmar: "Nao",
+    reflexoPreensaoPlantar: "Nao",
+    reflexoMarcha: "Nao",
   });
 
   const handleChange = (event) => {
@@ -134,12 +134,12 @@ function FormularioH() {
       <hr className="hr" />
       <div className="tudo">
         <div className="h2Box">
-          <h2 className="h2">Idade</h2>
           <Menu/>
+          <h2 className="h2">Idade</h2>
         </div>
         <hr className="hr" />
         <div>
-          <h2 className="anamnase">Anamnese</h2>
+          <h2 className="anamnase"> EXAME FÍSICO </h2>
           <p className="p">Questões a serem respondidas</p>
         </div>
         <div>
@@ -204,7 +204,7 @@ function FormularioH() {
                   value={dados.tempaux}
                   onChange={handleChange}
                 />
-                <label className="fr"> FR (irpm):</label>
+                <label className="fr"> FR (rpm):</label>
                 <input
                   type="number"
                   step="1"
@@ -218,81 +218,181 @@ function FormularioH() {
                 />
               </div>
               <div className="identAll">
-                <div className="geral">
-                  <label>Estado Geral:</label>
-                  <input
-                    type="radio"
-                    name="estgeral"
-                    value="Ativo"
-                    checked={dados.estgeral === "Ativo"}
-                    onChange={handleChange}
-                  />
-                  <label>Ativo</label>
-                  <input
-                    type="radio"
-                    name="estgeral"
-                    value="Outro"
-                    checked={dados.estgeral === "Outro"}
-                    onChange={handleChange}
-                  />
-                  <label>Outro</label>
+                  <div className="geral">
+                    <label>Estado Geral:</label>
+                    <input
+                      type="radio"
+                      name="estgeral"
+                      value="Ativo"
+                      checked={dados.estgeral === "Ativo"}
+                      onChange={handleChange}
+                    />
+                    <label>Ativo</label>
+                    <input
+                      type="radio"
+                      name="estgeral"
+                      value="Hipoativo"
+                      checked={dados.estgeral === "Hipoativo"}
+                      onChange={handleChange}
+                    />
+                    <label>Hipoativo</label>
+                    <input
+                      type="radio"
+                      name="estgeral"
+                      value="Letargico"
+                      checked={dados.estgeral === "Letargico"}
+                      onChange={handleChange}
+                    />
+                    <label>Letárgico</label>
+                    <input
+                      type="radio"
+                      name="estgeral"
+                      value="Calmo"
+                      checked={dados.estgeral === "Calmo"}
+                      onChange={handleChange}
+                    />
+                    <label>Calmo</label>
+                    <input
+                      type="radio"
+                      name="estgeral"
+                      value="Choroso"
+                      checked={dados.estgeral === "Choroso"}
+                      onChange={handleChange}
+                    />
+                    <label>Choroso</label>
+                  </div>
                 </div>
+
                 <div className="pele">
-                  <label>Estado da Pele:</label>
-                  <input
-                    type="radio"
-                    name="estpele"
-                    value="Lisa"
-                    checked={dados.estpele === "Lisa"}
-                    onChange={handleChange}
-                  />
-                  <label>Lisa</label>
-                  <input
-                    type="radio"
-                    name="estpele"
-                    value="Outro"
-                    checked={dados.estpele === "Outro"}
-                    onChange={handleChange}
-                  />
-                  <label>Outro</label>
-                </div>
-                <div className="krammer">
-                  <label>Krammer:</label>
-                  <input
-                    type="radio"
-                    name="krammer"
-                    value="1"
-                    checked={dados.krammer === "1"}
-                    onChange={handleChange}
-                  />
-                  <label>1</label>
-                  <input
-                    type="radio"
-                    name="krammer"
-                    value="2"
-                    checked={dados.krammer === "2"}
-                    onChange={handleChange}
-                  />
-                  <label>2</label>
-                  <input
-                    type="radio"
-                    name="krammer"
-                    value="3"
-                    checked={dados.krammer === "3"}
-                    onChange={handleChange}
-                  />
-                  <label>3</label>
-                  <input
-                    type="radio"
-                    name="krammer"
-                    value="4"
-                    checked={dados.krammer === "4"}
-                    onChange={handleChange}
-                  />
-                  <label>4</label>
-                </div>
+  <label>Estado da Pele:</label>
+  <input
+    type="radio"
+    name="estpele"
+    value="Lisa"
+    checked={dados.estpele === "Lisa"}
+    onChange={handleChange}
+  />
+  <label>Lisa</label>
+  <input
+    type="radio"
+    name="estpele"
+    value="Irregular"
+    checked={dados.estpele === "Irregular"}
+    onChange={handleChange}
+  />
+  <label>Irregular</label>
+  <input
+    type="radio"
+    name="estpele"
+    value="Macia"
+    checked={dados.estpele === "Macia"}
+    onChange={handleChange}
+  />
+  <label>Macia</label>
+  <input
+    type="radio"
+    name="estpele"
+    value="Áspera"
+    checked={dados.estpele === "Áspera"}
+    onChange={handleChange}
+  />
+  <label>Áspera</label>
+  <input
+    type="radio"
+    name="estpele"
+    value="Rósea"
+    checked={dados.estpele === "Rósea"}
+    onChange={handleChange}
+  />
+  <label>Rósea</label>
+  <input
+    type="radio"
+    name="estpele"
+    value="Pálida"
+    checked={dados.estpele === "Pálida"}
+    onChange={handleChange}
+  />
+  <label>Pálida</label>
+  <input
+    type="radio"
+    name="estpele"
+    value="Cianótica"
+    checked={dados.estpele === "Cianótica"}
+    onChange={handleChange}
+  />
+  <label>Cianótica</label>
+  <input
+    type="radio"
+    name="estpele"
+    value="Ictérica"
+    checked={dados.estpele === "Ictérica"}
+    onChange={handleChange}
+  />
+  <label>Ictérica</label>
+  <input
+    type="radio"
+    name="estpele"
+    value="Hidrata"
+    checked={dados.estpele === "Hidrata"}
+    onChange={handleChange}
+  />
+  <label>Hidrata</label>
+  <input
+    type="radio"
+    name="estpele"
+    value="Desidratada"
+    checked={dados.estpele === "Desidratada"}
+    onChange={handleChange}
+  />
+  <label>Desidratada</label>
+</div>
+
+              <div className="krammer">
+  <label>Krammer:</label>
+  <input
+    type="radio"
+    name="krammer"
+    value="1"
+    checked={dados.krammer === "1"}
+    onChange={handleChange}
+  />
+  <label>1</label>
+  <input
+    type="radio"
+    name="krammer"
+    value="2"
+    checked={dados.krammer === "2"}
+    onChange={handleChange}
+  />
+  <label>2</label>
+  <input
+    type="radio"
+    name="krammer"
+    value="3"
+    checked={dados.krammer === "3"}
+    onChange={handleChange}
+  />
+  <label>3</label>
+  <input
+    type="radio"
+    name="krammer"
+    value="4"
+    checked={dados.krammer === "4"}
+    onChange={handleChange}
+  />
+  <label>4</label>
+  <input
+    type="radio"
+    name="krammer"
+    value="5"
+    checked={dados.krammer === "5"}
+    onChange={handleChange}
+  />
+  <label>5</label>
+</div>
+
                 <div className="millium">
-                  <label>Millium:</label>
+                  <label>Millium sebáceo:</label>
                   <input
                     type="radio"
                     name="millium"
@@ -330,7 +430,7 @@ function FormularioH() {
                   <label>Sim</label>
                 </div>
                 <div className="manchas">
-                  <label>Manchas Mongólicas:</label>
+                  <label>Mancha Mongólica:</label>
                   <input
                     type="radio"
                     name="mancham"
@@ -373,155 +473,583 @@ function FormularioH() {
           <hr className="hr" />
           <fieldset className="exameFisico">
             <h2>Exame Físico</h2>
-            <div className="cabeca">
-              <h3>Cabeça</h3>
-              <br />
-              <div className="fontenelas">
-                <label>Fontenelas:</label>
-                <label>
-                  <input
-                    type="radio"
-                    name="fontenelas"
-                    value="abauladas"
-                    checked={dados.fontenelas === "abauladas"}
-                    onChange={handleChange}
-                  />
-                  Abauladas
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="fontenelas"
-                    value="deprimidas"
-                    checked={dados.fontenelas === "deprimidas"}
-                    onChange={handleChange}
-                  />
-                  Deprimidas
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="fontenelas"
-                    value="planas"
-                    checked={dados.fontenelas === "planas"}
-                    onChange={handleChange}
-                  />
-                  Planas
-                </label>
-              </div>
-            </div>
+           <div className="face">
+  <h3>Face</h3>
+  <br />
+  <div className="simetriaFace">
+    <label>Simetria:</label>
+    <label>
+      <input
+        type="radio"
+        name="simetriaFace"
+        value="simetrica"
+        checked={dados.simetriaFace === "simetrica"}
+        onChange={handleChange}
+      />
+      Simétrica
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="simetriaFace"
+        value="assimetrica"
+        checked={dados.simetriaFace === "assimetrica"}
+        onChange={handleChange}
+      />
+      Assimétrica
+    </label>
+  </div>
 
-            <div className="bossa">
-              <label>Bossa serossanguinolenta:</label>
-              <label>
-                <input
-                  type="radio"
-                  name="bossa"
-                  value="sim"
-                  checked={dados.bossa === "sim"}
-                  onChange={handleChange}
-                />
-                Sim
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="bossa"
-                  value="nao"
-                  checked={dados.bossa === "nao"}
-                  onChange={handleChange}
-                />
-                Não
-              </label>
-            </div>
+  <div className="malformacaoFace">
+    <label>Malformação:</label>
+    <label>
+      <input
+        type="radio"
+        name="malformacaoFace"
+        value="sim"
+        checked={dados.malformacaoFace === "sim"}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="malformacaoFace"
+        value="nao"
+        checked={dados.malformacaoFace === "nao"}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
 
-            <div className="cefalo">
-              <label>Cefalohematoma:</label>
-              <label>
-                <input
-                  type="radio"
-                  name="cefalohematoma"
-                  value="sim"
-                  checked={dados.cefalohematoma === "sim"}
-                  onChange={handleChange}
-                />
-                Sim
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="cefalohematoma"
-                  value="nao"
-                  checked={dados.cefalohematoma === "nao"}
-                  onChange={handleChange}
-                />
-                Não
-              </label>
-            </div>
+  <div className="deformidadesFace">
+    <label>Deformidades:</label>
+    <label>
+      <input
+        type="radio"
+        name="deformidadesFace"
+        value="sim"
+        checked={dados.deformidadesFace === "sim"}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="deformidadesFace"
+        value="nao"
+        checked={dados.deformidadesFace === "nao"}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
 
-            <div className="linfonodos">
-              <label>Linfonodos cervicais palpáveis:</label>
-              <label>
-                <input
-                  type="radio"
-                  name="linfonodosCervicais"
-                  value="movel"
-                  checked={dados.linfonodosCervicais === "movel"}
-                  onChange={handleChange}
-                />
-                Móvel
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="linfonodosCervicais"
-                  value="fixo"
-                  checked={dados.linfonodosCervicais === "fixo"}
-                  onChange={handleChange}
-                />
-                Fixo
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="linfonodosCervicais"
-                  value="fibrobastico"
-                  checked={dados.linfonodosCervicais === "fibrobastico"}
-                  onChange={handleChange}
-                />
-                Fibrobástico
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="linfonodosCervicais"
-                  value="amolecido"
-                  checked={dados.linfonodosCervicais === "amolecido"}
-                  onChange={handleChange}
-                />
-                Amolecido
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="linfonodosCervicais"
-                  value="endurecido"
-                  checked={dados.linfonodosCervicais === "endurecido"}
-                  onChange={handleChange}
-                />
-                Endurecido
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="linfonodosCervicais"
-                  value="nao"
-                  checked={dados.linfonodosCervicais === "nao"}
-                  onChange={handleChange}
-                />
-                Não Apresenta
-              </label>
-            </div>
+  <div className="aparenciaSindromica">
+    <label>Aparência sindrômica:</label>
+    <label>
+      <input
+        type="radio"
+        name="aparenciaSindromica"
+        value="sim"
+        checked={dados.aparenciaSindromica === "sim"}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="aparenciaSindromica"
+        value="nao"
+        checked={dados.aparenciaSindromica === "nao"}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+</div>
+
+<div className="olhos">
+  <h3>Olhos</h3>
+  <br />
+  <div className="simetriaOlhos">
+    <label>Simetria:</label>
+    <label>
+      <input
+        type="radio"
+        name="simetriaOlhos"
+        value="simetricos"
+        checked={dados.simetriaOlhos === "simetricos"}
+        onChange={handleChange}
+      />
+      Simétricos
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="simetriaOlhos"
+        value="assimetricos"
+        checked={dados.simetriaOlhos === "assimetricos"}
+        onChange={handleChange}
+      />
+      Assimétricos
+    </label>
+  </div>
+
+  <div className="secrecaoOlhos">
+    <label>Secreção:</label>
+    <label>
+      <input
+        type="radio"
+        name="secrecaoOlhos"
+        value="sim"
+        checked={dados.secrecaoOlhos === "sim"}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="secrecaoOlhos"
+        value="nao"
+        checked={dados.secrecaoOlhos === "nao"}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+
+  <div className="estrabismo">
+    <label>Estrabismo:</label>
+    <label>
+      <input
+        type="radio"
+        name="estrabismo"
+        value="sim"
+        checked={dados.estrabismo === "sim"}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="estrabismo"
+        value="nao"
+        checked={dados.estrabismo === "nao"}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+
+  <div className="esclera">
+    <label>Esclera:</label>
+    <label>
+      <input
+        type="radio"
+        name="esclera"
+        value="icterica"
+        checked={dados.esclera === "icterica"}
+        onChange={handleChange}
+      />
+      Ictérica
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="esclera"
+        value="anicterica"
+        checked={dados.esclera === "anicterica"}
+        onChange={handleChange}
+      />
+      Anictérica
+    </label>
+  </div>
+
+  <div className="pupilas">
+    <label>Pupilas:</label>
+    <label>
+      <input
+        type="radio"
+        name="pupilas"
+        value="anisocoricas"
+        checked={dados.pupilas === "anisocoricas"}
+        onChange={handleChange}
+      />
+      Anisocóricas
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="pupilas"
+        value="isocoricas"
+        checked={dados.pupilas === "isocoricas"}
+        onChange={handleChange}
+      />
+      Isocóricas
+    </label>
+  </div>
+</div>
+
+<div className="nariz">
+  <h3>Nariz</h3>
+  <br />
+  <div className="secrecaoNariz">
+    <label>Secreção:</label>
+    <label>
+      <input
+        type="radio"
+        name="secrecaoNariz"
+        value="sim"
+        checked={dados.secrecaoNariz === "sim"}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="secrecaoNariz"
+        value="nao"
+        checked={dados.secrecaoNariz === "nao"}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+
+  <div className="batimentosNariz">
+    <label>Batimentos das asas do nariz:</label>
+    <label>
+      <input
+        type="radio"
+        name="batimentosNariz"
+        value="sim"
+        checked={dados.batimentosNariz === "sim"}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="batimentosNariz"
+        value="nao"
+        checked={dados.batimentosNariz === "nao"}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+
+  <div className="obstrucaoNariz">
+    <label>Obstrução nasal:</label>
+    <label>
+      <input
+        type="radio"
+        name="obstrucaoNariz"
+        value="sim"
+        checked={dados.obstrucaoNariz === "sim"}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="obstrucaoNariz"
+        value="nao"
+        checked={dados.obstrucaoNariz === "nao"}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+</div>
+
+<div className="boca">
+  <h3>Boca</h3>
+  <br />
+  <div className="palatoIntegro">
+    <label>Palato íntegro:</label>
+    <label>
+      <input
+        type="radio"
+        name="palatoIntegro"
+        value="sim"
+        checked={dados.palatoIntegro === "sim"}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="palatoIntegro"
+        value="nao"
+        checked={dados.palatoIntegro === "nao"}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+
+  <div className="fendaLabial">
+    <label>Fenda labial:</label>
+    <label>
+      <input
+        type="radio"
+        name="fendaLabial"
+        value="sim"
+        checked={dados.fendaLabial === "sim"}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="fendaLabial"
+        value="nao"
+        checked={dados.fendaLabial === "nao"}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+
+  <div className="tamanhoLingua">
+    <label>Tamanho da língua:</label>
+    <label>
+      <input
+        type="radio"
+        name="tamanhoLingua"
+        value="normal"
+        checked={dados.tamanhoLingua === "normal"}
+        onChange={handleChange}
+      />
+      Normal
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="tamanhoLingua"
+        value="macroglossia"
+        checked={dados.tamanhoLingua === "macroglossia"}
+        onChange={handleChange}
+      />
+      Macroglossia
+    </label>
+  </div>
+
+  <div className="freioLingual">
+    <label>Freio lingual:</label>
+    <label>
+      <input
+        type="radio"
+        name="freioLingual"
+        value="normal"
+        checked={dados.freioLingual === "normal"}
+        onChange={handleChange}
+      />
+      Normal
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="freioLingual"
+        value="curto"
+        checked={dados.freioLingual === "curto"}
+        onChange={handleChange}
+      />
+      Curto
+    </label>
+  </div>
+
+  <div className="mucosa">
+    <label>Mucosa:</label>
+    <label>
+      <input
+        type="radio"
+        name="mucosaCor"
+        value="corada"
+        checked={dados.mucosaCor === "corada"}
+        onChange={handleChange}
+      />
+      Corada
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="mucosaCor"
+        value="palida"
+        checked={dados.mucosaCor === "palida"}
+        onChange={handleChange}
+      />
+      Pálida
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="mucosaCor"
+        value="icterica"
+        checked={dados.mucosaCor === "icterica"}
+        onChange={handleChange}
+      />
+      Ictérica
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="mucosaCor"
+        value="anictericas"
+        checked={dados.mucosaCor === "anictericas"}
+        onChange={handleChange}
+      />
+      Anictéricas
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="mucosaCor"
+        value="cianoticas"
+        checked={dados.mucosaCor === "cianoticas"}
+        onChange={handleChange}
+      />
+      Cianóticas
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="mucosaCor"
+        value="acianoticas"
+        checked={dados.mucosaCor === "acianoticas"}
+        onChange={handleChange}
+      />
+      Acianóticas
+    </label>
+  </div>
+
+  <div className="mucosaHidratacao">
+    <label>Hidratação:</label>
+    <label>
+      <input
+        type="radio"
+        name="mucosaHidratacao"
+        value="umida"
+        checked={dados.mucosaHidratacao === "umida"}
+        onChange={handleChange}
+      />
+      Úmida
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="mucosaHidratacao"
+        value="seca"
+        checked={dados.mucosaHidratacao === "seca"}
+        onChange={handleChange}
+      />
+      Seca
+    </label>
+  </div>
+</div>
+            <div className="orelhas-ouvidos">
+  <label>Orelhas/ouvidos:</label>
+  <br />
+  <label>
+    <input
+      type="radio"
+      name="secrecaoOrelhas"
+      value="sim"
+      checked={dados.secrecaoOrelhas === "sim"}
+      onChange={handleChange}
+    />
+    Secreção: Sim
+  </label>
+  <label>
+    <input
+      type="radio"
+      name="secrecaoOrelhas"
+      value="nao"
+      checked={dados.secrecaoOrelhas === "nao"}
+      onChange={handleChange}
+    />
+    Secreção: Não
+  </label>
+  <br />
+
+  <label>
+    <input
+      type="radio"
+      name="linfonodoRetroauricular"
+      value="sim"
+      checked={dados.linfonodoRetroauricular === "sim"}
+      onChange={handleChange}
+    />
+    Linfonodo Retroauricular Palpável: Sim
+  </label>
+  <label>
+    <input
+      type="radio"
+      name="linfonodoRetroauricular"
+      value="nao"
+      checked={dados.linfonodoRetroauricular === "nao"}
+      onChange={handleChange}
+    />
+    Linfonodo Retroauricular Palpável: Não
+  </label>
+  <br />
+
+  <label>
+    <input
+      type="radio"
+      name="movelOrelhas"
+      value="sim"
+      checked={dados.movelOrelhas === "sim"}
+      onChange={handleChange}
+    />
+    Móvel
+  </label>
+  <label>
+    <input
+      type="radio"
+      name="movelOrelhas"
+      value="nao"
+      checked={dados.movelOrelhas === "nao"}
+      onChange={handleChange}
+    />
+    Fixo
+  </label>
+  <br />
+
+  <label>
+    <input
+      type="radio"
+      name="fibroblasticoOrelhas"
+      value="amolecido"
+      checked={dados.fibroblasticoOrelhas === "amolecido"}
+      onChange={handleChange}
+    />
+    Fibroblástico: Amolecido
+  </label>
+  <label>
+    <input
+      type="radio"
+      name="fibroblasticoOrelhas"
+      value="endurecido"
+      checked={dados.fibroblasticoOrelhas === "endurecido"}
+      onChange={handleChange}
+    />
+    Fibroblástico: Endurecido
+  </label>
+</div>
           </fieldset>
           <hr className="hr" />
           <fieldset className="pescoco">
@@ -1413,12 +1941,12 @@ function FormularioH() {
                     checked
                     onChange={handleChange}
                   />
-                  Criptorquidia
+                  Criptorquidia 
                 </label>
               </div>
 
               <div className="meato-urinario">
-                <label>Meato Urinário:</label>
+                <label>Meato urinário:</label>
                 <label>
                   <input
                     type="radio"
