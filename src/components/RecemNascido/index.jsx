@@ -468,8 +468,7 @@ function FormularioH() {
                   <label>Sim</label>
                 </div>
               </div>
-            </div>
-          </fieldset>
+        </fieldset>
           <hr className="hr" />
           <fieldset className="exameFisico">
             <h2>Exame Físico</h2>
