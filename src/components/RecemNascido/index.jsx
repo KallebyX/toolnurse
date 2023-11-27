@@ -1049,7 +1049,7 @@ function FormularioH() {
                 Fibroblástico: Endurecido
               </label>
             </div>
-            </fieldset>
+          </fieldset>
           <hr className="hr" />
           <fieldset className="pescoco">
             <h3>Pescoço e Tórax</h3>
