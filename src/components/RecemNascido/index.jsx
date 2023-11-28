@@ -134,8 +134,8 @@ function FormularioH() {
       <hr className="hr" />
       <div className="tudo">
         <div className="h2Box">
-          <Menu />
           <h2 className="h2">Idade</h2>
+          <Menu />
         </div>
         <hr className="hr" />
         <div>
