@@ -1,0 +1,37 @@
+.buttons {
+    width: 150px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FB8484;
+    border: 10px solid transparent;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 30px;
+    margin: 5px;
+}
+
+.buttons:hover {
+    width: 150px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FB8470;
+    border: 10px solid transparent;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 30px;
+    margin: 5px;
+}
+
+.ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
