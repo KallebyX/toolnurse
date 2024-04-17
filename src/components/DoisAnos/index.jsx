@@ -135,13 +135,13 @@ function Formulario2Anos() {
         <div className="cabecalho">
           <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
           <Menu />
-          <hr className="hr" />
+         
         </div>
         <div className="formulario">
-  <h2>Formulário de Avaliação - 2 Anos</h2>
-  
+  <h3>2 Anos</h3>
+  <hr className="hr" />
   <div className="form-section">
-    <h3>Anamnese Geral</h3>
+  <h3>Informações Básicas</h3>
     <div className="form-group">
       <label>Peso (Kg):</label>
       <input type="text" name="peso" value={dados.peso} onChange={handleChange} />

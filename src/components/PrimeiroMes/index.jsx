@@ -136,8 +136,9 @@ const FormularioUmMes = () => {
       <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
       <Menu />
     </div>
-    <hr className="hr" />
+
     <h3>Primeiro Mês</h3>
+    <hr className="hr" />
     <form onSubmit={handleSubmit}>
       {/* Peso */}
       <div className="form-group">

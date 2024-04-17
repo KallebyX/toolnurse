@@ -24,6 +24,9 @@ function Formulario9Meses() {
     secrecaoOrelhas: '',
     linfonodoRetroauricular: '',
     tiragem: '',
+    apTiragem: '',
+    murmVesicular: '',
+    acBulhasCardiacas: '',
     murmVesiculares: '',
     bulhasCardiacas: '',
     apTiragem: '',
@@ -90,8 +93,8 @@ function Formulario9Meses() {
       `- Secreção: ${dados.secrecaoOrelhas}\n` +
       `- Linfonodo retroauricular palpável: ${dados.linfonodoRetroauricular}\n\n` +
       `**Tórax:**\n` +
-      `- AP Tiragem: ${dados.tiragem}\n` +
-      `- Murmúrio Vesicular: ${dados.murmurioVesicular}\n` +
+      `- AP Tiragem: ${dados.apTiragem}\n` +
+      `- Murmúrio Vesicular: ${dados.murmVesicular}\n` +
       `- AC Bulhas Cardíacas: ${dados.acBulhasCardiacas}\n\n` +
       `**Abdome:**\n` +
       `- Estado: ${dados.abdomen}\n` +
@@ -126,15 +129,18 @@ function Formulario9Meses() {
             <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
             <Menu />
           </div>
-          <hr className="hr" />
+          
+          
         </div>
+        <h3>9 Meses</h3>
+        <hr className="hr" />
         <div className="formulario">
           {/* Campos do formulário */}
           <div className="form-section">
-            <h3>9 Meses</h3>
+            
             <div className="form-section">
-  <h3>Anamnese Geral</h3>
   <div className="form-group">
+  <h3>Informações Básicas</h3>
     <label>Peso (Kg):</label>
     <input type="text" name="peso" value={dados.peso} onChange={handleChange} />
   </div>
@@ -221,7 +227,6 @@ function Formulario9Meses() {
   </div>
 </div>
 <div className="form-section">
-  <h3>Olhos</h3>
   <div className="form-group">
     <label>Secreção:</label>
     <div>
@@ -242,7 +247,6 @@ function Formulario9Meses() {
   </div>
 </div>
 <div className="form-section">
-  <h3>Boca</h3>
   <div className="form-group">
     <label>Mucosa:</label>
     <div>
@@ -269,7 +273,6 @@ function Formulario9Meses() {
   </div>
 </div>
 <div className="form-section">
-  <h3>Orelhas/Ouvidos</h3>
   <div className="form-group">
     <label>Secreção:</label>
     <div>
@@ -290,7 +293,6 @@ function Formulario9Meses() {
   </div>
 </div>
 <div className="form-section">
-  <h3>Dentição</h3>
   <div className="form-group">
     <label>Dente Incisivo Central Inferior:</label>
     <div>
@@ -314,6 +316,7 @@ function Formulario9Meses() {
     </div>
   </div>
 </div>
+
 <div className="form-section">
   <h3>Tórax</h3>
   <div className="form-group">
@@ -344,6 +347,8 @@ function Formulario9Meses() {
     </div>
   </div>
 </div>
+
+
 <div className="form-section">
   <h3>Abdome</h3>
   <div className="form-group">
@@ -459,31 +464,6 @@ function Formulario9Meses() {
 </div>
 </div>
 <div className="form-section">
-  <h3>Marcos do Desenvolvimento - 9 Meses</h3>
-  <div className="form-group">
-    <label>Brinca de esconde-achou:</label>
-    <div>
-      <input type="radio" id="escondeAchouPresente" name="escondeAchou" value="Presente" onChange={handleChange} checked={dados.escondeAchou === "Presente"} />
-      <label htmlFor="escondeAchouPresente">Presente</label>
-      <input type="radio" id="escondeAchouAusente" name="escondeAchou" value="Ausente" onChange={handleChange} checked={dados.escondeAchou === "Ausente"} />
-      <label htmlFor="escondeAchouAusente">Ausente</label>
-      <input type="radio" id="escondeAchouNaoVerificado" name="escondeAchou" value="NaoVerificado" onChange={handleChange} checked={dados.escondeAchou === "NaoVerificado"} />
-      <label htmlFor="escondeAchouNaoVerificado">Não Verificado</label>
-    </div>
-  </div>
-  <div className="form-group">
-    <label>Transfere objetos de uma mão para outra:</label>
-    <div>
-      <input type="radio" id="transfereObjetosPresente" name="transfereObjetos" value="Presente" onChange={handleChange} checked={dados.transfereObjetos === "Presente"} />
-      <label htmlFor="transfereObjetosPresente">Presente</label>
-      <input type="radio" id="transfereObjetosAusente" name="transfereObjetos" value="Ausente" onChange={handleChange} checked={dados.transfereObjetos === "Ausente"} />
-      <label htmlFor="transfereObjetosAusente">Ausente</label>
-      <input type="radio" id="transfereObjetosNaoVerificado" name="transfereObjetos" value="NaoVerificado" onChange={handleChange} checked={dados.transfereObjetos === "NaoVerificado"} />
-      <label htmlFor="transfereObjetosNaoVerificado">Não Verificado</label>
-    </div>
-  </div>
-</div>
-<div className="form-section">
   <h3>Orifício Anal</h3>
   <div className="form-group">
     <label>Anomalias:</label>
@@ -537,6 +517,32 @@ function Formulario9Meses() {
 </div>
 
 </div>
+<div className="form-section">
+  <h3>Marcos do Desenvolvimento - 9 Meses</h3>
+  <div className="form-group">
+    <label>Brinca de esconde-achou:</label>
+    <div>
+      <input type="radio" id="escondeAchouPresente" name="escondeAchou" value="Presente" onChange={handleChange} checked={dados.escondeAchou === "Presente"} />
+      <label htmlFor="escondeAchouPresente">Presente</label>
+      <input type="radio" id="escondeAchouAusente" name="escondeAchou" value="Ausente" onChange={handleChange} checked={dados.escondeAchou === "Ausente"} />
+      <label htmlFor="escondeAchouAusente">Ausente</label>
+      <input type="radio" id="escondeAchouNaoVerificado" name="escondeAchou" value="NaoVerificado" onChange={handleChange} checked={dados.escondeAchou === "NaoVerificado"} />
+      <label htmlFor="escondeAchouNaoVerificado">Não Verificado</label>
+    </div>
+  </div>
+  <div className="form-group">
+    <label>Transfere objetos de uma mão para outra:</label>
+    <div>
+      <input type="radio" id="transfereObjetosPresente" name="transfereObjetos" value="Presente" onChange={handleChange} checked={dados.transfereObjetos === "Presente"} />
+      <label htmlFor="transfereObjetosPresente">Presente</label>
+      <input type="radio" id="transfereObjetosAusente" name="transfereObjetos" value="Ausente" onChange={handleChange} checked={dados.transfereObjetos === "Ausente"} />
+      <label htmlFor="transfereObjetosAusente">Ausente</label>
+      <input type="radio" id="transfereObjetosNaoVerificado" name="transfereObjetos" value="NaoVerificado" onChange={handleChange} checked={dados.transfereObjetos === "NaoVerificado"} />
+      <label htmlFor="transfereObjetosNaoVerificado">Não Verificado</label>
+    </div>
+  </div>
+</div>
+
 
             {/* Adicione mais campos conforme necessário */}
           </div>

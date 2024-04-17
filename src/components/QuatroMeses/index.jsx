@@ -142,9 +142,10 @@ const handleSubmit = (event) => {
                 <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
                 <Menu />
             </div>
-            <h2>4-5 Meses</h2>
+            <h3>4-5 Meses</h3>
             <form onSubmit={handleSubmit}>
             <div className="form-group">
+            <h3>Informações Básicas</h3>
         <label>Peso (Kg):</label>
         <input type="text" name="peso" value={dados.peso} onChange={handleChange} />
       </div>

@@ -224,12 +224,13 @@ function FormularioRecemNascido() {
         <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
         <Menu />
       </div>
-      <hr className="hr" />
+     
 
     <form onSubmit={handleSubmit}>
       
   
   <h3>Rescém nascido</h3>
+  <hr className="hr" />
   <div></div>
     <div className='formulario-recem-nascido'>
   <h3>Informações Básicas</h3>

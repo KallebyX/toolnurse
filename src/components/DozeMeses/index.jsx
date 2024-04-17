@@ -138,16 +138,16 @@ const formatarDados = () => {
         <div className="cabecalho">
           <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
           <Menu />
-          <hr className="hr" />
+       
         </div>
         <div className="formulario">
-          <h2>Formulário de Avaliação - 12 Meses</h2>
-          
+        <h3>12 Meses</h3>
+        <hr className="hr" />
           {/* Cada seção do formulário seria implementada aqui, similar ao exemplo: */}
 
 <div className="form-section">
-  <h3>Anamnese Geral</h3>
   <div className="form-group">
+  <h3>Informações Básicas</h3>
     <label>Peso (Kg):</label>
     <input type="text" name="peso" value={dados.peso} onChange={handleChange} />
   </div>

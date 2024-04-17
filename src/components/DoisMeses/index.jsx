@@ -151,9 +151,10 @@ function FormularioDoisTresMeses() {
           <div className="cabecalho">
     
           </div>
+          <h3>2 - 3 Meses</h3>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-            <h2>2 - 3 Meses</h2>
+            <h3>Informações Básicas</h3>
               <label>Peso (Kg):</label>
               <input type="text" name="peso" value={dados.peso} onChange={handleChange} />
             </div>
