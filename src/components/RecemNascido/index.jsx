@@ -22,7 +22,7 @@ function FormularioRecemNascido() {
     fontanelas: '',
     bossaSeroSanguinolenta: '',
     cefalohematoma: '',
-    linfonodosCervicaisPalpaveis: '',
+    linfonodosCervicais: '',
     faceSimetria: '',
     malformacao: '',
     deformidades: '',
@@ -229,7 +229,7 @@ function FormularioRecemNascido() {
     <form onSubmit={handleSubmit}>
       
   
-  <h3>Anamnese - Rescem nascido</h3>
+  <h3>Rescém nascido</h3>
   <div></div>
     <div className='formulario-recem-nascido'>
   <h3>Informações Básicas</h3>

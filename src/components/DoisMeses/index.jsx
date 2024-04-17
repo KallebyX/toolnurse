@@ -1,302 +1,984 @@
 import React, { useState } from 'react';
-import toolNurseImage from '../../assets/toolNurse.jpg';
-import Menu from '../Menu';
+import toolNurseImage from '../../assets/toolNurse.jpg'; // Ajuste o caminho conforme necessário
+import Menu from '../Menu'; // Ajuste o caminho conforme necessário
 
-function Formulario2a3Meses() {
+function FormularioDoisTresMeses() {
     const [dados, setDados] = useState({
-      peso: '',
-      estatura: '',
-      pc: '',
-      estadoGeral: '',
-      peleTextura: [],
-      peleSensacao: [],
-      peleCor: [],
-      peleHidratacao: '',
-      fontanelasAnterior: '',
-      fontanelasPosteriorFechada: '',
-      linfonodosCervicaisPalpaveis: '',
-      olhosSecrecao: '',
-      olhosEstrabismo: '',
-      apTiragem: '',
-      acBulhasCardiacas: '',
-      abdomeEstado: '',
-      herniaUmbilical: '',
-      femininaLabiosClitorisProeminentes: '',
-      masculinaTesticulos: '',
-      orificioAnalAnomalias: '',
-      sorri2Meses: '',
-      abreMaos2Meses: '',
-      movimentaMembros2Meses: '',
-      emiteSons2Meses: '',
-      respondeContatoSocial3Meses: '',
-      seguraObjetos3Meses: '',
-      emiteSonsRiAlto3Meses: '',
-      levantaCabeca3Meses: '',
-    });
-  
-    const formatarDados = () => {
-      let formattedData = "**Avaliação de Desenvolvimento - 2 a 3 Meses**\n\n";
-    
-      formattedData += "**Anamnese**\n";
-      formattedData += `- Peso: ${dados.peso} Kg\n`;
-      formattedData += `- Estatura: ${dados.estatura} cm\n`;
-      formattedData += `- PC: ${dados.pc} cm\n`;
-      formattedData += `- Estado Geral: ${dados.estadoGeral}\n\n`;
-    
-      formattedData += "**Pele**\n";
-      dados.peleTextura.forEach(textura => formattedData += `- Textura: ${textura}\n`);
-      dados.peleSensacao.forEach(sensacao => formattedData += `- Sensação ao Toque: ${sensacao}\n`);
-      dados.peleCor.forEach(cor => formattedData += `- Cor: ${cor}\n`);
-      formattedData += `- Hidratação: ${dados.peleHidratacao}\n\n`;
-    
-      formattedData += "**Cabeça**\n";
-      formattedData += `- Fontanelas Anterior: ${dados.fontanelasAnterior}\n`;
-      formattedData += `- Fontanelas Posterior Fechada: ${dados.fontanelasPosteriorFechada}\n`;
-      formattedData += `- Linfonodos cervicais palpáveis: ${dados.linfonodosCervicaisPalpaveis}\n`;
-      formattedData += `- Olhos - Secreção: ${dados.olhosSecrecao}\n`;
-      formattedData += `- Olhos - Estrabismo: ${dados.olhosEstrabismo}\n\n`;
-    
-      formattedData += "**Tórax**\n";
-      formattedData += `- AP - Tiragem: ${dados.apTiragem}\n`;
-      formattedData += `- AC - Bulhas cardíacas: ${dados.acBulhasCardiacas}\n\n`;
-    
-      formattedData += "**Abdome**\n";
-      formattedData += `- Estado: ${dados.abdomeEstado}\n`;
-      formattedData += `- Hérnia umbilical: ${dados.herniaUmbilical}\n\n`;
-    
-      formattedData += "**Genitália Feminina**\n";
-      formattedData += `- Pequenos lábios e clitóris proeminentes: ${dados.femininaLabiosClitorisProeminentes}\n\n`;
-    
-      formattedData += "**Genitália Masculina**\n";
-      formattedData += `- Testículos: ${dados.masculinaTesticulos}\n\n`;
-    
-      formattedData += "**Orifício Anal**\n";
-      formattedData += `- Anomalias: ${dados.orificioAnalAnomalias}\n\n`;
-    
-      formattedData += "**Marcos do Desenvolvimento - 2 Meses**\n";
-      formattedData += `- Sorri quando estimulada: ${dados.sorri2Meses}\n`;
-      formattedData += `- Abre as mãos: ${dados.abreMaos2Meses}\n`;
-      formattedData += `- Movimenta os membros: ${dados.movimentaMembros2Meses}\n`;
-      formattedData += `- Emite sons: ${dados.emiteSons2Meses}\n\n`;
-    
-      formattedData += "**Marcos do Desenvolvimento - 3 Meses**\n";
-      formattedData += `- Responde ativamente ao contato social: ${dados.respondeContatoSocial3Meses}\n`;
-      formattedData += `- Segura objetos: ${dados.seguraObjetos3Meses}\n`;
-      formattedData += `- Emite sons, ri alto: ${dados.emiteSonsRiAlto3Meses}\n`;
-      formattedData += `- Levanta a cabeça e apoia-se nos antebraços, de bruços: ${dados.levantaCabeca3Meses}\n`;
-    
-      return formattedData;
-    };
-    
-    const handleChange = (event) => {
-      const { name, value } = event.target;
-      setDados({ ...dados, [name]: value });
-    };
-  
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      const formattedData = formatarDados();
-      navigator.clipboard.writeText(formattedData)
-        .then(() => alert("Formulário copiado para a área de transferência!"))
-        .catch(err => console.error("Erro ao copiar o formulário: ", err));
-    };
+        peso: '',
+        estatura: '',
+        pc: '',
+        estadoGeral: '',
+        texturaPele: '',
+        sensacaoPele: '',
+        corPele: '',
+        hidratacaoPele: '',
+        fontanelasAnterior: '',
+        fontanelasPosteriorFechada: '',
+        linfonodosCervicais: '',
+        linfonodosCervicaisDetalhes: '',
+        secrecaoOlhos: '',
+        estrabismo: '',
+        mucosa: '',
+        secrecaoNariz: '',
+        batimentosNariz: '',
+        murmurioVesiculares: '',
+        obstrucaoNasal: '',
+        secrecaoOrelhas: '',
+        linfonodoRetroauricular: '',
+        linfonodoRetroauricularDetalhes: '',
+        tiragem: '',
+        murmurioVesiculares: '',
+        bulhasCardiacas: '',
+        estadoAbdome: '',
+        herniaUmbilical: '',
+        labiosClitorisProeminentesFem: '',
+        secrecaoFeminina: '',
+        sinequia: '',
+        herniaInguinalFem: '',
+        herniaInguinalMas: '',
+        hidrocele: '',
+        fimoseFisiologica: '',
+        testiculos: '',
+        meatoUrinario: '',
+        anomaliasAnal: '',
+        fissuras: '',
+        assaduras: '',
+        sorriEstimulada: '',
+        abreMaos: '',
+        movimentaMembros: '',
+        emiteSons: '',
+        contatoSocial: '',
+        seguraObjetos: '',
+        riAlto: '',
+        levantaCabeca: ''
+      });
+      const formatarDados = () => {
+        return `
+          **Avaliação 2-3 Meses**
+      
+          **Peso:** ${dados.peso} Kg
+          **Estatura:** ${dados.estatura} cm
+          **PC:** ${dados.pc} cm
+      
+          **Estado Geral:**
+          - ${dados.estadoGeral}
+      
+          **Pele:**
+          - Textura: ${dados.texturaPele}
+          - Sensação: ${dados.sensacaoPele}
+          - Cor: ${dados.corPele}
+          - Hidratação: ${dados.hidratacaoPele}
+      
+          **Cabeça:**
+          - Fontanelas Anterior: ${dados.fontanelasAnterior}
+          - Fontanelas Posterior Fechada: ${dados.fontanelasPosteriorFechada ? 'Sim' : 'Não'}
+          - Linfonodos Cervicais: ${dados.linfonodosCervicais}
+          - Detalhes: ${dados.linfonodosCervicaisDetalhes}
+      
+          **Olhos:**
+          - Secreção: ${dados.secrecaoOlhos}
+          - Estrabismo: ${dados.estrabismo}
+      
+          **Mucosa:** ${dados.mucosa}
+      
+          **Nariz:**
+          - Secreção: ${dados.secrecaoNariz}
+          - Batimentos das asas do nariz: ${dados.batimentosNariz}
+          - Obstrução nasal: ${dados.obstrucaoNasal}
+      
+          **Orelhas/Ouvidos:**
+          - Secreção: ${dados.secrecaoOrelhas}
+          - Linfonodo Retroauricular: ${dados.linfonodoRetroauricular}
+      
+          **Tórax:**
+            - AP - Tiragem: ${dados.tiragem ? 'Sim' : 'Não'}
+          - Murmúrio Vesiculares: ${dados.murmurioVesiculares}
+          - Bulhas Cardíacas: ${dados.bulhasCardiacas}
+      
+          **Abdome:**
+          - Estado: ${dados.estadoAbdome}
+          - Hérnia Umbilical: ${dados.herniaUmbilical}
+      
+          **Genitália Feminina:**
+          - Pequenos Lábios e Clitóris Proeminentes: ${dados.labiosClitorisProeminentesFem}
+          - Secreção: ${dados.secrecaoFeminina}
+          - Sinéquia: ${dados.sinequia}
+          - Hérnia Inguinal: ${dados.herniaInguinalFem}
+      
+          **Genitália Masculina:**
+          - Hérnia Inguinal: ${dados.herniaInguinalMas}
+          - Hidrocele: ${dados.hidrocele}
+          - Fimose Fisiológica: ${dados.fimoseFisiologica}
+          - Testículos: ${dados.testiculos}
+          - Meato Urinário: ${dados.meatoUrinario}
+      
+          **Orifício Anal:**
+          - Anomalias: ${dados.anomaliasAnal}
+          - Fissuras: ${dados.fissuras}
+          - Assaduras: ${dados.assaduras}
+      
+          **Marcos do Desenvolvimento:**
+          - Sorri quando estimulada: ${dados.sorriEstimulada}
+          - Abre as mãos: ${dados.abreMaos}
+          - Movimenta os membros: ${dados.movimentaMembros}
+          - Emite sons: ${dados.emiteSons}
+          - Responde ativamente ao contato social: ${dados.contatoSocial}
+          - Segura objetos: ${dados.seguraObjetos}
+          - Emite sons, ri alto: ${dados.riAlto}
+          - Levanta a cabeça e apoia-se nos antebraços, de bruços: ${dados.levantaCabeca}
+        `.trim();
+      };
+      
 
-    return (
-        <form onSubmit={handleSubmit}>
-            <div className="cabecalho">
-                <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
-                <Menu />
+      const handleChange = (event) => {
+        const { name, value } = event.target;
+        setDados({ ...dados, [name]: value });
+      };
+    
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        const formattedData = formatarDados();
+        // Aqui você pode fazer algo com os dados formatados, como enviar para um servidor ou exibir em um alerta
+        console.log(formattedData);
+      };
+      
+      return (
+<div className="tudo">
+                <div className="cabecalho">
+      <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
+      <Menu />
+    </div>
+          <div className="cabecalho">
+    
+          </div>
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+            <h2>2 - 3 Meses</h2>
+              <label>Peso (Kg):</label>
+              <input type="text" name="peso" value={dados.peso} onChange={handleChange} />
             </div>
-            <hr className="hr" />
+            <div className="form-group">
+              <label>Estatura (cm):</label>
+              <input type="text" name="estatura" value={dados.estatura} onChange={handleChange} />
+            </div>
+            <div className="form-group">
+              <label>PC (cm):</label>
+              <input type="text" name="pc" value={dados.pc} onChange={handleChange} />
+            </div>
+            <div className="form-section">
+              <h3>Estado Geral</h3>
+              <div className="form-group">
+                {["Ativo", "Hipoativo", "Letárgico", "Calmo", "Choroso"].map((estado) => (
+                  <label key={estado}>
+                    <input
+                      type="radio"
+                      name="estadoGeral"
+                      value={estado}
+                      checked={dados.estadoGeral === estado}
+                      onChange={handleChange}
+                    />
+                    {estado}
+                  </label>
+                ))}
+              </div>
+            </div>
+            <div className="form-section">
+              <h3>Pele</h3>
+              <div className="form-group">
+                <label>Textura:</label>
+                {["Lisa", "Irregular"].map((textura) => (
+                  <label key={textura}>
+                    <input
+                      type="radio"
+                      name="texturaPele"
+                      value={textura}
+                      checked={dados.texturaPele === textura}
+                      onChange={handleChange}
+                    />
+                    {textura}
+                  </label>
+                ))}
+              </div>
+              <div className="form-group">
+                <label>Sensação:</label>
+                {["Macia", "Áspera"].map((sensacao) => (
+                  <label key={sensacao}>
+                    <input
+                      type="radio"
+                      name="sensacaoPele"
+                      value={sensacao}
+                      checked={dados.sensacaoPele === sensacao}
+                      onChange={handleChange}
+                    />
+                    {sensacao}
+                  </label>
+                ))}
+              </div>
+              <div className="form-group">
+                <label>Cor:</label>
+                {["Rósea", "Pálida", "Cianótica", "Ictérica"].map((cor) => (
+                  <label key={cor}>
+                    <input
+                      type="radio"
+                      name="corPele"
+                      value={cor}
+                      checked={dados.corPele === cor}
+                      onChange={handleChange}
+                    />
+                    {cor}
+                  </label>
+                ))}
+              </div>
+              <div className="form-group">
+                <label>Hidratação:</label>
+                {["Hidratada", "Desidratada"].map((hidratacao) => (
+                  <label key={hidratacao}>
+                    <input
+                      type="radio"
+                      name="hidratacaoPele"
+                      value={hidratacao}
+                      checked={dados.hidratacaoPele === hidratacao}
+                      onChange={handleChange}
+                    />
+                    {hidratacao}
+                  </label>
+                ))}
+              </div>
+            </div>
+            <div className="form-section">
+  <h3>Cabeça</h3>
+  <div className="form-group">
+    <label>Fontanelas Anterior:</label>
+    {["Abauladas", "Deprimidas", "Plana"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="fontanelasAnterior"
+          value={option}
+          checked={dados.fontanelasAnterior === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+  <div className="form-group">
+    <label>Fontanelas Posterior Fechada:</label>
+    {["Sim", "Não"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="fontanelasPosteriorFechada"
+          value={option}
+          checked={dados.fontanelasPosteriorFechada === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+  <div className="form-group">
+    <label>Linfonodos cervicais palpáveis:</label>
+    <label>
+      <input
+        type="radio"
+        name="linfonodosCervicais"
+        value="Não"
+        checked={dados.linfonodosCervicais === "Não"}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+    {["Sim - Móvel", "Sim - Fixo", "Sim - Fibrobástico", "Sim - Amolecido", "Sim - Endurecido"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="linfonodosCervicais"
+          value={option}
+          checked={dados.linfonodosCervicais === option}
+          onChange={handleChange}
+        />
+        {option.split(" - ")[1]}
+      </label>
+    ))}
+  </div>
+  <div className="form-group">
+    <label>Olhos - Secreção:</label>
+    {["sim", "não"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="secrecaoOlhos"
+          value={option}
+          checked={dados.secrecaoOlhos === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+  <div className="form-group">
+    <label>Olhos - Estrabismo:</label>
+    {["sim", "não"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="estrabismo"
+          value={option}
+          checked={dados.estrabismo === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+  <div className="form-group">
+    <label>Mucosa:</label>
+    {["corada", "pálida", "cianóticas", "acianóticas", "úmida", "seca"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="mucosa"
+          value={option}
+          checked={dados.mucosa === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+</div>
+<div className="form-section">
+  <div className="form-group">
+    <label>Secreção:</label>
+    {["sim", "não"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="secrecaoNariz"
+          value={option}
+          checked={dados.secrecaoNariz === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+  <div className="form-group">
+    <label>Batimentos das asas do nariz:</label>
+    {["sim", "não"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="batimentosNariz"
+          value={option}
+          checked={dados.batimentosNariz === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+  <div className="form-group">
+    <label>Obstrução nasal:</label>
+    {["sim", "não"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="obstrucaoNasal"
+          value={option}
+          checked={dados.obstrucaoNasal === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+</div>
 
-            <div className="tudo">
-                {/* Seção Anamnese */}
-                <div>
-  <h3>Anamnese - 2 a 3 Meses</h3>
-  <label>Peso (Kg):<input type="text" name="peso" onChange={handleChange} /></label>
-  <label>Estatura (cm):<input type="text" name="estatura" onChange={handleChange} /></label>
-  <label>PC (cm):<input type="text" name="pc" onChange={handleChange} /></label>
-  <div>Estado geral:
-    <label><input type="radio" name="estadoGeral" value="ativo" onChange={handleChange} /> Ativo</label>
-    <label><input type="radio" name="estadoGeral" value="hipoativo" onChange={handleChange} /> Hipoativo</label>
-    <label><input type="radio" name="estadoGeral" value="letargico" onChange={handleChange} /> Letárgico</label>
-    <label><input type="radio" name="estadoGeral" value="calmo" onChange={handleChange} /> Calmo</label>
-    <label><input type="radio" name="estadoGeral" value="choroso" onChange={handleChange} /> Choroso</label>
+<div className="form-section">
+  <div className="form-group">
+    <label>Secreção:</label>
+    {["sim", "não"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="secrecaoOrelhas"
+          value={option}
+          checked={dados.secrecaoOrelhas === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+  <div className="form-group">
+    <label>Linfonodo retroauricular palpável:</label>
+    <label>
+      <input
+        type="radio"
+        name="linfonodoRetroauricular"
+        value="Não"
+        checked={dados.linfonodoRetroauricular === "Não"}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+    {["Sim - Móvel", "Sim - Fixo", "Sim - Fibroblástico", "Sim - Amolecido", "Sim - Endurecido"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="linfonodoRetroauricular"
+          value={option}
+          checked={dados.linfonodoRetroauricular === option}
+          onChange={handleChange}
+        />
+        {option.split(" - ")[1]}
+      </label>
+    ))}
+  </div>
+</div>
+<div className="form-section">
+  <h3>Tórax</h3>
+  <div className="form-group">
+    <label>AP - Tiragem:</label>
+    <input
+      type="checkbox"
+      name="tiragem"
+      checked={dados.tiragem}
+      onChange={(e) => setDados({ ...dados, tiragem: e.target.checked })}
+    />
+  </div>
+  <div className="form-group">
+  <label>Murmúrio vesiculares:</label><br />
+  <input type="radio" id="semRuidos" name="murmurioVesiculares" value="Sem ruídos adventícios" checked={dados.murmurioVesiculares === 'Sem ruídos adventícios'}  onChange={handleChange} />
+  <label htmlFor="semRuidos">Sem ruídos adventícios</label><br />
+
+  <input type="radio" id="comRuidos" name="murmurioVesiculares" value="Com ruídos adventícios" checked={dados.murmurioVesiculares === 'Com ruídos adventícios'} onChange={handleChange} />
+  <label htmlFor="comRuidos">Com ruídos adventícios</label><br />
+</div>
+  <div className="form-group">
+    <label>Bulhas Cardíacas:</label>
+    {["Sem Sopro", "Com Sopro"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="bulhasCardiacas"
+          value={option}
+          checked={dados.bulhasCardiacas === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+</div>
+<div className="form-section">
+  <h3>Abdome</h3>
+  <div className="form-group">
+    <label>Estado do Abdome:</label>
+    {["Plano", "Globoso", "Rígido", "Flácido"].map((estado) => (
+      <label key={estado}>
+        <input
+          type="radio"
+          name="estadoAbdome"
+          value={estado}
+          checked={dados.estadoAbdome === estado}
+          onChange={handleChange}
+        />
+        {estado}
+      </label>
+    ))}
+  </div>
+  <div className="form-group">
+    <label>Hérnia Umbilical:</label>
+    <label>
+      <input
+        type="radio"
+        name="herniaUmbilical"
+        value="Sim"
+        checked={dados.herniaUmbilical === 'Sim'}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="herniaUmbilical"
+        value="Não"
+        checked={dados.herniaUmbilical === 'Não'}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+</div>
+<div className="form-section">
+  <h3>Genitália</h3>
+  
+  <h4>Feminina</h4>
+  <div className="form-group">
+    <label>Pequenos lábios e clitóris proeminentes:</label>
+    <label>
+      <input
+        type="radio"
+        name="labiosClitorisProeminentesFem"
+        value="Sim"
+        checked={dados.labiosClitorisProeminentesFem === 'Sim'}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="labiosClitorisProeminentesFem"
+        value="Não"
+        checked={dados.labiosClitorisProeminentesFem === 'Não'}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+
+  <div className="form-group">
+    <label>Secreção:</label>
+    <label>
+      <input
+        type="radio"
+        name="secrecaoFeminina"
+        value="Sim"
+        checked={dados.secrecaoFeminina === 'Sim'}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="secrecaoFeminina"
+        value="Não"
+        checked={dados.secrecaoFeminina === 'Não'}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+
+  <div className="form-group">
+    <label>Sinéquia:</label>
+    <label>
+      <input
+        type="radio"
+        name="sinequia"
+        value="Sim"
+        checked={dados.sinequia === 'Sim'}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="sinequia"
+        value="Não"
+        checked={dados.sinequia === 'Não'}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+
+  <div className="form-group">
+    <label>Hérnia inguinal:</label>
+    <label>
+      <input
+        type="radio"
+        name="herniaInguinalFem"
+        value="Sim"
+        checked={dados.herniaInguinalFem === 'Sim'}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="herniaInguinalFem"
+        value="Não"
+        checked={dados.herniaInguinalFem === 'Não'}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+
+  <h4>Masculina</h4>
+  <div className="form-group">
+    <label>Hérnia inguinal:</label>
+    <label>
+      <input
+        type="radio"
+        name="herniaInguinalMas"
+        value="Sim"
+        checked={dados.herniaInguinalMas === 'Sim'}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="herniaInguinalMas"
+        value="Não"
+        checked={dados.herniaInguinalMas === 'Não'}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+
+  <div className="form-group">
+    <label>Hidrocele:</label>
+    <label>
+      <input
+        type="radio"
+        name="hidrocele"
+        value="Sim"
+        checked={dados.hidrocele === 'Sim'}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="hidrocele"
+        value="Não"
+        checked={dados.hidrocele === 'Não'}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+
+  <div className="form-group">
+    <label>Fimose fisiológica:</label>
+    <label>
+      <input
+        type="radio"
+        name="fimoseFisiologica"
+        value="Sim"
+        checked={dados.fimoseFisiologica === 'Sim'}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="fimoseFisiologica"
+        value="Não"
+        checked={dados.fimoseFisiologica === 'Não'}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+
+  <div className="form-group">
+    <label>Testículos:</label>
+    <label>
+      <input
+        type="radio"
+        name="testiculos"
+        value="Ectópicos"
+        checked={dados.testiculos === 'Ectópicos'}
+        onChange={handleChange}
+      />
+      Ectópicos
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="testiculos"
+        value="Criptorquidia"
+        checked={dados.testiculos === 'Criptorquidia'}
+        onChange={handleChange}
+      />
+      Criptorquidia
+    </label>
+  </div>
+
+  <div className="form-group">
+    <label>Meato urinário:</label>
+    <label>
+      <input
+        type="radio"
+        name="meatoUrinario"
+        value="Visualizado"
+        checked={dados.meatoUrinario === 'Visualizado'}
+        onChange={handleChange}
+      />
+      Visualizado
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="meatoUrinario"
+        value="Não visualizado"
+        checked={dados.meatoUrinario === 'Não visualizado'}
+        onChange={handleChange}
+      />
+      Não visualizado
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="meatoUrinario"
+        value="Hipospadia"
+        checked={dados.meatoUrinario === 'Hipospadia'}
+        onChange={handleChange}
+      />
+      Hipospadia
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="meatoUrinario"
+        value="Epispádia"
+        checked={dados.meatoUrinario === 'Epispádia'}
+        onChange={handleChange}
+      />
+      Epispádia
+    </label>
+  </div>
+</div>
+<div className="form-section">
+  <h3>Orifício Anal</h3>
+  <div className="form-group">
+    <label>Anomalias:</label>
+    <label>
+      <input
+        type="radio"
+        name="anomaliasAnal"
+        value="Sim"
+        checked={dados.anomaliasAnal === 'Sim'}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="anomaliasAnal"
+        value="Não"
+        checked={dados.anomaliasAnal === 'Não'}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+
+  <div className="form-group">
+    <label>Fissuras:</label>
+    <label>
+      <input
+        type="radio"
+        name="fissuras"
+        value="Sim"
+        checked={dados.fissuras === 'Sim'}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="fissuras"
+        value="Não"
+        checked={dados.fissuras === 'Não'}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+
+  <div className="form-group">
+    <label>Assaduras:</label>
+    <label>
+      <input
+        type="radio"
+        name="assaduras"
+        value="Sim"
+        checked={dados.assaduras === 'Sim'}
+        onChange={handleChange}
+      />
+      Sim
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="assaduras"
+        value="Não"
+        checked={dados.assaduras === 'Não'}
+        onChange={handleChange}
+      />
+      Não
+    </label>
+  </div>
+</div>
+<div className="form-section">
+  <h3>Marcos do Desenvolvimento - 2 Meses</h3>
+  <div className="form-group">
+    <label>Sorri quando estimulada:</label>
+    {["Presente", "Ausente", "Não verificado"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="sorriEstimulada"
+          value={option}
+          checked={dados.sorriEstimulada === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+
+  <div className="form-group">
+    <label>Abre as mãos:</label>
+    {["Presente", "Ausente", "Não verificado"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="abreMaos"
+          value={option}
+          checked={dados.abreMaos === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+
+  <div className="form-group">
+    <label>Movimenta os membros:</label>
+    {["Presente", "Ausente", "Não verificado"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="movimentaMembros"
+          value={option}
+          checked={dados.movimentaMembros === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+
+  <div className="form-group">
+    <label>Emite sons:</label>
+    {["Presente", "Ausente", "Não verificado"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="emiteSons"
+          value={option}
+          checked={dados.emiteSons === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+</div>
+<div className="form-section">
+  <h3>Marcos do Desenvolvimento - 3 Meses</h3>
+  <div className="form-group">
+    <label>Responde ativamente ao contato social:</label>
+    {["Presente", "Ausente", "Não verificado"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="contatoSocial"
+          value={option}
+          checked={dados.contatoSocial === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+
+  <div className="form-group">
+    <label>Segura objetos:</label>
+    {["Presente", "Ausente", "Não verificado"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="seguraObjetos"
+          value={option}
+          checked={dados.seguraObjetos === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+
+  <div className="form-group">
+    <label>Emite sons, ri alto:</label>
+    {["Presente", "Ausente", "Não verificado"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="riAlto"
+          value={option}
+          checked={dados.riAlto === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
+  </div>
+
+  <div className="form-group">
+    <label>Levanta a cabeça e apoia-se nos antebraços, de bruços:</label>
+    {["Presente", "Ausente", "Não verificado"].map((option) => (
+      <label key={option}>
+        <input
+          type="radio"
+          name="levantaCabeca"
+          value={option}
+          checked={dados.levantaCabeca === option}
+          onChange={handleChange}
+        />
+        {option}
+      </label>
+    ))}
   </div>
 </div>
 
 
-                {/* Seção Pele */}
-            
-                <div className="pele">
-    <h3>Pele</h3>
-    <div>Textura:
-        <label><input type="radio" name="peleTextura" value="lisa" onChange={handleChange} /> Lisa</label>
-        <label><input type="radio" name="peleTextura" value="irregular" onChange={handleChange} /> Irregular</label>
-    </div>
-    <div>Sensação ao Toque:
-        <label><input type="radio" name="peleSensacao" value="macia" onChange={handleChange} /> Macia</label>
-        <label><input type="radio" name="peleSensacao" value="aspera" onChange={handleChange} /> Áspera</label>
-    </div>
-    <div>Cor:
-        <label><input type="radio" name="peleCor" value="rosea" onChange={handleChange} /> Rósea</label>
-        <label><input type="radio" name="peleCor" value="palida" onChange={handleChange} /> Pálida</label>
-        <label><input type="radio" name="peleCor" value="cianotica" onChange={handleChange} /> Cianótica</label>
-        <label><input type="radio" name="peleCor" value="icterica" onChange={handleChange} /> Ictérica</label>
-    </div>
-    <div>Hidratação:
-        <label><input type="radio" name="peleHidratacao" value="hidratada" onChange={handleChange} /> Hidratada</label>
-        <label><input type="radio" name="peleHidratacao" value="desidratada" onChange={handleChange} /> Desidratada</label>
-    </div>
-</div>
-
-<div className="cabeca">
-    <h3>CABEÇA</h3>
-    <div>
-    <div>Fontanelas Anterior:</div>
-    <label>
-        <input type="radio" name="fontanelasAnterior" value="abauladas" onChange={handleChange} /> Abauladas
-    </label>
-    <label>
-        <input type="radio" name="fontanelasAnterior" value="deprimidas" onChange={handleChange} /> Deprimidas
-    </label>
-    <label>
-        <input type="radio" name="fontanelasAnterior" value="planas" onChange={handleChange} /> Planas
-    </label>
-</div>
-
-    <div>Fontanelas Posterior Fechada:
-        <input type="radio" name="fontanelasPosteriorFechada" value="sim" onChange={handleChange} /> Sim
-        <input type="radio" name="fontanelasPosteriorFechada" value="nao" onChange={handleChange} /> Não
-    </div>
-    <div>Linfonodos cervicais palpáveis:
-        <input type="radio" name="linfonodosCervicaisPalpaveis" value="sim" onChange={handleChange} /> Sim
-        <input type="radio" name="linfonodosCervicaisPalpaveis" value="nao" onChange={handleChange} /> Não
-        {/* Adicionar campos para características se "Sim" */}
-    </div>
-    <div>Olhos - Secreção:
-        <input type="radio" name="olhosSecrecao" value="sim" onChange={handleChange} /> Sim
-        <input type="radio" name="olhosSecrecao" value="nao" onChange={handleChange} /> Não
-    </div>
-    <div>Olhos - Estrabismo:
-        <input type="radio" name="olhosEstrabismo" value="sim" onChange={handleChange} /> Sim
-        <input type="radio" name="olhosEstrabismo" value="nao" onChange={handleChange} /> Não
-    </div>
-    {/* Outros campos da seção CABEÇA conforme necessário */}
-</div>
-<div className="torax">
-          <h3>TÓRAX</h3>
-          <label>AP - Tiragem: <input type="text" name="apTiragem" onChange={handleChange} /></label>
-          <div>
-            AC - Bulhas cardíacas:
-            <label><input type="radio" name="acBulhasCardiacas" value="semSopro" onChange={handleChange} /> Sem Sopro</label>
-            <label><input type="radio" name="acBulhasCardiacas" value="comSopro" onChange={handleChange} /> Com Sopro</label>
-          </div>
+            {/* Adicionar mais campos conforme necessário */}
+            <button
+          type="button"
+          className='copiar'
+          onClick={() => {
+            const formattedData = formatarDados();  // Ensure this function returns the formatted string of data
+            navigator.clipboard.writeText(formattedData)
+              .then(() => alert('Dados copiados para a área de transferência!'))
+              .catch((error) => console.error('Erro ao copiar os dados:', error));
+          }}
+        >
+          Copiar Dados
+        </button>
+          </form>
         </div>
-
-        {/* Seção Abdome */}
-        <div className="abdome">
-          <h3>ABDOME</h3>
-          <div>
-            Estado:
-            <label><input type="radio" name="abdomeEstado" value="plano" onChange={handleChange} /> Plano</label>
-            <label><input type="radio" name="abdomeEstado" value="globoso" onChange={handleChange} /> Globoso</label>
-            <label><input type="radio" name="abdomeEstado" value="rigido" onChange={handleChange} /> Rígido</label>
-            <label><input type="radio" name="abdomeEstado" value="flacido" onChange={handleChange} /> Flácido</label>
-          </div>
-          <div>
-            Hérnia umbilical:
-            <label><input type="radio" name="herniaUmbilical" value="sim" onChange={handleChange} /> Sim</label>
-            <label><input type="radio" name="herniaUmbilical" value="nao" onChange={handleChange} /> Não</label>
-          </div>
-        </div>
-<div className="genitalia">
-    <h3>GENITÁLIA</h3>
-    <div className="feminina">
-        <h4>Feminina</h4>
-        {/* Campos específicos para a genitália feminina */}
-        <div>Pequenos lábios e clitóris proeminentes:
-            <input type="radio" name="femininaLabiosClitorisProeminentes" value="sim" onChange={handleChange} /> Sim
-            <input type="radio" name="femininaLabiosClitorisProeminentes" value="nao" onChange={handleChange} /> Não
-        </div>
-        {/* Outros campos */}
-    </div>
-    <div className="masculina">
-        <h4>Masculina</h4>
-        {/* Campos específicos para a genitália masculina */}
-        <div>
-    <div>Testículos:</div>
-    <label>
-        <input type="radio" name="masculinaTesticulos" value="ectopicos" onChange={handleChange} /> Ectópicos
-    </label>
-    <label>
-        <input type="radio" name="masculinaTesticulos" value="criptorquidia" onChange={handleChange} /> Criptorquidia
-    </label>
-</div>
-
-        {/* Outros campos */}
-    </div>
-</div>
-<div className="orificioAnal">
-    <h3>Orifício Anal</h3>
-    {/* Campos específicos para orifício anal */}
-    <div>Anomalias:
-        <input type="radio" name="orificioAnalAnomalias" value="sim" onChange={handleChange} /> Sim
-        <input type="radio" name="orificioAnalAnomalias" value="nao" onChange={handleChange} /> Não
-    </div>
-    {/* Outros campos */}
-</div>
-
-<div className="marcosDesenvolvimento">
-    <h3>Marcos do Desenvolvimento</h3>
-    <h4>2 Meses</h4>
-    <div>Sorri quando estimulada:
-        <input type="radio" name="sorri2Meses" value="presente" onChange={handleChange} /> Presente
-        <input type="radio" name="sorri2Meses" value="ausente" onChange={handleChange} /> Ausente
-        <input type="radio" name="sorri2Meses" value="naoVerificado" onChange={handleChange} /> Não verificado
-    </div>
-    <div>Abre as mãos:
-        <input type="radio" name="abreMaos2Meses" value="presente" onChange={handleChange} /> Presente
-        <input type="radio" name="abreMaos2Meses" value="ausente" onChange={handleChange} /> Ausente
-        <input type="radio" name="abreMaos2Meses" value="naoVerificado" onChange={handleChange} /> Não verificado
-    </div>
-    <div>Movimenta os membros:
-        <input type="radio" name="movimentaMembros2Meses" value="presente" onChange={handleChange} /> Presente
-        <input type="radio" name="movimentaMembros2Meses" value="ausente" onChange={handleChange} /> Ausente
-        <input type="radio" name="movimentaMembros2Meses" value="naoVerificado" onChange={handleChange} /> Não verificado
-    </div>
-    <div>Emite sons:
-        <input type="radio" name="emiteSons2Meses" value="presente" onChange={handleChange} /> Presente
-        <input type="radio" name="emiteSons2Meses" value="ausente" onChange={handleChange} /> Ausente
-        <input type="radio" name="emiteSons2Meses" value="naoVerificado" onChange={handleChange} /> Não verificado
-    </div>
-
-    <h4>3 Meses</h4>
-    <div>Responde ativamente ao contato social:
-        <input type="radio" name="respondeContatoSocial3Meses" value="presente" onChange={handleChange} /> Presente
-        <input type="radio" name="respondeContatoSocial3Meses" value="ausente" onChange={handleChange} /> Ausente
-        <input type="radio" name="respondeContatoSocial3Meses" value="naoVerificado" onChange={handleChange} /> Não verificado
-    </div>
-    <div>Segura objetos:
-        <input type="radio" name="seguraObjetos3Meses" value="presente" onChange={handleChange} /> Presente
-        <input type="radio" name="seguraObjetos3Meses" value="ausente" onChange={handleChange} /> Ausente
-        <input type="radio" name="seguraObjetos3Meses" value="naoVerificado" onChange={handleChange} /> Não verificado
-    </div>
-    <div>Emite sons, ri alto:
-        <input type="radio" name="emiteSonsRiAlto3Meses" value="presente" onChange={handleChange} /> Presente
-        <input type="radio" name="emiteSonsRiAlto3Meses" value="ausente" onChange={handleChange} /> Ausente
-        <input type="radio" name="emiteSonsRiAlto3Meses" value="naoVerificado" onChange={handleChange} /> Não verificado
-    </div>
-    <div>Levanta a cabeça e apoia-se nos antebraços, de bruços:
-        <input type="radio" name="levantaCabeca3Meses" value="presente" onChange={handleChange} /> Presente
-        <input type="radio" name="levantaCabeca3Meses" value="ausente" onChange={handleChange} /> Ausente
-        <input type="radio" name="levantaCabeca3Meses" value="naoVerificado" onChange={handleChange} /> Não verificado
-    </div>
-</div>
-                <button className="copiar" type="submit">Copiar</button>
-            </div>
-        </form>
-    );
+      );
 }
 
-export default Formulario2a3Meses;
+export default FormularioDoisTresMeses;
