@@ -24,6 +24,7 @@ function FormularioRecemNascido() {
     cefalohematoma: '',
     linfonodosCervicais: '',
     faceSimetria: '',
+    face: '',
     malformacao: '',
     deformidades: '',
     aparenciaSindromica: '',
@@ -51,7 +52,7 @@ function FormularioRecemNascido() {
     retracaoXifoideana: '',
     gemidos: '',
     estridor: '',
-    sinaisEsforcoRespiratorio: '',
+    esforcoRespiratorio: '',
     bulhasCardiacas: '',
     estadoAbdome: '',
     herniaUmbilical: '',
@@ -115,7 +116,7 @@ function FormularioRecemNascido() {
       - Linfonodos Cervicais Palpáveis: ${dados.linfonodosCervicais}
   
       **Face:**
-      - Simetria: ${dados.faceSimetria}
+      - Simetria: ${dados.face}
       - Malformação: ${dados.malformacao}
       - Deformidades: ${dados.deformidades}
       - Aparência Sindrômica: ${dados.aparenciaSindromica}
@@ -155,7 +156,7 @@ function FormularioRecemNascido() {
       - Retração Xifoideana: ${dados.retracaoXifoideana}
       - Gemidos: ${dados.gemidos}
       - Estridor: ${dados.estridor}
-      - Sinais de Esforço Respiratório: ${dados.sinaisEsforcoRespiratorio}
+      - Sinais de Esforço Respiratório: ${dados.esforcoRespiratorio}
       - Bulhas Cardíacas: ${dados.bulhasCardiacas}
   
       **Abdome:**
@@ -729,9 +730,9 @@ function FormularioRecemNascido() {
   </div>
   <div className="form-group">
     <label>Linha palmar:</label>
-    <input type="radio" id="linhaPalmarSim" name="linhaPalmarSuperiores" value="Sim" checked={dados.linhaPalmarSuperiores === 'Sim'} onChange={handleChange} />
+    <input type="radio" id="linhaPalmarSim" name="linhaPalmarSuperiores" value="Sim" checked={dados.linhaPalmar === 'Sim'} onChange={handleChange} />
     <label htmlFor="linhaPalmarSim">Sim</label>
-    <input type="radio" id="linhaPalmarNao" name="linhaPalmarSuperiores" value="Não" checked={dados.linhaPalmarSuperiores === 'Não'} onChange={handleChange} />
+    <input type="radio" id="linhaPalmarNao" name="linhaPalmarSuperiores" value="Não" checked={dados.linhaPalmar === 'Não'} onChange={handleChange} />
     <label htmlFor="linhaPalmarNao">Não</label>
   </div>
 

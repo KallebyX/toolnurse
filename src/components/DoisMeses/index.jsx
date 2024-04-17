@@ -73,7 +73,6 @@ function FormularioDoisTresMeses() {
           - Fontanelas Anterior: ${dados.fontanelasAnterior}
           - Fontanelas Posterior Fechada: ${dados.fontanelasPosteriorFechada ? 'Sim' : 'Não'}
           - Linfonodos Cervicais: ${dados.linfonodosCervicais}
-          - Detalhes: ${dados.linfonodosCervicaisDetalhes}
       
           **Olhos:**
           - Secreção: ${dados.secrecaoOlhos}

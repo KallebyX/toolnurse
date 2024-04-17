@@ -331,7 +331,22 @@ const formatarDados = () => {
       </label>
     ))}
   </div>
-
+  
+  <div className="form-group">
+    <p>Dente incisivo lateral Inferior:</p>
+    {["Presença", "Sem erupção", "Não visualizado"].map(opcao => (
+      <label key={opcao}>
+        <input 
+          type="radio" 
+          name="denteIncisivoLateralInferior" 
+          value={opcao} 
+          checked={dados.denteIncisivoLateralInferior === opcao} 
+          onChange={handleChange} 
+        />
+        {opcao}
+      </label>
+    ))}
+  </div>
   {/* Orelhas/Ouvidos */}
   <div className="form-group">
     <p>Secreção:</p>
