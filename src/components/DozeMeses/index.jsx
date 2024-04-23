@@ -82,7 +82,7 @@ const formatarDados = () => {
 
 **Cabeça:**
 - Fontanela Anterior: ${dados.fontanelaAnterior}
-- Linfonodos Cervicais Palpáveis: ${dados.linfonodosCervicaisPalpaveis}
+-Linfonodos Cervicais Palpáveis: ${dados.linfonodosCervicaisPalpaveis} ${dados.linfonodosCervicaisPalpaveis === 'SIM' ? `(${dados.tipoLinfonodoCervical})` : ''}
 
 **Olhos:**
 - Secreção: ${dados.secrecaoOlhos}
@@ -94,12 +94,16 @@ const formatarDados = () => {
 
 **Orelhas/Ouvidos:**
 - Secreção: ${dados.secrecaoOrelhas}
-- Linfonodo Retroauricular Palpável: ${dados.linfonodoRetroauricular}
+- Linfonodo Retroauricular Palpável: ${dados.linfonodoRetroauricular} ${dados.linfonodoRetroauricular === 'sim' ? `(${dados.tipoLinfonodoRetroauricular})` : ''}
+
 
 **Tórax:**
-- AP Tiragem: ${dados.tiragem}
-- Murmúrio Vesicular: ${dados.murmVesiculares}
-- AC Bulhas Cardíacas: ${dados.bulhasCardiacas}
+- AP:
+${dados.apTiragem ? 'Tiragem' : ''}
+${dados.apMurmurioVesiculares ? 'Murmúrio Vesiculares' : ''}
+${dados.apSemRuidos ? 'Sem Ruídos Adventícios' : ''}
+- AC: ${dados.acBulhas} 
+
 
 **Abdome:**
 - Estado: ${dados.abdomen}
@@ -107,7 +111,6 @@ const formatarDados = () => {
 
 **Genitália:**
 - Feminina:
-  - Pequenos Lábios e Clitóris Proeminentes: ${dados.labiosClitorisProeminentes}
   - Secreção: ${dados.secrecaoFeminina}
   - Sinéquia: ${dados.sinequia}
   - Hérnia Inguinal: ${dados.herniaInguinalFem}
@@ -232,7 +235,7 @@ const formatarDados = () => {
   
   {/* Fontanela Anterior */}
   <div className="form-group">
-    <p>Fontanela Anterior:</p>
+    <label>Fontanela Anterior:</label>
     {["Em fechamento", "Fechada", "Abauladas", "Deprimidas", "Planas"].map(opcao => (
       <label key={opcao}>
         <input 
@@ -249,32 +252,24 @@ const formatarDados = () => {
 
   {/* Linfonodos cervicais palpáveis */}
   <div className="form-group">
-    <p>Linfonodos cervicais palpáveis:</p>
-    <label>
-      <input 
-        type="radio" 
-        name="linfonodosCervicaisPalpaveis" 
-        value="Sim" 
-        checked={dados.linfonodosCervicaisPalpaveis === 'Sim'} 
-        onChange={handleChange} 
-      />
-      Sim
-    </label>
-    <label>
-      <input 
-        type="radio" 
-        name="linfonodosCervicaisPalpaveis" 
-        value="Não" 
-        checked={dados.linfonodosCervicaisPalpaveis === 'Não'} 
-        onChange={handleChange} 
-      />
-      Não
-    </label>
-  </div>
+  <label>Linfonodos cervicais palpáveis:</label><br />
+  <input type="radio" id="linfonodosSim" name="linfonodosCervicaisPalpaveis" value="SIM" checked={dados.linfonodosCervicaisPalpaveis === 'SIM'} onChange={handleChange} /> Sim<br />
+  <input type="radio" id="linfonodosNao" name="linfonodosCervicaisPalpaveis" value="NÃO" checked={dados.linfonodosCervicaisPalpaveis === 'NÃO'} onChange={handleChange} /> Não<br />
+
+  {dados.linfonodosCervicaisPalpaveis === 'SIM' && (
+    <div>
+      <input type="radio" name="tipoLinfonodoCervical" value="Móvel" checked={dados.tipoLinfonodoCervical === 'Móvel'} onChange={handleChange} /> Móvel<br />
+      <input type="radio" name="tipoLinfonodoCervical" value="Fixo" checked={dados.tipoLinfonodoCervical === 'Fixo'} onChange={handleChange} /> Fixo<br />
+      <input type="radio" name="tipoLinfonodoCervical" value="Fibrobástico" checked={dados.tipoLinfonodoCervical === 'Fibrobástico'} onChange={handleChange} /> Fibrobástico<br />
+      <input type="radio" name="tipoLinfonodoCervical" value="Amolecido" checked={dados.tipoLinfonodoCervical === 'Amolecido'} onChange={handleChange} /> Amolecido<br />
+      <input type="radio" name="tipoLinfonodoCervical" value="Endurecido" checked={dados.tipoLinfonodoCervical === 'Endurecido'} onChange={handleChange} /> Endurecido<br />
+    </div>
+  )}
+</div>
 
   {/* Olhos */}
   <div className="form-group">
-    <p>Secreção nos olhos:</p>
+    <label>Secreção nos olhos:</label>
     <label>
       <input 
         type="radio" 
@@ -298,8 +293,10 @@ const formatarDados = () => {
   </div>
 
   {/* Boca */}
+  <label htmlFor="">Boca:</label>
   <div className="form-group">
-    <p>Mucosa:</p>
+
+    <label>Mucosa:</label>
     {["Corada", "Pálida", "Úmida", "Seca"].map(opcao => (
       <label key={opcao}>
         <input 
@@ -317,7 +314,7 @@ const formatarDados = () => {
   {/* Dentição */}
   {/* Implemente conforme sua necessidade, exemplo para dente incisivo lateral superior */}
   <div className="form-group">
-    <p>Dente incisivo lateral superior:</p>
+    <label>Dente incisivo lateral superior:</label>
     {["Presença", "Sem erupção", "Não visualizado"].map(opcao => (
       <label key={opcao}>
         <input 
@@ -333,7 +330,7 @@ const formatarDados = () => {
   </div>
   
   <div className="form-group">
-    <p>Dente incisivo lateral Inferior:</p>
+    <label>Dente incisivo lateral Inferior:</label>
     {["Presença", "Sem erupção", "Não visualizado"].map(opcao => (
       <label key={opcao}>
         <input 
@@ -348,8 +345,9 @@ const formatarDados = () => {
     ))}
   </div>
   {/* Orelhas/Ouvidos */}
+  <label htmlFor="">Orelhas/ouvidos:</label>
   <div className="form-group">
-    <p>Secreção:</p>
+    <label>Secreção:</label>
     <label>
       <input 
         type="radio" 
@@ -373,84 +371,67 @@ const formatarDados = () => {
   </div>
   
   <div className="form-group">
-    <p>Linfonodo retroauricular palpável:</p>
-    <label>
-      <input 
-        type="radio" 
-        name="linfonodoRetroauricular" 
-        value="Sim" 
-        checked={dados.linfonodoRetroauricular === 'Sim'} 
-        onChange={handleChange} 
-      />
-      Sim
-    </label>
-    <label>
-      <input 
-        type="radio" 
-        name="linfonodoRetroauricular" 
-        value="Não" 
-        checked={dados.linfonodoRetroauricular === 'Não'} 
-        onChange={handleChange} 
-      />
-      Não
-    </label>
-  </div>
+  <label>Linfonodo retroauricular palpável:</label><br />
+  <label>
+    <input type="radio" id="linfonodoRetroauricularSim" name="linfonodoRetroauricular" value="sim" checked={dados.linfonodoRetroauricular === 'sim'} onChange={handleChange} />
+    Sim
+  </label>
+  <label>
+    <input type="radio" id="linfonodoRetroauricularNao" name="linfonodoRetroauricular" value="não" checked={dados.linfonodoRetroauricular === 'não'} onChange={handleChange} />
+    Não
+  </label><br />
+
+  {dados.linfonodoRetroauricular === 'sim' && (
+    <div>
+      <label>
+        <input type="radio" name="tipoLinfonodoRetroauricular" value="Móvel" checked={dados.tipoLinfonodoRetroauricular === 'Móvel'} onChange={handleChange} />
+        Móvel
+      </label>
+      <label>
+        <input type="radio" name="tipoLinfonodoRetroauricular" value="Fixo" checked={dados.tipoLinfonodoRetroauricular === 'Fixo'} onChange={handleChange} />
+        Fixo
+      </label>
+      <label>
+        <input type="radio" name="tipoLinfonodoRetroauricular" value="Fibrobástico" checked={dados.tipoLinfonodoRetroauricular === 'Fibrobástico'} onChange={handleChange} />
+        Fibrobástico
+      </label>
+      <label>
+        <input type="radio" name="tipoLinfonodoRetroauricular" value="Amolecido" checked={dados.tipoLinfonodoRetroauricular === 'Amolecido'} onChange={handleChange} />
+        Amolecido
+      </label>
+      <label>
+        <input type="radio" name="tipoLinfonodoRetroauricular" value="Endurecido" checked={dados.tipoLinfonodoRetroauricular === 'Endurecido'} onChange={handleChange} />
+        Endurecido
+      </label>
+    </div>
+  )}
+</div>
 </div>
 
 <div className="form-section">
   <h3>Tórax</h3>
+
   <div className="form-group">
-    <p>AP:</p>
-    <label>
-      <input 
-        type="radio" 
-        name="tiragem" 
-        value="Tiragem" 
-        checked={dados.tiragem === 'Tiragem'} 
-        onChange={handleChange} 
-      />
-      Tiragem
-    </label>
-    <label>
-      <input 
-        type="radio" 
-        name="murmVesiculares" 
-        value="Murmúrio Vesicular" 
-        checked={dados.murmVesiculares === 'Murmúrio Vesicular'} 
-        onChange={handleChange} 
-      />
-      Murmúrio Vesicular
-    </label>
-    {/* Adicione mais opções conforme necessário */}
-  </div>
-  <div className="form-group">
-    <p>AC:</p>
-    <label>
-      <input 
-        type="radio" 
-        name="bulhasCardiacas" 
-        value="Sem sopro" 
-        checked={dados.bulhasCardiacas === 'Sem sopro'} 
-        onChange={handleChange} 
-      />
-      Sem Sopro
-    </label>
-    <label>
-      <input 
-        type="radio" 
-        name="bulhasCardiacas" 
-        value="Com sopro" 
-        checked={dados.bulhasCardiacas === 'Com sopro'} 
-        onChange={handleChange} 
-      />
-      Com Sopro
-    </label>
-  </div>
+  <label>AP:</label><br />
+  <input type="checkbox" id="apTiragem" name="apTiragem" checked={dados.apTiragem} onChange={handleChange} />
+  <label htmlFor="apTiragem">Tiragem</label><br />
+  <input type="checkbox" id="apMurmurioVesiculares" name="apMurmurioVesiculares" checked={dados.apMurmurioVesiculares} onChange={handleChange} />
+  <label htmlFor="apMurmurioVesiculares">Murmúrio vesiculares</label><br />
+  <input type="checkbox" id="apSemRuidos" name="apSemRuidos" checked={dados.apSemRuidos} onChange={handleChange} />
+  <label htmlFor="apSemRuidos">Sem ruídos adventícios</label><br />
+</div>
+
+<div className="form-group">
+  <label>AC:</label><br />
+  <input type="radio" id="acSemSopro" name="acBulhas" value="Sem sopro" checked={dados.acBulhas === 'Sem sopro'} onChange={handleChange} />
+  <label htmlFor="acSemSopro">Sem sopro</label><br />
+  <input type="radio" id="acComSopro" name="acBulhas" value="Com sopro" checked={dados.acBulhas === 'Com sopro'} onChange={handleChange} />
+  <label htmlFor="acComSopro">Com sopro</label><br />
+</div>
 </div>
 <div className="form-section">
   <h3>Abdome</h3>
   <div className="form-group">
-    <p>Estado:</p>
     {["Plano", "Globoso", "Rígido", "Flácido"].map(estado => (
       <label key={estado}>
         <input 
@@ -492,31 +473,6 @@ const formatarDados = () => {
   <h3>Genitália</h3>
   <div className="form-group">
     <h4>Feminina</h4>
-    <div className="form-group">
-      <label>Pequenos lábios e clitóris proeminentes:</label>
-      <div>
-        <label>
-          <input 
-            type="radio" 
-            name="labiosClitorisProeminentes" 
-            value="Sim" 
-            checked={dados.labiosClitorisProeminentes === 'Sim'} 
-            onChange={handleChange} 
-          />
-          Sim
-        </label>
-        <label>
-          <input 
-            type="radio" 
-            name="labiosClitorisProeminentes" 
-            value="Não" 
-            checked={dados.labiosClitorisProeminentes === 'Não'} 
-            onChange={handleChange} 
-          />
-          Não
-        </label>
-      </div>
-    </div>
     <div className="form-group">
       <label>Secreção:</label>
       <div>
@@ -692,16 +648,6 @@ const formatarDados = () => {
         onChange={handleChange} 
       />
       Criptorquidia
-    </label>
-    <label>
-      <input 
-        type="radio" 
-        name="testiculos" 
-        value="Descidos" 
-        checked={dados.testiculos === 'Descidos'} 
-        onChange={handleChange} 
-      />
-      Descidos
     </label>
     {/* Adicione mais opções de acordo com sua necessidade */}
   </div>
