@@ -82,16 +82,16 @@ function Formulario9Meses() {
       `- Hidratação: ${dados.hidratacaoPele}\n\n` +
       `**Cabeça:**\n` +
       `- Fontanela Anterior: ${dados.fontanelaAnterior}\n` +
-      `- Linfonodos cervicais palpáveis: ${dados.linfonodosCervicaisPalpaveis}\n\n` +
+      `**Linfonodos Cervicais Palpáveis:** ${dados.linfonodosCervicaisPalpaveis} ${dados.linfonodosCervicaisPalpaveis === 'Sim' ? `(${dados.tipoLinfonodos})` : ''}\n\n` +
       `**Olhos:**\n` +
-      `- Secreção: ${dados.secrecaoOlhos}\n\n` +
+      `- Secreção: ${dados.secrecaoOlhos}\n` +
       `**Mucosa:** ${dados.mucosa}\n\n` +
       `**Dentição:**\n` +
       `- Dente Incisivo Central Inferior: ${dados.denteIncisivoCentralInferior}\n` +
       `- Dente Incisivo Central Superior: ${dados.denteIncisivoCentralSuperior}\n\n` +
       `**Orelhas/Ouvidos:**\n` +
       `- Secreção: ${dados.secrecaoOrelhas}\n` +
-      `- Linfonodo retroauricular palpável: ${dados.linfonodoRetroauricular}\n\n` +
+      `- Linfonodos retroauriculares palpáveis: ${dados.linfonodosRetroauricularesPalpaveis} ${dados.linfonodosRetroauricularesPalpaveis === 'Sim' ? `(${dados.tipoLinfonodoRetroauricular})` : ''}\n\n`+
       `**Tórax:**\n` +
       `- AP Tiragem: ${dados.apTiragem}\n` +
       `- Murmúrio Vesicular: ${dados.murmVesicular}\n` +
@@ -100,7 +100,6 @@ function Formulario9Meses() {
       `- Estado: ${dados.abdomen}\n` +
       `- Hérnia Umbilical: ${dados.herniaUmbilical}\n\n` +
       `**Genitália Feminina:**\n` +
-      `- Pequenos lábios e clitóris proeminentes: ${dados.labiosClitorisProeminentes}\n` +
       `- Secreção: ${dados.secrecaoFeminina}\n` +
       `- Sinéquia: ${dados.sinequia}\n` +
       `- Hérnia inguinal: ${dados.herniaInguinalFem}\n\n` +
@@ -116,9 +115,7 @@ function Formulario9Meses() {
       `- Assaduras: ${dados.assaduras}\n\n` +
       `**Marcos do Desenvolvimento - 9 Meses:**\n` +
       `- Brinca de esconde-achou: ${dados.escondeAchou}\n` +
-      `- Transfere objetos de uma mão para outra: ${dados.transfereObjetos}\n` +
-      `- Duplica sílabas: ${dados.duplicaSilabas}\n` +
-      `- Senta-se sem apoio: ${dados.sentaSemApoio}`;
+      `- Transfere objetos de uma mão para outra: ${dados.transfereObjetos}\n`
   };
 
   return (
@@ -220,14 +217,45 @@ function Formulario9Meses() {
     </div>
   </div>
   <div className="form-group">
-    <label>Linfonodos cervicais palpáveis:</label>
-    <input type="radio" id="linfonodosCervicaisPalpaveisSim" name="linfonodosCervicaisPalpaveis" value="Sim" onChange={handleChange} checked={dados.linfonodosCervicaisPalpaveis === "Sim"} />
-    <label htmlFor="linfonodosCervicaisPalpaveisSim">Sim</label>
-    <input type="radio" id="linfonodosCervicaisPalpaveisNao" name="linfonodosCervicaisPalpaveis" value="Nao" onChange={handleChange} checked={dados.linfonodosCervicaisPalpaveis === "Nao"} />
-    <label htmlFor="linfonodosCervicaisPalpaveisNao">Não</label>
-  </div>
+      <label>Linfonodos cervicais palpáveis:</label><br />
+      <input
+        type="radio"
+        id="linfonodosCervicaisPalpaveisSim"
+        name="linfonodosCervicaisPalpaveis"
+        value="Sim"
+        onChange={handleChange}
+        checked={dados.linfonodosCervicaisPalpaveis === "Sim"}
+      />
+      <label htmlFor="linfonodosCervicaisPalpaveisSim">Sim</label>
+      <input
+        type="radio"
+        id="linfonodosCervicaisPalpaveisNao"
+        name="linfonodosCervicaisPalpaveis"
+        value="Nao"
+        onChange={handleChange}
+        checked={dados.linfonodosCervicaisPalpaveis === "Nao"}
+      />
+      <label htmlFor="linfonodosCervicaisPalpaveisNao">Não</label>
+
+      {dados.linfonodosCervicaisPalpaveis === "Sim" && (
+        <div>
+          <label>Tipos:</label><br />
+          <input type="radio" id="movel" name="tipoLinfonodos" value="Móvel" onChange={handleChange} />
+          <label htmlFor="movel">Móvel</label><br />
+          <input type="radio" id="fixo" name="tipoLinfonodos" value="Fixo" onChange={handleChange} />
+          <label htmlFor="fixo">Fixo</label><br />
+          <input type="radio" id="fibrobastico" name="tipoLinfonodos" value="Fibrobástico" onChange={handleChange} />
+          <label htmlFor="fibrobastico">Fibrobástico</label><br />
+          <input type="radio" id="amolecido" name="tipoLinfonodos" value="Amolecido" onChange={handleChange} />
+          <label htmlFor="amolecido">Amolecido</label><br />
+          <input type="radio" id="endurecido" name="tipoLinfonodos" value="Endurecido" onChange={handleChange} />
+          <label htmlFor="endurecido">Endurecido</label><br />
+        </div>
+      )}
+    </div>
 </div>
 <div className="form-section">
+  <label htmlFor="">Olhos:</label>
   <div className="form-group">
     <label>Secreção:</label>
     <div>
@@ -237,6 +265,7 @@ function Formulario9Meses() {
       <label htmlFor="secrecaoOlhosNao">Não</label>
     </div>
   </div>
+  <label htmlFor="">Boca:</label>
   <div className="form-group">
     <label>Estrabismo:</label>
     <div>
@@ -259,37 +288,6 @@ function Formulario9Meses() {
       <label htmlFor="mucosaUmida">Úmida</label>
       <input type="radio" id="mucosaSeca" name="mucosa" value="Seca" onChange={handleChange} checked={dados.mucosa === "Seca"} />
       <label htmlFor="mucosaSeca">Seca</label>
-    </div>
-  </div>
-  <div className="form-group">
-    <label>Dentição - Dente Incisivo Central Inferior:</label>
-    <div>
-      <input type="radio" id="denticaoInferiorPresente" name="denticaoInferior" value="Presente" onChange={handleChange} checked={dados.denticaoInferior === "Presente"} />
-      <label htmlFor="denticaoInferiorPresente">Presente</label>
-      <input type="radio" id="denticaoInferiorAusencia" name="denticaoInferior" value="Ausencia" onChange={handleChange} checked={dados.denticaoInferior === "Ausencia"} />
-      <label htmlFor="denticaoInferiorAusencia">Ausência</label>
-      <input type="radio" id="denticaoInferiorNaoVisualizado" name="denticaoInferior" value="NaoVisualizado" onChange={handleChange} checked={dados.denticaoInferior === "NaoVisualizado"} />
-      <label htmlFor="denticaoInferiorNaoVisualizado">Não Visualizado</label>
-    </div>
-  </div>
-</div>
-<div className="form-section">
-  <div className="form-group">
-    <label>Secreção:</label>
-    <div>
-      <input type="radio" id="secrecaoOrelhasSim" name="secrecaoOrelhas" value="Sim" onChange={handleChange} checked={dados.secrecaoOrelhas === "Sim"} />
-      <label htmlFor="secrecaoOrelhasSim">Sim</label>
-      <input type="radio" id="secrecaoOrelhasNao" name="secrecaoOrelhas" value="Nao" onChange={handleChange} checked={dados.secrecaoOrelhas === "Nao"} />
-      <label htmlFor="secrecaoOrelhasNao">Não</label>
-    </div>
-  </div>
-  <div className="form-group">
-    <label>Linfonodo Retroauricular Palpável:</label>
-    <div>
-      <input type="radio" id="linfonodoRetroauricularSim" name="linfonodoRetroauricular" value="Sim" onChange={handleChange} checked={dados.linfonodoRetroauricular === "Sim"} />
-      <label htmlFor="linfonodoRetroauricularSim">Sim</label>
-      <input type="radio" id="linfonodoRetroauricularNao" name="linfonodoRetroauricular" value="Nao" onChange={handleChange} checked={dados.linfonodoRetroauricular === "Nao"} />
-      <label htmlFor="linfonodoRetroauricularNao">Não</label>
     </div>
   </div>
 </div>
@@ -316,6 +314,58 @@ function Formulario9Meses() {
       <label htmlFor="denteIncisivoCentralSuperiorNaoVisualizado">Não Visualizado</label>
     </div>
   </div>
+</div>
+
+<div className="form-section">
+  <label htmlFor="">Orelhas/ouvidos:</label>
+  <div className="form-group">
+    <label>Secreção:</label>
+    <div>
+      <input type="radio" id="secrecaoOrelhasSim" name="secrecaoOrelhas" value="Sim" onChange={handleChange} checked={dados.secrecaoOrelhas === "Sim"} />
+      <label htmlFor="secrecaoOrelhasSim">Sim</label>
+      <input type="radio" id="secrecaoOrelhasNao" name="secrecaoOrelhas" value="Nao" onChange={handleChange} checked={dados.secrecaoOrelhas === "Nao"} />
+      <label htmlFor="secrecaoOrelhasNao">Não</label>
+    </div>
+  </div>
+  <div className="form-group">
+  <label>Linfonodos retroauriculares palpáveis:</label><br />
+  <input
+    type="radio"
+    id="linfonodosRetroauricularesPalpaveisSim"
+    name="linfonodosRetroauricularesPalpaveis"
+    value="Sim"
+    onChange={handleChange}
+    checked={dados.linfonodosRetroauricularesPalpaveis === "Sim"}
+  />
+  <label htmlFor="linfonodosRetroauricularesPalpaveisSim">Sim</label>
+  <input
+    type="radio"
+    id="linfonodosRetroauricularesPalpaveisNao"
+    name="linfonodosRetroauricularesPalpaveis"
+    value="Nao"
+    onChange={handleChange}
+    checked={dados.linfonodosRetroauricularesPalpaveis === "Nao"}
+  />
+  <label htmlFor="linfonodosRetroauricularesPalpaveisNao">Não</label>
+
+  {dados.linfonodosRetroauricularesPalpaveis === "Sim" && (
+    <div>
+      <label>Tipos:</label><br />
+      <input type="radio" id="movel" name="tipoLinfonodoRetroauricular" value="Móvel" onChange={handleChange} />
+      <label htmlFor="movel">Móvel</label><br />
+      <input type="radio" id="fixo" name="tipoLinfonodoRetroauricular" value="Fixo" onChange={handleChange} />
+      <label htmlFor="fixo">Fixo</label><br />
+      <input type="radio" id="fibroblastico" name="tipoLinfonodoRetroauricular" value="Fibroblástico" onChange={handleChange} />
+      <label htmlFor="fibroblastico">Fibroblástico</label><br />
+      <input type="radio" id="amolecido" name="tipoLinfonodoRetroauricular" value="Amolecido" onChange={handleChange} />
+      <label htmlFor="amolecido">Amolecido</label><br />
+      <input type="radio" id="endurecido" name="tipoLinfonodoRetroauricular" value="Endurecido" onChange={handleChange} />
+      <label htmlFor="endurecido">Endurecido</label><br />
+    </div>
+  )}
+</div>
+
+
 </div>
 
 <div className="form-section">
@@ -379,15 +429,6 @@ function Formulario9Meses() {
 <div className="form-section">
   <h3>Genitália</h3>
   <h4>Feminina</h4>
-  <div className="form-group">
-    <label>Pequenos lábios e clitóris proeminentes:</label>
-    <div>
-      <input type="radio" id="labiosClitorisProeminentesSim" name="labiosClitorisProeminentes" value="Sim" onChange={handleChange} checked={dados.labiosClitorisProeminentes === "Sim"} />
-      <label htmlFor="labiosClitorisProeminentesSim">Sim</label>
-      <input type="radio" id="labiosClitorisProeminentesNao" name="labiosClitorisProeminentes" value="Nao" onChange={handleChange} checked={dados.labiosClitorisProeminentes === "Nao"} />
-      <label htmlFor="labiosClitorisProeminentesNao">Não</label>
-    </div>
-  </div>
   <div className="form-group">
     <label>Secreção:</label>
     <div>
@@ -456,13 +497,17 @@ function Formulario9Meses() {
 <div className="form-group">
   <label>Meato Urinário:</label>
   <div>
-    {/* Adapte as opções conforme necessário */}
     <input type="radio" id="meatoUrinarioVisualizado" name="meatoUrinario" value="Visualizado" onChange={handleChange} checked={dados.meatoUrinario === "Visualizado"} />
     <label htmlFor="meatoUrinarioVisualizado">Visualizado</label>
     <input type="radio" id="meatoUrinarioNaoVisualizado" name="meatoUrinario" value="NaoVisualizado" onChange={handleChange} checked={dados.meatoUrinario === "NaoVisualizado"} />
     <label htmlFor="meatoUrinarioNaoVisualizado">Não Visualizado</label>
+    <input type="radio" id="meatoUrinarioHipospadia" name="meatoUrinario" value="Hipospadia" onChange={handleChange} checked={dados.meatoUrinario === "Hipospadia"} />
+    <label htmlFor="meatoUrinarioHipospadia">Hipospadia</label>
+    <input type="radio" id="meatoUrinarioEpispadia" name="meatoUrinario" value="Epispádia" onChange={handleChange} checked={dados.meatoUrinario === "Epispádia"} />
+    <label htmlFor="meatoUrinarioEpispadia">Epispádia</label>
   </div>
 </div>
+
 </div>
 <div className="form-section">
   <h3>Orifício Anal</h3>
@@ -520,29 +565,6 @@ function Formulario9Meses() {
       <label htmlFor="transfereObjetosNaoVerificado">Não Verificado</label>
     </div>
   </div>
-  <div className="form-group">
-  <label>Duplica Sílabas:</label>
-  <div>
-    <input type="radio" id="duplicaSilabasPresente" name="duplicaSilabas" value="Presente" onChange={handleChange} checked={dados.duplicaSilabas === "Presente"} />
-    <label htmlFor="duplicaSilabasPresente">Presente</label>
-    <input type="radio" id="duplicaSilabasAusente" name="duplicaSilabas" value="Ausente" onChange={handleChange} checked={dados.duplicaSilabas === "Ausente"} />
-    <label htmlFor="duplicaSilabasAusente">Ausente</label>
-    <input type="radio" id="duplicaSilabasNaoVerificado" name="duplicaSilabas" value="NaoVerificado" onChange={handleChange} checked={dados.duplicaSilabas === "NaoVerificado"} />
-    <label htmlFor="duplicaSilabasNaoVerificado">Não Verificado</label>
-  </div>
-</div>
-
-<div className="form-group">
-  <label>Senta-se Sem Apoio:</label>
-  <div>
-    <input type="radio" id="sentaSemApoioPresente" name="sentaSemApoio" value="Presente" onChange={handleChange} checked={dados.sentaSemApoio === "Presente"} />
-    <label htmlFor="sentaSemApoioPresente">Presente</label>
-    <input type="radio" id="sentaSemApoioAusente" name="sentaSemApoio" value="Ausente" onChange={handleChange} checked={dados.sentaSemApoio === "Ausente"} />
-    <label htmlFor="sentaSemApoioAusente">Ausente</label>
-    <input type="radio" id="sentaSemApoioNaoVerificado" name="sentaSemApoio" value="NaoVerificado" onChange={handleChange} checked={dados.sentaSemApoio === "NaoVerificado"} />
-    <label htmlFor="sentaSemApoioNaoVerificado">Não Verificado</label>
-  </div>
-</div>
 </div>
 
 
