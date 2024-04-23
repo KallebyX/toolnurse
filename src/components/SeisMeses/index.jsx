@@ -77,9 +77,11 @@ function FormularioSeisMeses() {
         - Linfonodo Retroauricular: ${dados.linfonodoRetroauricular}
   
       Tórax:
-        - Tiragem: ${dados.tiragem ? 'Sim' : 'Não'}
-        - Murmúrio Vesiculares: ${dados.murmurioVesiculares}
-        - Bulhas Cardíacas: ${dados.bulhasCardiacas}
+        - AP:
+        ${dados.apTiragem ? 'Tiragem' : ''}
+        ${dados.apMurmurioVesiculares ? 'Murmúrio Vesiculares' : ''}
+        ${dados.apSemRuidos ? 'Sem Ruídos Adventícios' : ''}
+        - AC: ${dados.acBulhas}
   
       Abdome:
         - Estado: ${dados.estadoAbdome}
@@ -87,7 +89,6 @@ function FormularioSeisMeses() {
   
       Genitália:
         - Feminina:
-          - Pequenos Lábios e Clitóris Proeminentes: ${dados.labiosClitorisProeminentesFem}
           - Secreção: ${dados.secrecaoFeminina}
           - Sinéquia: ${dados.sinequia}
           - Hérnia Inguinal: ${dados.herniaInguinalFem}
@@ -281,7 +282,7 @@ function FormularioSeisMeses() {
       </label>
     ))}
   </div>
-
+<label htmlFor="">Olhos:</label>
   <div className="form-group">
     <label>Secreção ocular:</label>
     <label>
@@ -331,6 +332,7 @@ function FormularioSeisMeses() {
   </div>
 </div>
 <div className="form-section">
+  <label htmlFor="">Boca:</label>
   <div className="form-group">
     <label>Mucosa:</label>
     {["Corada", "Pálida", "Úmida", "Seca"].map((option) => (
@@ -362,6 +364,7 @@ function FormularioSeisMeses() {
       </label>
     ))}
   </div>
+  <label htmlFor="">Orelhas/ouvidos:</label>
   <div className="form-group">
     <label>Secreção:</label>
     {["sim", "não"].map((option) => (
@@ -407,46 +410,22 @@ function FormularioSeisMeses() {
 <div className="form-section">
   <h3>Tórax</h3>
   <div className="form-group">
-    <label>AP - Tiragem:</label>
-    <input
-      type="checkbox"
-      name="tiragem"
-      checked={dados.tiragem}
-      onChange={(e) => setDados({ ...dados, tiragem: e.target.checked })}
-    />
-  </div>
+  <label>AP:</label><br />
+  <input type="checkbox" id="apTiragem" name="apTiragem" checked={dados.apTiragem} onChange={handleChange} />
+  <label htmlFor="apTiragem">Tiragem</label><br />
+  <input type="checkbox" id="apMurmurioVesiculares" name="apMurmurioVesiculares" checked={dados.apMurmurioVesiculares} onChange={handleChange} />
+  <label htmlFor="apMurmurioVesiculares">Murmúrio vesiculares</label><br />
+  <input type="checkbox" id="apSemRuidos" name="apSemRuidos" checked={dados.apSemRuidos} onChange={handleChange} />
+  <label htmlFor="apSemRuidos">Sem ruídos adventícios</label><br />
+</div>
 
-  <div className="form-group">
-    <label>Murmúrio Vesiculares:</label>
-    {["Sem ruídos adventícios", "Com ruídos adventícios"].map((option) => (
-      <label key={option}>
-        <input
-          type="radio"
-          name="murmurioVesiculares"
-          value={option}
-          checked={dados.murmurioVesiculares === option}
-          onChange={handleChange}
-        />
-        {option}
-      </label>
-    ))}
-  </div>
-
-  <div className="form-group">
-    <label>Bulhas Cardíacas:</label>
-    {["Sem sopro", "Com sopro"].map((option) => (
-      <label key={option}>
-        <input
-          type="radio"
-          name="bulhasCardiacas"
-          value={option}
-          checked={dados.bulhasCardiacas === option}
-          onChange={handleChange}
-        />
-        {option}
-      </label>
-    ))}
-  </div>
+<div className="form-group">
+  <label>AC:</label><br />
+  <input type="radio" id="acSemSopro" name="acBulhas" value="Sem sopro" checked={dados.acBulhas === 'Sem sopro'} onChange={handleChange} />
+  <label htmlFor="acSemSopro">Sem sopro</label><br />
+  <input type="radio" id="acComSopro" name="acBulhas" value="Com sopro" checked={dados.acBulhas === 'Com sopro'} onChange={handleChange} />
+  <label htmlFor="acComSopro">Com sopro</label><br />
+</div>
 </div>
 <div className="form-section">
   <h3>Abdome</h3>
@@ -494,30 +473,6 @@ function FormularioSeisMeses() {
   <h3>Genitália</h3>
   
   <h4>Feminina</h4>
-  <div className="form-group">
-    <label>Pequenos lábios e clitóris proeminentes:</label>
-    <label>
-      <input
-        type="radio"
-        name="labiosClitorisProeminentesFem"
-        value="Sim"
-        checked={dados.labiosClitorisProeminentesFem === 'Sim'}
-        onChange={handleChange}
-      />
-      Sim
-    </label>
-    <label>
-      <input
-        type="radio"
-        name="labiosClitorisProeminentesFem"
-        value="Não"
-        checked={dados.labiosClitorisProeminentesFem === 'Não'}
-        onChange={handleChange}
-      />
-      Não
-    </label>
-  </div>
-
   <div className="form-group">
     <label>Secreção:</label>
     <label>
