@@ -84,8 +84,8 @@ const handleSubmit = (event) => {
     
         Cabeça:
           - Fontanela Anterior: ${dados.fontanelaAnterior}
-          - Sem Linfonodos Cervicais Palpáveis: ${dados.semLinfonodosCervicaisPalpaveis}
-          - Linfonodos Cervicais: ${dados.linfonodosCervicaisPalpaveis}
+          -Linfonodos Cervicais Palpáveis: ${dados.linfonodosCervicaisPalpaveis} ${dados.linfonodosCervicaisPalpaveis === 'SIM' ? `(${dados.tipoLinfonodoCervical})` : ''}
+
     
         Olhos:
           - Secreção: ${dados.secrecaoOlhos}
@@ -94,14 +94,15 @@ const handleSubmit = (event) => {
     
         Orelhas/Ouvidos:
           - Secreção: ${dados.secrecaoOrelhas}
-          - Linfonodo Retroauricular: ${dados.linfonodoRetroauricular}
+          - Linfonodo Retroauricular Palpável: ${dados.linfonodoRetroauricular} ${dados.linfonodoRetroauricular === 'sim' ? `(${dados.tipoLinfonodoRetroauricular})` : ''}
+
     
-        Tórax:
-        - AP:
-        ${dados.apTiragem ? 'Tiragem' : ''}
-        ${dados.apMurmurioVesiculares ? 'Murmúrio Vesiculares' : ''}
-        ${dados.apSemRuidos ? 'Sem Ruídos Adventícios' : ''}
-      - AC: ${dados.acBulhas} 
+          **Tórax:**
+          - AP:
+          ${dados.apTiragem ? 'Tiragem' : ''}
+          ${dados.apMurmurioVesiculares ? 'Murmúrio Vesiculares' : ''}
+          ${dados.apSemRuidos ? 'Sem Ruídos Adventícios' : ''}
+        - AC: ${dados.acBulhas} 
     
         Abdome:
           - Estado: ${dados.estadoAbdome}
@@ -127,7 +128,7 @@ const handleSubmit = (event) => {
         Marcos do Desenvolvimento:
           - Responde Ativamente ao Contato Social: ${dados.respondeContatoSocial}
           - Segura Objetos: ${dados.seguraObjetos}
-          - Emite Sons, Ri Alto: ${dados.riAlto}
+          - Emite Sons, Ri Alto: ${dados.emiteSons}
           - Levanta a Cabeça: ${dados.levantaCabeca}
           - Busca Ativa de Objetos: ${dados.buscaAtivaObjetos}
           - Leva Objetos à Boca: ${dados.levaObjetosBoca}
@@ -259,46 +260,21 @@ const handleSubmit = (event) => {
   </div>
 
   <div className="form-group">
-    <label>Sem linfonodos cervicais palpáveis:</label>
-    {["Sim", "Não"].map((option) => (
-      <label key={option}>
-        <input
-          type="radio"
-          name="semLinfonodosCervicaisPalpaveis"
-          value={option}
-          checked={dados.semLinfonodosCervicaisPalpaveis === option}
-          onChange={handleChange}
-        />
-        {option}
-      </label>
-    ))}
-  </div>
+  <label>Linfonodos cervicais palpáveis:</label><br />
+  <input type="radio" id="linfonodosSim" name="linfonodosCervicaisPalpaveis" value="SIM" checked={dados.linfonodosCervicaisPalpaveis === 'SIM'} onChange={handleChange} /> Sim<br />
+  <input type="radio" id="linfonodosNao" name="linfonodosCervicaisPalpaveis" value="NÃO" checked={dados.linfonodosCervicaisPalpaveis === 'NÃO'} onChange={handleChange} /> Não<br />
 
-  <div className="form-group">
-    <label>Linfonodos cervicais palpáveis:</label>
-    <label>
-      <input
-        type="radio"
-        name="linfonodosCervicaisPalpaveis"
-        value="Não"
-        checked={dados.linfonodosCervicaisPalpaveis === "Não"}
-        onChange={handleChange}
-      />
-      Não
-    </label>
-    {["Sim - Móvel", "Sim - Fixo", "Sim - Fibrobástico", "Sim - Amolecido", "Sim - Endurecido"].map((option) => (
-      <label key={option}>
-        <input
-          type="radio"
-          name="linfonodosCervicaisPalpaveis"
-          value={option}
-          checked={dados.linfonodosCervicaisPalpaveis === option}
-          onChange={handleChange}
-        />
-        {option.split(" - ")[1]}
-      </label>
-    ))}
-  </div>
+  {dados.linfonodosCervicaisPalpaveis === 'SIM' && (
+    <div>
+      <input type="radio" name="tipoLinfonodoCervical" value="Móvel" checked={dados.tipoLinfonodoCervical === 'Móvel'} onChange={handleChange} /> Móvel<br />
+      <input type="radio" name="tipoLinfonodoCervical" value="Fixo" checked={dados.tipoLinfonodoCervical === 'Fixo'} onChange={handleChange} /> Fixo<br />
+      <input type="radio" name="tipoLinfonodoCervical" value="Fibrobástico" checked={dados.tipoLinfonodoCervical === 'Fibrobástico'} onChange={handleChange} /> Fibrobástico<br />
+      <input type="radio" name="tipoLinfonodoCervical" value="Amolecido" checked={dados.tipoLinfonodoCervical === 'Amolecido'} onChange={handleChange} /> Amolecido<br />
+      <input type="radio" name="tipoLinfonodoCervical" value="Endurecido" checked={dados.tipoLinfonodoCervical === 'Endurecido'} onChange={handleChange} /> Endurecido<br />
+    </div>
+  )}
+</div>
+
 </div>
 <div className="form-section">
   <div className="form-group">
@@ -365,30 +341,41 @@ const handleSubmit = (event) => {
     ))}
   </div>
   <div className="form-group">
-    <label>Linfonodo retroauricular palpável:</label>
-    <label>
-      <input
-        type="radio"
-        name="linfonodoRetroauricular"
-        value="Não"
-        checked={dados.linfonodoRetroauricular === "Não"}
-        onChange={handleChange}
-      />
-      Não
-    </label>
-    {["Sim - Móvel", "Sim - Fixo", "Sim - Fibroblástico", "Sim - Amolecido", "Sim - Endurecido"].map((option) => (
-      <label key={option}>
-        <input
-          type="radio"
-          name="linfonodoRetroauricular"
-          value={option}
-          checked={dados.linfonodoRetroauricular === option}
-          onChange={handleChange}
-        />
-        {option.split(" - ")[1]}
+  <label>Linfonodo retroauricular palpável:</label><br />
+  <label>
+    <input type="radio" id="linfonodoRetroauricularSim" name="linfonodoRetroauricular" value="sim" checked={dados.linfonodoRetroauricular === 'sim'} onChange={handleChange} />
+    Sim
+  </label>
+  <label>
+    <input type="radio" id="linfonodoRetroauricularNao" name="linfonodoRetroauricular" value="não" checked={dados.linfonodoRetroauricular === 'não'} onChange={handleChange} />
+    Não
+  </label><br />
+
+  {dados.linfonodoRetroauricular === 'sim' && (
+    <div>
+      <label>
+        <input type="radio" name="tipoLinfonodoRetroauricular" value="Móvel" checked={dados.tipoLinfonodoRetroauricular === 'Móvel'} onChange={handleChange} />
+        Móvel
       </label>
-    ))}
-  </div>
+      <label>
+        <input type="radio" name="tipoLinfonodoRetroauricular" value="Fixo" checked={dados.tipoLinfonodoRetroauricular === 'Fixo'} onChange={handleChange} />
+        Fixo
+      </label>
+      <label>
+        <input type="radio" name="tipoLinfonodoRetroauricular" value="Fibrobástico" checked={dados.tipoLinfonodoRetroauricular === 'Fibrobástico'} onChange={handleChange} />
+        Fibrobástico
+      </label>
+      <label>
+        <input type="radio" name="tipoLinfonodoRetroauricular" value="Amolecido" checked={dados.tipoLinfonodoRetroauricular === 'Amolecido'} onChange={handleChange} />
+        Amolecido
+      </label>
+      <label>
+        <input type="radio" name="tipoLinfonodoRetroauricular" value="Endurecido" checked={dados.tipoLinfonodoRetroauricular === 'Endurecido'} onChange={handleChange} />
+        Endurecido
+      </label>
+    </div>
+  )}
+</div>
 </div>
 <div className="form-section">
   <h3>Tórax</h3>

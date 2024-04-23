@@ -73,6 +73,7 @@ function FormularioDoisTresMeses() {
           - Fontanelas Anterior: ${dados.fontanelasAnterior}
           - Fontanelas Posterior Fechada: ${dados.fontanelasPosteriorFechada ? 'Sim' : 'Não'}
           -Linfonodos Cervicais Palpáveis: ${dados.linfonodosCervicaisPalpaveis} ${dados.linfonodosCervicaisPalpaveis === 'SIM' ? `(${dados.tipoLinfonodoCervical})` : ''}
+
       
           **Olhos:**
           - Secreção: ${dados.secrecaoOlhos}
@@ -117,11 +118,13 @@ function FormularioDoisTresMeses() {
           - Fissuras: ${dados.fissuras}
           - Assaduras: ${dados.assaduras}
       
-          **Marcos do Desenvolvimento:**
+          **Marcos do Desenvolvimento - 2 Meses**
           - Sorri quando estimulada: ${dados.sorriEstimulada}
           - Abre as mãos: ${dados.abreMaos}
           - Movimenta os membros: ${dados.movimentaMembros}
           - Emite sons: ${dados.emiteSons}
+      
+          **Marcos do Desenvolvimento - 3 Meses**
           - Responde ativamente ao contato social: ${dados.contatoSocial}
           - Segura objetos: ${dados.seguraObjetos}
           - Emite sons, ri alto: ${dados.riAlto}
@@ -280,8 +283,8 @@ function FormularioDoisTresMeses() {
   </div>
   <div className="form-group">
   <label>Linfonodos cervicais palpáveis:</label><br />
-  <input type="radio" id="linfonodosSim" name="linfonodosCervicaisPalpaveis" value="SIM" checked={dados.linfonodosCervicaisPalpaveis === 'SIM'} onChange={handleChange} /> SIM<br />
-  <input type="radio" id="linfonodosNao" name="linfonodosCervicaisPalpaveis" value="NÃO" checked={dados.linfonodosCervicaisPalpaveis === 'NÃO'} onChange={handleChange} /> NÃO<br />
+  <input type="radio" id="linfonodosSim" name="linfonodosCervicaisPalpaveis" value="SIM" checked={dados.linfonodosCervicaisPalpaveis === 'SIM'} onChange={handleChange} /> Sim<br />
+  <input type="radio" id="linfonodosNao" name="linfonodosCervicaisPalpaveis" value="NÃO" checked={dados.linfonodosCervicaisPalpaveis === 'NÃO'} onChange={handleChange} /> Não<br />
 
   {dados.linfonodosCervicaisPalpaveis === 'SIM' && (
     <div>

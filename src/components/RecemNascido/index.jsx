@@ -785,27 +785,44 @@ function FormularioRecemNascido() {
   </div>
   <div className="formulario-section">
   <h3>Membros Superiores</h3>
-  <div className="form-group">
-    <label>Deformidades:</label>
-    <input type="radio" id="deformidadesSuperioresSim" name="deformidadesSuperiores" value="Sim" checked={dados.deformidadesSuperiores === 'Sim'} onChange={handleChange} />
-    <label htmlFor="deformidadesSuperioresSim">Sim</label>
-    <input type="radio" id="deformidadesSuperioresNao" name="deformidadesSuperiores" value="Não" checked={dados.deformidadesSuperiores === 'Não'} onChange={handleChange} />
-    <label htmlFor="deformidadesSuperioresNao">Não</label>
-  </div>
-  <div className="form-group">
-    <label>Malformação:</label>
-    <input type="radio" id="malformacaoSuperioresSim" name="malformacaoSuperiores" value="Sim" checked={dados.malformacaoSuperiores === 'Sim'} onChange={handleChange} />
-    <label htmlFor="malformacaoSuperioresSim">Sim</label>
-    <input type="radio" id="malformacaoSuperioresNao" name="malformacaoSuperiores" value="Não" checked={dados.malformacaoSuperiores === 'Não'} onChange={handleChange} />
-    <label htmlFor="malformacaoSuperioresNao">Não</label>
-  </div>
-  <div className="form-group">
-    <label>Linha palmar:</label>
-    <input type="radio" id="linhaPalmarSim" name="linhaPalmarSuperiores" value="Sim" checked={dados.linhaPalmar === 'Sim'} onChange={handleChange} />
-    <label htmlFor="linhaPalmarSim">Sim</label>
-    <input type="radio" id="linhaPalmarNao" name="linhaPalmarSuperiores" value="Não" checked={dados.linhaPalmar === 'Não'} onChange={handleChange} />
-    <label htmlFor="linhaPalmarNao">Não</label>
-  </div>
+<div className="form-group">
+  <label>Deformidades:</label>
+  <input type="radio" id="deformidadesSuperioresSim" name="deformidadesSuperiores" value="Sim" checked={dados.deformidadesSuperiores === 'Sim'} onChange={handleChange} />
+  <label htmlFor="deformidadesSuperioresSim">Sim</label>
+  <input type="radio" id="deformidadesSuperioresNao" name="deformidadesSuperiores" value="Não" checked={dados.deformidadesSuperiores === 'Não'} onChange={handleChange} />
+  <label htmlFor="deformidadesSuperioresNao">Não</label>
+</div>
+<div className="form-group">
+  <label>Malformação:</label>
+  <input type="radio" id="malformacaoSuperioresSim" name="malformacaoSuperiores" value="Sim" checked={dados.malformacaoSuperiores === 'Sim'} onChange={handleChange} />
+  <label htmlFor="malformacaoSuperioresSim">Sim</label>
+  <input type="radio" id="malformacaoSuperioresNao" name="malformacaoSuperiores" value="Não" checked={dados.malformacaoSuperiores === 'Não'} onChange={handleChange} />
+  <label htmlFor="malformacaoSuperioresNao">Não</label>
+</div>
+<div className="form-group">
+  <label>Linha palmar:</label>
+  <input 
+    type="radio" 
+    id="linhaPalmarSim" 
+    name="linhaPalmar" 
+    value="Sim" 
+    checked={dados.linhaPalmar === 'Sim'} 
+    onChange={handleChange} 
+  />
+  <label htmlFor="linhaPalmarSim">Sim</label>
+  
+  <input 
+    type="radio" 
+    id="linhaPalmarNao" 
+    name="linhaPalmar" 
+    value="Não" 
+    checked={dados.linhaPalmar === 'Não'} 
+    onChange={handleChange} 
+  />
+  <label htmlFor="linhaPalmarNao">Não</label>
+</div>
+
+
 
   <h3>Membros Inferiores</h3>
   <div className="form-group">

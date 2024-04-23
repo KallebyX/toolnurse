@@ -63,17 +63,15 @@ function Formulario18Meses() {
       .catch((error) => console.error('Erro ao copiar os dados: ', error));
   };
 
-  const formatarDados = () => {
+const formatarDados = () => {
     return `
   **Avaliação de Desenvolvimento - 18 Meses**
-  
   **Peso:** ${dados.peso} Kg
   **Estatura:** ${dados.estatura} cm
   **IMC:** ${dados.imc}
   **PC:** ${dados.pc} cm
   **Temperatura Axilar:** ${dados.temperatura} °C
   **FR:** ${dados.fr} RPM
-  
   **Estado Geral:** ${dados.estadoGeral}
   
   **Pele:**
@@ -84,7 +82,7 @@ function Formulario18Meses() {
   
   **Cabeça:**
   - Fontanela Anterior: ${dados.fontanelaAnterior}
-  -Linfonodos Cervicais Palpáveis: ${dados.linfonodosCervicaisPalpaveis} ${dados.linfonodosCervicaisPalpaveis === 'SIM' ? `(${dados.tipoLinfonodoCervical})` : ''}
+  - Linfonodos Cervicais Palpáveis: ${dados.linfonodosCervicaisPalpaveis} ${dados.linfonodosCervicaisPalpaveis === 'SIM' ? `(${dados.tipoLinfonodoCervical})` : ''}
   
   **Olhos:**
   - Secreção: ${dados.secrecaoOlhos}
@@ -103,9 +101,8 @@ function Formulario18Meses() {
   ${dados.apTiragem ? 'Tiragem' : ''}
   ${dados.apMurmurioVesiculares ? 'Murmúrio Vesiculares' : ''}
   ${dados.apSemRuidos ? 'Sem Ruídos Adventícios' : ''}
-- AC: ${dados.acBulhas} 
+  - AC: ${dados.acBulhas} 
 
-  
   **Abdome:**
   - Estado: ${dados.estadoAbdome}
   - Presença de Hérnia Umbilical: ${dados.herniaUmbilical ? 'Sim' : 'Não'}
@@ -128,17 +125,24 @@ function Formulario18Meses() {
   - Assaduras: ${dados.assaduras ? 'Sim' : 'Não'}
   
   **Marcos do Desenvolvimento:**
-  - Mostra o que quer: ${dados.mostraOQueQuer ? 'Presente' : 'Ausente'}
-  - Coloca blocos na caneca: ${dados.colocaBlocosNaCaneca ? 'Presente' : 'Ausente'}
-  - Diz uma palavra: ${dados.dizUmaPalavra ? 'Presente' : 'Ausente'}
-  - Anda sem apoio: ${dados.andaSemApoio ? 'Presente' : 'Ausente'}
-  - Usa colher ou garfo: ${dados.usaColherOuGarfo ? 'Presente' : 'Ausente'}
-  - Constrói torre de 2 cubos: ${dados.constroiTorreDeDoisCubos ? 'Presente' : 'Ausente'}
-  - Fala 3 palavras: ${dados.falaTresPalavras ? 'Presente' : 'Ausente'}
-  - Anda para trás: ${dados.andaParaTras ? 'Presente' : 'Ausente'}
+  ${formatDevelopmentMilestone('Mostra o que quer', dados.mostraOQueQuer)}
+  ${formatDevelopmentMilestone('Coloca blocos na caneca', dados.colocaBlocosNaCaneca)}
+  ${formatDevelopmentMilestone('Diz uma palavra', dados.dizUmaPalavra)}
+  ${formatDevelopmentMilestone('Anda sem apoio', dados.andaSemApoio)}
+  ${formatDevelopmentMilestone('Usa colher ou garfo', dados.usaColherOuGarfo)}
+  ${formatDevelopmentMilestone('Constrói torre de 2 cubos', dados.constroiTorreDeDoisCubos)}
+  ${formatDevelopmentMilestone('Fala 3 palavras', dados.falaTresPalavras)}
+  ${formatDevelopmentMilestone('Anda para trás', dados.andaParaTras)}
   `.trim();
-  };
-  
+};
+
+function formatDevelopmentMilestone(milestone, value) {
+  return `**${milestone}:** ${value}`;  // Always include the value provided
+}
+
+
+
+
 
   return (
     <div className='tudo'>
@@ -360,7 +364,7 @@ function Formulario18Meses() {
   </div>
   <div className="form-group">
     <label>1º molar:</label>
-    {["Presença", "Sem erupção", "Não visualizado"].map(opcao => (
+    {["Presente", "Sem erupção", "Não visualizado"].map(opcao => (
       <label key={opcao}>
         <input 
           type="radio" 

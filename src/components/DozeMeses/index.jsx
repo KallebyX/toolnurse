@@ -106,7 +106,7 @@ ${dados.apSemRuidos ? 'Sem Ruídos Adventícios' : ''}
 
 
 **Abdome:**
-- Estado: ${dados.abdomen}
+- Estado: ${dados.estadoAbdome}
 - Presença de Hérnia Umbilical: ${dados.herniaUmbilical}
 
 **Genitália:**

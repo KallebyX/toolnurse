@@ -91,13 +91,15 @@ function Formulario9Meses() {
       `- Dente Incisivo Central Superior: ${dados.denteIncisivoCentralSuperior}\n\n` +
       `**Orelhas/Ouvidos:**\n` +
       `- Secreção: ${dados.secrecaoOrelhas}\n` +
-      `- Linfonodos retroauriculares palpáveis: ${dados.linfonodosRetroauricularesPalpaveis} ${dados.linfonodosRetroauricularesPalpaveis === 'Sim' ? `(${dados.tipoLinfonodoRetroauricular})` : ''}\n\n`+
+      `- Linfonodos retroauriculares palpáveis: ${dados.linfonodosRetroauricularesPalpaveis} ${dados.linfonodosRetroauricularesPalpaveis === 'Sim' ? `(${dados.tipoLinfonodoRetroauricular})` : ''}\n\n` +
       `**Tórax:**\n` +
-      `- AP Tiragem: ${dados.apTiragem}\n` +
-      `- Murmúrio Vesicular: ${dados.murmVesicular}\n` +
-      `- AC Bulhas Cardíacas: ${dados.acBulhasCardiacas}\n\n` +
+      `- AP:\n` +
+      `${dados.apTiragem ? 'Tiragem\n' : ''}` +
+      `${dados.apMurmurioVesiculares ? 'Murmúrio Vesiculares\n' : ''}` +
+      `${dados.apSemRuidos ? 'Sem Ruídos Adventícios\n' : ''}` +
+      `- AC: ${dados.acBulhas}\n\n` +
       `**Abdome:**\n` +
-      `- Estado: ${dados.abdomen}\n` +
+      `- Estado: ${dados.estadoAbdome}\n` +
       `- Hérnia Umbilical: ${dados.herniaUmbilical}\n\n` +
       `**Genitália Feminina:**\n` +
       `- Secreção: ${dados.secrecaoFeminina}\n` +
@@ -115,8 +117,9 @@ function Formulario9Meses() {
       `- Assaduras: ${dados.assaduras}\n\n` +
       `**Marcos do Desenvolvimento - 9 Meses:**\n` +
       `- Brinca de esconde-achou: ${dados.escondeAchou}\n` +
-      `- Transfere objetos de uma mão para outra: ${dados.transfereObjetos}\n`
+      `- Transfere objetos de uma mão para outra: ${dados.transfereObjetos}\n`;
   };
+  
 
   return (
     <div className='tudo'>
@@ -239,7 +242,6 @@ function Formulario9Meses() {
 
       {dados.linfonodosCervicaisPalpaveis === "Sim" && (
         <div>
-          <label>Tipos:</label><br />
           <input type="radio" id="movel" name="tipoLinfonodos" value="Móvel" onChange={handleChange} />
           <label htmlFor="movel">Móvel</label><br />
           <input type="radio" id="fixo" name="tipoLinfonodos" value="Fixo" onChange={handleChange} />
@@ -350,7 +352,6 @@ function Formulario9Meses() {
 
   {dados.linfonodosRetroauricularesPalpaveis === "Sim" && (
     <div>
-      <label>Tipos:</label><br />
       <input type="radio" id="movel" name="tipoLinfonodoRetroauricular" value="Móvel" onChange={handleChange} />
       <label htmlFor="movel">Móvel</label><br />
       <input type="radio" id="fixo" name="tipoLinfonodoRetroauricular" value="Fixo" onChange={handleChange} />
@@ -371,32 +372,22 @@ function Formulario9Meses() {
 <div className="form-section">
   <h3>Tórax</h3>
   <div className="form-group">
-    <label>AP - Tiragem:</label>
-    <div>
-      <input type="radio" id="apTiragemSim" name="apTiragem" value="Sim" onChange={handleChange} checked={dados.apTiragem === "Sim"} />
-      <label htmlFor="apTiragemSim">Sim</label>
-      <input type="radio" id="apTiragemNao" name="apTiragem" value="Nao" onChange={handleChange} checked={dados.apTiragem === "Nao"} />
-      <label htmlFor="apTiragemNao">Não</label>
-    </div>
-  </div>
-  <div className="form-group">
-    <label>Murmúrio Vesicular:</label>
-    <div>
-      <input type="radio" id="murmVesicularPresente" name="murmVesicular" value="Presente" onChange={handleChange} checked={dados.murmVesicular === "Presente"} />
-      <label htmlFor="murmVesicularPresente">Presente</label>
-      <input type="radio" id="murmVesicularAusente" name="murmVesicular" value="Ausente" onChange={handleChange} checked={dados.murmVesicular === "Ausente"} />
-      <label htmlFor="murmVesicularAusente">Ausente</label>
-    </div>
-  </div>
-  <div className="form-group">
-    <label>AC - Bulhas Cardíacas:</label>
-    <div>
-      <input type="radio" id="acBulhasCardiacasSemSopro" name="acBulhasCardiacas" value="SemSopro" onChange={handleChange} checked={dados.acBulhasCardiacas === "SemSopro"} />
-      <label htmlFor="acBulhasCardiacasSemSopro">Sem Sopro</label>
-      <input type="radio" id="acBulhasCardiacasComSopro" name="acBulhasCardiacas" value="ComSopro" onChange={handleChange} checked={dados.acBulhasCardiacas === "ComSopro"} />
-      <label htmlFor="acBulhasCardiacasComSopro">Com Sopro</label>
-    </div>
-  </div>
+  <label>AP:</label><br />
+  <input type="checkbox" id="apTiragem" name="apTiragem" checked={dados.apTiragem} onChange={handleChange} />
+  <label htmlFor="apTiragem">Tiragem</label><br />
+  <input type="checkbox" id="apMurmurioVesiculares" name="apMurmurioVesiculares" checked={dados.apMurmurioVesiculares} onChange={handleChange} />
+  <label htmlFor="apMurmurioVesiculares">Murmúrio vesiculares</label><br />
+  <input type="checkbox" id="apSemRuidos" name="apSemRuidos" checked={dados.apSemRuidos} onChange={handleChange} />
+  <label htmlFor="apSemRuidos">Sem ruídos adventícios</label><br />
+</div>
+
+<div className="form-group">
+  <label>AC:</label><br />
+  <input type="radio" id="acSemSopro" name="acBulhas" value="Sem sopro" checked={dados.acBulhas === 'Sem sopro'} onChange={handleChange} />
+  <label htmlFor="acSemSopro">Sem sopro</label><br />
+  <input type="radio" id="acComSopro" name="acBulhas" value="Com sopro" checked={dados.acBulhas === 'Com sopro'} onChange={handleChange} />
+  <label htmlFor="acComSopro">Com sopro</label><br />
+</div>
 </div>
 
 
