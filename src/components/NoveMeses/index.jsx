@@ -172,27 +172,7 @@ function Formulario9Meses() {
     </div>
   </div>
 </div>
-<div className="form-section">
-  <h3>Cabeça</h3>
-  <div className="form-group">
-    <label>Fontanela Anterior:</label>
-    <div>
-      {["Em Fechamento", "Fechada", "Abauladas", "Deprimidas", "Planas"].map(opcao => (
-        <React.Fragment key={opcao}>
-          <input type="radio" id={`fontanelaAnterior-${opcao}`} name="fontanelaAnterior" value={opcao} onChange={handleChange} checked={dados.fontanelaAnterior === opcao} />
-          <label htmlFor={`fontanelaAnterior-${opcao}`}>{opcao}</label>
-        </React.Fragment>
-      ))}
-    </div>
-  </div>
-  <div className="form-group">
-    <label>Linfonodos cervicais palpáveis:</label>
-    <input type="radio" id="linfonodosCervicaisPalpaveisSim" name="linfonodosCervicaisPalpaveis" value="Sim" onChange={handleChange} checked={dados.linfonodosCervicaisPalpaveis === "Sim"} />
-    <label htmlFor="linfonodosCervicaisPalpaveisSim">Sim</label>
-    <input type="radio" id="linfonodosCervicaisPalpaveisNao" name="linfonodosCervicaisPalpaveis" value="Nao" onChange={handleChange} checked={dados.linfonodosCervicaisPalpaveis === "Nao"} />
-    <label htmlFor="linfonodosCervicaisPalpaveisNao">Não</label>
-  </div>
-</div>
+
 <div className="form-section">
   <h3>Pele</h3>
   <div className="form-group">
@@ -224,6 +204,27 @@ function Formulario9Meses() {
     <label htmlFor="hidratacaoPeleHidratada">Hidratada</label>
     <input type="radio" id="hidratacaoPeleDesidratada" name="hidratacaoPele" value="Desidratada" onChange={handleChange} checked={dados.hidratacaoPele === "Desidratada"} />
     <label htmlFor="hidratacaoPeleDesidratada">Desidratada</label>
+  </div>
+</div>
+<div className="form-section">
+  <h3>Cabeça</h3>
+  <div className="form-group">
+    <label>Fontanela Anterior:</label>
+    <div>
+      {["Em Fechamento", "Fechada", "Abauladas", "Deprimidas", "Planas"].map(opcao => (
+        <React.Fragment key={opcao}>
+          <input type="radio" id={`fontanelaAnterior-${opcao}`} name="fontanelaAnterior" value={opcao} onChange={handleChange} checked={dados.fontanelaAnterior === opcao} />
+          <label htmlFor={`fontanelaAnterior-${opcao}`}>{opcao}</label>
+        </React.Fragment>
+      ))}
+    </div>
+  </div>
+  <div className="form-group">
+    <label>Linfonodos cervicais palpáveis:</label>
+    <input type="radio" id="linfonodosCervicaisPalpaveisSim" name="linfonodosCervicaisPalpaveis" value="Sim" onChange={handleChange} checked={dados.linfonodosCervicaisPalpaveis === "Sim"} />
+    <label htmlFor="linfonodosCervicaisPalpaveisSim">Sim</label>
+    <input type="radio" id="linfonodosCervicaisPalpaveisNao" name="linfonodosCervicaisPalpaveis" value="Nao" onChange={handleChange} checked={dados.linfonodosCervicaisPalpaveis === "Nao"} />
+    <label htmlFor="linfonodosCervicaisPalpaveisNao">Não</label>
   </div>
 </div>
 <div className="form-section">
@@ -492,29 +493,7 @@ function Formulario9Meses() {
       <label htmlFor="assadurasNao">Não</label>
     </div>
   </div>
-<div className="form-group">
-  <label>Duplica Sílabas:</label>
-  <div>
-    <input type="radio" id="duplicaSilabasPresente" name="duplicaSilabas" value="Presente" onChange={handleChange} checked={dados.duplicaSilabas === "Presente"} />
-    <label htmlFor="duplicaSilabasPresente">Presente</label>
-    <input type="radio" id="duplicaSilabasAusente" name="duplicaSilabas" value="Ausente" onChange={handleChange} checked={dados.duplicaSilabas === "Ausente"} />
-    <label htmlFor="duplicaSilabasAusente">Ausente</label>
-    <input type="radio" id="duplicaSilabasNaoVerificado" name="duplicaSilabas" value="NaoVerificado" onChange={handleChange} checked={dados.duplicaSilabas === "NaoVerificado"} />
-    <label htmlFor="duplicaSilabasNaoVerificado">Não Verificado</label>
-  </div>
-</div>
 
-<div className="form-group">
-  <label>Senta-se Sem Apoio:</label>
-  <div>
-    <input type="radio" id="sentaSemApoioPresente" name="sentaSemApoio" value="Presente" onChange={handleChange} checked={dados.sentaSemApoio === "Presente"} />
-    <label htmlFor="sentaSemApoioPresente">Presente</label>
-    <input type="radio" id="sentaSemApoioAusente" name="sentaSemApoio" value="Ausente" onChange={handleChange} checked={dados.sentaSemApoio === "Ausente"} />
-    <label htmlFor="sentaSemApoioAusente">Ausente</label>
-    <input type="radio" id="sentaSemApoioNaoVerificado" name="sentaSemApoio" value="NaoVerificado" onChange={handleChange} checked={dados.sentaSemApoio === "NaoVerificado"} />
-    <label htmlFor="sentaSemApoioNaoVerificado">Não Verificado</label>
-  </div>
-</div>
 
 </div>
 <div className="form-section">
@@ -541,6 +520,29 @@ function Formulario9Meses() {
       <label htmlFor="transfereObjetosNaoVerificado">Não Verificado</label>
     </div>
   </div>
+  <div className="form-group">
+  <label>Duplica Sílabas:</label>
+  <div>
+    <input type="radio" id="duplicaSilabasPresente" name="duplicaSilabas" value="Presente" onChange={handleChange} checked={dados.duplicaSilabas === "Presente"} />
+    <label htmlFor="duplicaSilabasPresente">Presente</label>
+    <input type="radio" id="duplicaSilabasAusente" name="duplicaSilabas" value="Ausente" onChange={handleChange} checked={dados.duplicaSilabas === "Ausente"} />
+    <label htmlFor="duplicaSilabasAusente">Ausente</label>
+    <input type="radio" id="duplicaSilabasNaoVerificado" name="duplicaSilabas" value="NaoVerificado" onChange={handleChange} checked={dados.duplicaSilabas === "NaoVerificado"} />
+    <label htmlFor="duplicaSilabasNaoVerificado">Não Verificado</label>
+  </div>
+</div>
+
+<div className="form-group">
+  <label>Senta-se Sem Apoio:</label>
+  <div>
+    <input type="radio" id="sentaSemApoioPresente" name="sentaSemApoio" value="Presente" onChange={handleChange} checked={dados.sentaSemApoio === "Presente"} />
+    <label htmlFor="sentaSemApoioPresente">Presente</label>
+    <input type="radio" id="sentaSemApoioAusente" name="sentaSemApoio" value="Ausente" onChange={handleChange} checked={dados.sentaSemApoio === "Ausente"} />
+    <label htmlFor="sentaSemApoioAusente">Ausente</label>
+    <input type="radio" id="sentaSemApoioNaoVerificado" name="sentaSemApoio" value="NaoVerificado" onChange={handleChange} checked={dados.sentaSemApoio === "NaoVerificado"} />
+    <label htmlFor="sentaSemApoioNaoVerificado">Não Verificado</label>
+  </div>
+</div>
 </div>
 
 
