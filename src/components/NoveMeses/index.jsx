@@ -60,14 +60,14 @@ function Formulario9Meses() {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    const formattedData = formatarDados();
+    event.preventDefault(); // Previne o comportamento padrão do formulário
+    const formattedData = formatarDados(dados); // Garante que 'dados' está sendo passado para a função
     navigator.clipboard.writeText(formattedData)
       .then(() => alert('Dados formatados copiados para a área de transferência!'))
       .catch((error) => console.error('Erro ao copiar os dados: ', error));
   };
 
-  const formatarDados = () => {
+  const formatarDados = (dados) => {
     return `**Avaliação de Desenvolvimento - 9 Meses**\n\n` +
       `**Peso:** ${dados.peso} Kg\n` +
       `**Estatura:** ${dados.estatura} cm\n` +
@@ -82,7 +82,7 @@ function Formulario9Meses() {
       `- Hidratação: ${dados.hidratacaoPele}\n\n` +
       `**Cabeça:**\n` +
       `- Fontanela Anterior: ${dados.fontanelaAnterior}\n` +
-      `**Linfonodos Cervicais Palpáveis:** ${dados.linfonodosCervicaisPalpaveis} ${dados.linfonodosCervicaisPalpaveis === 'Sim' ? `(${dados.tipoLinfonodos})` : ''}\n\n` +
+      `**Linfonodos Cervicais Palpáveis:** ${dados.linfonodosCervicaisPalpaveis}\n\n` +
       `**Olhos:**\n` +
       `- Secreção: ${dados.secrecaoOlhos}\n` +
       `**Mucosa:** ${dados.mucosa}\n\n` +
@@ -91,13 +91,12 @@ function Formulario9Meses() {
       `- Dente Incisivo Central Superior: ${dados.denteIncisivoCentralSuperior}\n\n` +
       `**Orelhas/Ouvidos:**\n` +
       `- Secreção: ${dados.secrecaoOrelhas}\n` +
-      `- Linfonodos retroauriculares palpáveis: ${dados.linfonodosRetroauricularesPalpaveis} ${dados.linfonodosRetroauricularesPalpaveis === 'Sim' ? `(${dados.tipoLinfonodoRetroauricular})` : ''}\n\n` +
-      `**Tórax:**\n` +
+      `**TÓRAX**\n` +
       `- AP:\n` +
-      `${dados.apTiragem ? 'Tiragem\n' : ''}` +
-      `${dados.apMurmurioVesiculares ? 'Murmúrio Vesiculares\n' : ''}` +
-      `${dados.apSemRuidos ? 'Sem Ruídos Adventícios\n' : ''}` +
-      `- AC: ${dados.acBulhas}\n\n` +
+      `  ${dados.apTiragem ? 'Tiragem' : ''}\n` +
+      `  ${dados.apMurmurioVesiculares ? 'Murmúrio Vesiculares' : ''}\n` +
+      `  ${dados.apSemRuidos ? 'Sem Ruídos Adventícios' : ''}\n` +
+      `- AC: ${dados.bulhasCardiacas}\n\n` +
       `**Abdome:**\n` +
       `- Estado: ${dados.estadoAbdome}\n` +
       `- Hérnia Umbilical: ${dados.herniaUmbilical}\n\n` +
@@ -116,9 +115,11 @@ function Formulario9Meses() {
       `- Fissuras: ${dados.fissuras}\n` +
       `- Assaduras: ${dados.assaduras}\n\n` +
       `**Marcos do Desenvolvimento - 9 Meses:**\n` +
-      `- Brinca de esconde-achou: ${dados.escondeAchou}\n` +
-      `- Transfere objetos de uma mão para outra: ${dados.transfereObjetos}\n`;
+      `- Duplica sílabas: ${dados.duplicaSilabas}\n` +
+      `- Senta-se sem apoio: ${dados.sentaSemApoio}\n`;
   };
+  
+  
   
 
   return (
@@ -267,7 +268,7 @@ function Formulario9Meses() {
       <label htmlFor="secrecaoOlhosNao">Não</label>
     </div>
   </div>
-  <label htmlFor="">Boca:</label>
+
   <div className="form-group">
     <label>Estrabismo:</label>
     <div>
@@ -278,6 +279,7 @@ function Formulario9Meses() {
     </div>
   </div>
 </div>
+<label htmlFor="">Boca:</label>
 <div className="form-section">
   <div className="form-group">
     <label>Mucosa:</label>
@@ -369,9 +371,9 @@ function Formulario9Meses() {
 
 </div>
 
-<div className="form-section">
-  <h3>Tórax</h3>
-  <div className="form-group">
+<h3>TÓRAX</h3>
+
+<div className="form-group">
   <label>AP:</label><br />
   <input type="checkbox" id="apTiragem" name="apTiragem" checked={dados.apTiragem} onChange={handleChange} />
   <label htmlFor="apTiragem">Tiragem</label><br />
@@ -383,12 +385,14 @@ function Formulario9Meses() {
 
 <div className="form-group">
   <label>AC:</label><br />
-  <input type="radio" id="acSemSopro" name="acBulhas" value="Sem sopro" checked={dados.acBulhas === 'Sem sopro'} onChange={handleChange} />
-  <label htmlFor="acSemSopro">Sem sopro</label><br />
-  <input type="radio" id="acComSopro" name="acBulhas" value="Com sopro" checked={dados.acBulhas === 'Com sopro'} onChange={handleChange} />
-  <label htmlFor="acComSopro">Com sopro</label><br />
+  <input type="radio" id="bulhasCardiacasNormal" name="bulhasCardiacas" value="Bulhas Cardíacas" checked={dados.bulhasCardiacas === 'Bulhas Cardíacas'} onChange={handleChange} />
+  <label htmlFor="bulhasCardiacasNormal">Bulhas Cardíacas</label><br />
+  <input type="radio" id="semSopro" name="bulhasCardiacas" value="Sem Sopro" checked={dados.bulhasCardiacas === 'Sem Sopro'} onChange={handleChange} />
+  <label htmlFor="semSopro">Sem Sopro</label><br />
+  <input type="radio" id="comSopro" name="bulhasCardiacas" value="Com Sopro" checked={dados.bulhasCardiacas === 'Com Sopro'} onChange={handleChange} />
+  <label htmlFor="comSopro">Com Sopro</label><br />
 </div>
-</div>
+
 
 
 <div className="form-section">
@@ -535,28 +539,30 @@ function Formulario9Meses() {
 <div className="form-section">
   <h3>Marcos do Desenvolvimento - 9 Meses</h3>
   <div className="form-group">
-    <label>Brinca de esconde-achou:</label>
+    <label>Duplica sílabas:</label>
     <div>
-      <input type="radio" id="escondeAchouPresente" name="escondeAchou" value="Presente" onChange={handleChange} checked={dados.escondeAchou === "Presente"} />
-      <label htmlFor="escondeAchouPresente">Presente</label>
-      <input type="radio" id="escondeAchouAusente" name="escondeAchou" value="Ausente" onChange={handleChange} checked={dados.escondeAchou === "Ausente"} />
-      <label htmlFor="escondeAchouAusente">Ausente</label>
-      <input type="radio" id="escondeAchouNaoVerificado" name="escondeAchou" value="NaoVerificado" onChange={handleChange} checked={dados.escondeAchou === "NaoVerificado"} />
-      <label htmlFor="escondeAchouNaoVerificado">Não Verificado</label>
+      <input type="radio" id="duplicaSilabasPresente" name="duplicaSilabas" value="Presente" onChange={handleChange} checked={dados.duplicaSilabas === "Presente"} />
+      <label htmlFor="duplicaSilabasPresente">Presente</label>
+      <input type="radio" id="duplicaSilabasAusente" name="duplicaSilabas" value="Ausente" onChange={handleChange} checked={dados.duplicaSilabas === "Ausente"} />
+      <label htmlFor="duplicaSilabasAusente">Ausente</label>
+      <input type="radio" id="duplicaSilabasNaoVerificado" name="duplicaSilabas" value="NaoVerificado" onChange={handleChange} checked={dados.duplicaSilabas === "NaoVerificado"} />
+      <label htmlFor="duplicaSilabasNaoVerificado">Não Verificado</label>
     </div>
   </div>
   <div className="form-group">
-    <label>Transfere objetos de uma mão para outra:</label>
+    <label>Senta-se sem apoio:</label>
     <div>
-      <input type="radio" id="transfereObjetosPresente" name="transfereObjetos" value="Presente" onChange={handleChange} checked={dados.transfereObjetos === "Presente"} />
-      <label htmlFor="transfereObjetosPresente">Presente</label>
-      <input type="radio" id="transfereObjetosAusente" name="transfereObjetos" value="Ausente" onChange={handleChange} checked={dados.transfereObjetos === "Ausente"} />
-      <label htmlFor="transfereObjetosAusente">Ausente</label>
-      <input type="radio" id="transfereObjetosNaoVerificado" name="transfereObjetos" value="NaoVerificado" onChange={handleChange} checked={dados.transfereObjetos === "NaoVerificado"} />
-      <label htmlFor="transfereObjetosNaoVerificado">Não Verificado</label>
+      <input type="radio" id="sentaSemApoioPresente" name="sentaSemApoio" value="Presente" onChange={handleChange} checked={dados.sentaSemApoio === "Presente"} />
+      <label htmlFor="sentaSemApoioPresente">Presente</label>
+      <input type="radio" id="sentaSemApoioAusente" name="sentaSemApoio" value="Ausente" onChange={handleChange} checked={dados.sentaSemApoio === "Ausente"} />
+      <label htmlFor="sentaSemApoioAusente">Ausente</label>
+      <input type="radio" id="sentaSemApoioNaoVerificado" name="sentaSemApoio" value="NaoVerificado" onChange={handleChange} checked={dados.sentaSemApoio === "NaoVerificado"} />
+      <label htmlFor="sentaSemApoioNaoVerificado">Não Verificado</label>
     </div>
   </div>
 </div>
+
+
 
 
             {/* Adicione mais campos conforme necessário */}

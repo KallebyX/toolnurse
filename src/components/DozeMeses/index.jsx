@@ -97,12 +97,12 @@ const formatarDados = () => {
 - Linfonodo Retroauricular Palpável: ${dados.linfonodoRetroauricular} ${dados.linfonodoRetroauricular === 'sim' ? `(${dados.tipoLinfonodoRetroauricular})` : ''}
 
 
-**Tórax:**
+TÓRAX
 - AP:
-${dados.apTiragem ? 'Tiragem' : ''}
-${dados.apMurmurioVesiculares ? 'Murmúrio Vesiculares' : ''}
-${dados.apSemRuidos ? 'Sem Ruídos Adventícios' : ''}
-- AC: ${dados.acBulhas} 
+  ${dados.apTiragem ? 'Tiragem' : ''}
+  ${dados.apMurmurioVesiculares ? 'Murmúrio Vesiculares' : ''}
+  ${dados.apSemRuidos ? 'Sem Ruídos Adventícios' : ''}
+- AC: ${dados.bulhasCardiacas}  
 
 
 **Abdome:**
@@ -409,9 +409,9 @@ ${dados.apSemRuidos ? 'Sem Ruídos Adventícios' : ''}
 </div>
 
 <div className="form-section">
-  <h3>Tórax</h3>
+<h3>TÓRAX</h3>
 
-  <div className="form-group">
+<div className="form-group">
   <label>AP:</label><br />
   <input type="checkbox" id="apTiragem" name="apTiragem" checked={dados.apTiragem} onChange={handleChange} />
   <label htmlFor="apTiragem">Tiragem</label><br />
@@ -423,11 +423,14 @@ ${dados.apSemRuidos ? 'Sem Ruídos Adventícios' : ''}
 
 <div className="form-group">
   <label>AC:</label><br />
-  <input type="radio" id="acSemSopro" name="acBulhas" value="Sem sopro" checked={dados.acBulhas === 'Sem sopro'} onChange={handleChange} />
-  <label htmlFor="acSemSopro">Sem sopro</label><br />
-  <input type="radio" id="acComSopro" name="acBulhas" value="Com sopro" checked={dados.acBulhas === 'Com sopro'} onChange={handleChange} />
-  <label htmlFor="acComSopro">Com sopro</label><br />
+  <input type="radio" id="bulhasCardiacasNormal" name="bulhasCardiacas" value="Bulhas Cardíacas" checked={dados.bulhasCardiacas === 'Bulhas Cardíacas'} onChange={handleChange} />
+  <label htmlFor="bulhasCardiacasNormal">Bulhas Cardíacas</label><br />
+  <input type="radio" id="semSopro" name="bulhasCardiacas" value="Sem Sopro" checked={dados.bulhasCardiacas === 'Sem Sopro'} onChange={handleChange} />
+  <label htmlFor="semSopro">Sem Sopro</label><br />
+  <input type="radio" id="comSopro" name="bulhasCardiacas" value="Com Sopro" checked={dados.bulhasCardiacas === 'Com Sopro'} onChange={handleChange} />
+  <label htmlFor="comSopro">Com Sopro</label><br />
 </div>
+
 </div>
 <div className="form-section">
   <h3>Abdome</h3>

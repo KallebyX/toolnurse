@@ -139,7 +139,10 @@ function FormularioRecemNascido() {
       - Fenda Labial: ${dados.fendaLabial}
       - Tamanho da Língua: ${dados.tamanhoLingua}
       - Freio Lingual: ${dados.freioLingual}
-      - Mucosa: ${dados.mucosa}
+      - Coloração da Mucosa: ${dados.colorMucosa}
+      - Cianose da Mucosa: ${dados.cianoseMucosa}
+      - Jaundice da Mucosa: ${dados.jaundiceMucosa}
+      - Hidratação da Mucosa: ${dados.hidratacaoMucosa}
   
       **Orelhas/Ouvidos:**
       - Secreção: ${dados.secrecaoOrelhas}
@@ -553,25 +556,48 @@ function FormularioRecemNascido() {
     <input type="radio" id="freioCurto" name="freioLingual" value="Curto" checked={dados.freioLingual === 'Curto'} onChange={handleChange} />
     <label htmlFor="freioCurto">Curto</label>
   </div>
-  <div className="form-group">
-  <label>Mucosa:</label>
-  <input type="radio" id="mucosaCorada" name="mucosa" value="Corada" checked={dados.mucosa === 'Corada'} onChange={handleChange} />
-  <label htmlFor="mucosaCorada">Corada</label>
-  <input type="radio" id="mucosaPalida" name="mucosa" value="Pálida" checked={dados.mucosa === 'Pálida'} onChange={handleChange} />
-  <label htmlFor="mucosaPalida">Pálida</label>
-  <input type="radio" id="mucosaIcterica" name="mucosa" value="Ictérica" checked={dados.mucosa === 'Ictérica'} onChange={handleChange} />
-  <label htmlFor="mucosaIcterica">Ictérica</label>
-  <input type="radio" id="mucosaAnicterica" name="mucosa" value="Anictérica" checked={dados.mucosa === 'Anictérica'} onChange={handleChange} />
-  <label htmlFor="mucosaAnicterica">Anictérica</label>
-  <input type="radio" id="mucosaCianotica" name="mucosa" value="Cianótica" checked={dados.mucosa === 'Cianótica'} onChange={handleChange} />
-  <label htmlFor="mucosaCianotica">Cianótica</label>
-  <input type="radio" id="mucosaAcianotica" name="mucosa" value="Acianótica" checked={dados.mucosa === 'Acianótica'} onChange={handleChange} />
-  <label htmlFor="mucosaAcianotica">Acianótica</label>
-  <input type="radio" id="mucosaUmida" name="mucosa" value="Úmida" checked={dados.mucosa === 'Úmida'} onChange={handleChange} />
-  <label htmlFor="mucosaUmida">Úmida</label>
-  <input type="radio" id="mucosaSeca" name="mucosa" value="Seca" checked={dados.mucosa === 'Seca'} onChange={handleChange} />
-  <label htmlFor="mucosaSeca">Seca</label>
+
+<div className="form-group">
+  <label>Coloração da Mucosa:</label>
+  <div>
+    <input type="radio" id="mucosaCorada" name="colorMucosa" value="Corada" checked={dados.colorMucosa === 'Corada'} onChange={handleChange} />
+    <label htmlFor="mucosaCorada">Corada</label>
+    <input type="radio" id="mucosaPalida" name="colorMucosa" value="Pálida" checked={dados.colorMucosa === 'Pálida'} onChange={handleChange} />
+    <label htmlFor="mucosaPalida">Pálida</label>
+  </div>
 </div>
+
+<div className="form-group">
+  <label>Jaundice da Mucosa:</label>
+  <div>
+    <input type="radio" id="mucosaIcterica" name="jaundiceMucosa" value="Ictérica" checked={dados.jaundiceMucosa === 'Ictérica'} onChange={handleChange} />
+    <label htmlFor="mucosaIcterica">Ictérica</label>
+    <input type="radio" id="mucosaAnicterica" name="jaundiceMucosa" value="Anictérica" checked={dados.jaundiceMucosa === 'Anictérica'} onChange={handleChange} />
+    <label htmlFor="mucosaAnicterica">Anictérica</label>
+  </div>
+</div>
+
+<div className="form-group">
+  <label>Cianose da Mucosa:</label>
+  <div>
+    <input type="radio" id="mucosaCianotica" name="cianoseMucosa" value="Cianótica" checked={dados.cianoseMucosa === 'Cianótica'} onChange={handleChange} />
+    <label htmlFor="mucosaCianotica">Cianótica</label>
+    <input type="radio" id="mucosaAcianotica" name="cianoseMucosa" value="Acianótica" checked={dados.cianoseMucosa === 'Acianótica'} onChange={handleChange} />
+    <label htmlFor="mucosaAcianotica">Acianótica</label>
+  </div>
+</div>
+
+<div className="form-group">
+  <label>Hidratação da Mucosa:</label>
+  <div>
+    <input type="radio" id="mucosaUmida" name="hidratacaoMucosa" value="Úmida" checked={dados.hidratacaoMucosa === 'Úmida'} onChange={handleChange} />
+    <label htmlFor="mucosaUmida">Úmida</label>
+    <input type="radio" id="mucosaSeca" name="hidratacaoMucosa" value="Seca" checked={dados.hidratacaoMucosa === 'Seca'} onChange={handleChange} />
+    <label htmlFor="mucosaSeca">Seca</label>
+  </div>
+</div>
+
+
 
 <h3>Orelhas/Ouvidos</h3>
 <div className="form-group">
