@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import toolNurseImage from '../../assets/toolNurse.jpg'; // Ajuste o caminho conforme necessário
 import Menu from '../Menu'; // Ajuste o caminho conforme necessário
+import Footer from '../Footer';
 
 function FormularioRecemNascido() {
   const [dados, setDados] = useState({
@@ -224,44 +225,54 @@ function FormularioRecemNascido() {
   };
 
   return (
+    
     <div className='tudo'>
       <div className="cabecalho">
         <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
-        <Menu />
+       
       </div>
-     
-
+      <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
+      <Menu />
+      <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
     <form onSubmit={handleSubmit}>
       
   
   <h3>Recém nascido</h3>
-  <hr className="hr" />
-  <div></div>
-    <div className='formulario-recem-nascido'>
+
   <h3>Informações Básicas</h3>
+    <div className='basicos'>
+
   <div className="form-group">
     <label>Peso (Kg):</label>
-    <input type="text" name="peso" value={dados.peso} onChange={handleChange} />
+    <input type="text" id='peso' name="peso" value={dados.peso} onChange={handleChange} />
   </div>
   <div className="form-group">
     <label>Estatura (cm):</label>
-    <input type="text" name="estatura" value={dados.estatura} onChange={handleChange} />
+    <input id='estatura' type="text" name="estatura" value={dados.estatura} onChange={handleChange} />
   </div>
   <div className="form-group">
     <label>PC (cm):</label>
-    <input type="text" name="pc" value={dados.pc} onChange={handleChange} />
+    <input type="text" id='pc' name="pc" value={dados.pc} onChange={handleChange} />
   </div>
   <div className="form-group">
     <label>Temperatura axilar (ºC):</label>
-    <input type="text" name="temperaturaAxilar" value={dados.temperaturaAxilar} onChange={handleChange} />
+    <input type="text"  id='temperaturaAxilar' name="temperaturaAxilar" value={dados.temperaturaAxilar} onChange={handleChange} />
   </div>
   <div className="form-group">
     <label>FR (RPM):</label>
-    <input type="text" name="fr" value={dados.fr} onChange={handleChange} />
+    <input 
+   id='fr' type="text" name="fr" value={dados.fr} onChange={handleChange} />
   </div>
   </div>
 
   <div className="formulario-section">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Estado Geral e Pele</h3>
   <div className="form-group">
     <label>Estado geral:</label>
@@ -376,6 +387,9 @@ function FormularioRecemNascido() {
   </div>
   </div>
   <div className="formulario-section">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Cabeça</h3>
 
   <div className="form-group">
@@ -466,6 +480,9 @@ function FormularioRecemNascido() {
   </div>
   </div>
   <div className="formulario-section">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Olhos</h3>
   <div className="form-group">
     <label>Simetria:</label>
@@ -502,7 +519,9 @@ function FormularioRecemNascido() {
     <input type="radio" id="pupilasIsocoricas" name="pupilas" value="Isocóricas" checked={dados.pupilas === 'Isocóricas'} onChange={handleChange} />
     <label htmlFor="pupilasIsocoricas">Isocóricas</label>
   </div>
-
+  <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Nariz</h3>
   <div className="form-group">
     <label>Secreção:</label>
@@ -527,6 +546,9 @@ function FormularioRecemNascido() {
   </div>
   </div>
   <div className="formulario-section">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Boca</h3>
   <div className="form-group">
     <label>Palato íntegro:</label>
@@ -598,7 +620,9 @@ function FormularioRecemNascido() {
 </div>
 
 
-
+<svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
 <h3>Orelhas/Ouvidos</h3>
 <div className="form-group">
   <label>Secreção:</label>
@@ -631,7 +655,9 @@ function FormularioRecemNascido() {
   )}
 </div>
 
-
+<svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Pescoço</h3>
   <div className="form-group">
     <label>Torcicolo congênito:</label>
@@ -642,6 +668,9 @@ function FormularioRecemNascido() {
   </div>
   </div>
   <div className="formulario-section">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Tórax</h3>
   <div className="form-group">
     <label>Simetria:</label>
@@ -739,6 +768,9 @@ function FormularioRecemNascido() {
 
   </div>
   <div className="formulario-section">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Abdome</h3>
   <div className="form-group">
     <label>Estado:</label>
@@ -810,6 +842,9 @@ function FormularioRecemNascido() {
   </div>
   </div>
   <div className="formulario-section">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Membros Superiores</h3>
 <div className="form-group">
   <label>Deformidades:</label>
@@ -849,7 +884,9 @@ function FormularioRecemNascido() {
 </div>
 
 
-
+<svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Membros Inferiores</h3>
   <div className="form-group">
     <label>Deformidades:</label>
@@ -881,6 +918,9 @@ function FormularioRecemNascido() {
   </div>
   </div>
   <div className="formulario-section">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Genitália Feminina</h3>
   <div className="form-group">
     <label>Pequenos lábios e clitóris proeminentes:</label>
@@ -910,7 +950,9 @@ function FormularioRecemNascido() {
     <input type="radio" id="herniaInguinalFemNao" name="herniaInguinalFem" value="Não" checked={dados.herniaInguinalFem === 'Não'} onChange={handleChange} />
     <label htmlFor="herniaInguinalFemNao">Não</label>
   </div>
-
+  <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Genitália Masculina</h3>
   <div className="form-group">
     <label>Hérnia inguinal:</label>
@@ -953,6 +995,9 @@ function FormularioRecemNascido() {
   </div>
   </div>
   <div className="formulario-section">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Orifício Anal</h3>
   <div className="form-group">
     <label>Anomalias:</label>
@@ -975,7 +1020,9 @@ function FormularioRecemNascido() {
     <input type="radio" id="assadurasNao" name="assadurasAnal" value="Não" checked={dados.assadurasAnal === 'Não'} onChange={handleChange} />
     <label htmlFor="assadurasNao">Não</label>
   </div>
-
+  <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Reflexos</h3>
   <div className="form-group">
     <label>Reflexo de Busca:</label>

@@ -136,19 +136,36 @@ const FormularioUmMes = () => {
   };
 
   return (
+    <div>
+
+   
+    
     <div className="tudo">
     <div className="cabecalho">
-      <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
-      <Menu />
-    </div>
-
+    <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
+  </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
+    <Menu />
+    <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
+<div>
+  
+</div>
     <h3>Primeiro Mês</h3>
+    
     <hr className="hr" />
     <form onSubmit={handleSubmit}>
-      {/* Peso */}
-      <div className="form-group">
+    <h3>Informações Básicas</h3>
+    
+      <div className='basicos'>
+     {/* Peso */}
+     
+     <div className="form-group">
       
-      <h3>Informações Básicas</h3>
+     
         <label htmlFor="peso">Peso (Kg):</label>
         <input type="text" id="peso" name="peso" value={dados.peso} onChange={handleChange} />
       </div>
@@ -176,6 +193,8 @@ const FormularioUmMes = () => {
         <label htmlFor="fr">FR (RPM):</label>
         <input type="text" id="fr" name="fr" value={dados.fr} onChange={handleChange} />
       </div>
+      </div>
+     
 <h3>Pele</h3>
       {/* Pele */}
       <div className="form-group">
@@ -236,6 +255,9 @@ const FormularioUmMes = () => {
         </label><br />
       </div>
 {/* CABEÇA */}
+<svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
 <div className="form-group">
   <h3>Cabeça</h3>
   <label>Fontanelas:</label><br />
@@ -416,6 +438,9 @@ const FormularioUmMes = () => {
 
 
 {/* TÓRAX */}
+<svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
 <h3>TÓRAX</h3>
 
 <div className="form-group">
@@ -441,6 +466,9 @@ const FormularioUmMes = () => {
 
 
 {/* ABDOME */}
+<svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
 <h3>ABDOME</h3>
 
 <div className="form-group">
@@ -466,6 +494,9 @@ const FormularioUmMes = () => {
   <label htmlFor="naoHernia">Não</label><br />
 </div>
 {/* GENITÁLIA */}
+<svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
 <h3>GENITÁLIA</h3>
 
 {/* Feminina */}
@@ -505,7 +536,9 @@ const FormularioUmMes = () => {
   <input type="radio" id="naoHerniaFem" name="herniaInguinalFem" value="Não" checked={dados.herniaInguinalFem === 'Não'} onChange={handleChange} />
   <label htmlFor="naoHerniaFem">Não</label><br />
 </div>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
 {/* Masculina */}
 <h4>Masculina</h4>
 <div className="form-group">
@@ -572,6 +605,9 @@ const FormularioUmMes = () => {
 </div>
 
 {/* Orifício anal */}
+<svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
 <h3>Orifício anal</h3>
 
 <div className="form-group">
@@ -601,6 +637,9 @@ const FormularioUmMes = () => {
   <label htmlFor="naoAssaduras">Não</label><br />
 </div>
 {/* Marcos do Desenvolvimento */}
+<svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
 <h3>Marcos do Desenvolvimento</h3>
 
 <div className="form-group">
@@ -668,6 +707,7 @@ const FormularioUmMes = () => {
         </button>
       </form>
     </div>
+     </div>
   );
 };
 

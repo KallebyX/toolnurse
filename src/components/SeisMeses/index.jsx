@@ -138,30 +138,47 @@ function FormularioSeisMeses() {
     <div className="tudo">
       <div className="cabecalho">
         <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
-        <Menu />
+      
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
+      <Menu />
+      <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
+
       <h3>6 Meses</h3>
       <form onSubmit={handleSubmit}>
         {/* Form fields here, structured similarly to the previous forms with inputs for each category */}
         {/* For example: */}
+        <h3>Informações Básicas</h3>
+        
         <div className="form-section">
   <div className="form-group">
-  <h3>Informações Básicas</h3>
-    <label>Peso (Kg):</label>
-    <input type="text" name="peso" value={dados.peso} onChange={handleChange} />
-  </div>
 
-  <div className="form-group">
-    <label>Estatura (cm):</label>
-    <input type="text" name="estatura" value={dados.estatura} onChange={handleChange} />
-  </div>
-
-  <div className="form-group">
-    <label>PC (cm):</label>
-    <input type="text" name="pc" value={dados.pc} onChange={handleChange} />
-  </div>
+  <div className='basicos'>
+        
+        <div className="form-group">
+        
+        <label>Peso (Kg):</label>
+          <input type="text" name="peso" id='peso' value={dados.peso} onChange={handleChange} />
+        </div>
+        <div className="form-group">
+          <label>Estatura (cm):</label>
+          <input type="text" name="estatura" id='estatura' value={dados.estatura} onChange={handleChange} />
+        </div>
+        <div className="form-group">
+          <label>PC (cm):</label>
+          <input type="text" id='pc' name="pc" value={dados.pc} onChange={handleChange} />
+        </div>
+        </div>
+        </div>
 
   <div className="form-section">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
     <h3>Estado Geral</h3>
     {["Ativo", "Hipoativo", "Letárgico", "Calmo", "Choroso"].map((estado) => (
       <label key={estado}>
@@ -178,6 +195,9 @@ function FormularioSeisMeses() {
   </div>
 
   <div className="form-section">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
     <h3>Pele</h3>
     <div className="form-group">
       <label>Textura:</label>
@@ -242,6 +262,9 @@ function FormularioSeisMeses() {
   </div>
 </div>
 <div className="form-section">
+<svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Cabeça</h3>
   <div className="form-group">
     <label>Fontanela Anterior:</label>
@@ -410,6 +433,9 @@ function FormularioSeisMeses() {
   )}
 </div>
 </div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
 <h3>TÓRAX</h3>
 
 <div className="form-group">
@@ -433,6 +459,9 @@ function FormularioSeisMeses() {
 </div>
 
 <div className="form-section">
+<svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Abdome</h3>
   <div className="form-group">
     <label>Estado do Abdome:</label>
@@ -475,6 +504,9 @@ function FormularioSeisMeses() {
   </div>
 </div>
 <div className="form-section">
+<svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Genitália</h3>
   
   <h4>Feminina</h4>
@@ -549,7 +581,9 @@ function FormularioSeisMeses() {
       Não
     </label>
   </div>
-
+  <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h4>Masculina</h4>
   <div className="form-group">
     <label>Hérnia inguinal:</label>
@@ -692,6 +726,9 @@ function FormularioSeisMeses() {
   </div>
 </div>
 <div className="form-section">
+<svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Orifício Anal</h3>
   <div className="form-group">
     <label>Anomalias:</label>
@@ -766,6 +803,9 @@ function FormularioSeisMeses() {
   </div>
 </div>
 <div className="form-section">
+<svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
   <h3>Marcos do Desenvolvimento - 6 Meses</h3>
   <div className="form-group">
     <label>Brinca de esconde-achou:</label>

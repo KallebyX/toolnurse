@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Menu = () => {
     return (
         <nav id="menu">
-            <h1>Menu Principal</h1>
+            <h1>Idade</h1>
             <ul className="ul">
                 <li><Link to="/recem" className="buttons">Recém-nascido</Link></li>
                 <li><Link to="/ummes" className="buttons">Primeiro Mês</Link></li>

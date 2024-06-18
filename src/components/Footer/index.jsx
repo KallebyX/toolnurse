@@ -1,12 +1,12 @@
 import React from "react";
+import "./Footer.css"; // Importa o arquivo CSS para o componente
 
 const Footer = () => {
-    return (
-      <div align="center">
-        <h5>Copyright 2023 - Laboratório de Produtos Avançados do Mestrado em Saúde Materno Infantil - by Sylvio Vieira</h5>
-        <h5>Facebook | Twitter</h5>
-      </div>
-    );
+  return (
+    <div className="footer">
+      
+    </div>
+  );
 };
 
 export default Footer;

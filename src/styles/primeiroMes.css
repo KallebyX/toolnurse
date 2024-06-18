@@ -1,16 +1,29 @@
 .img {
   display: flex;
-  margin-top: 40px;
+  margin-top: 70px;
   margin-left: 128px;
-  width: 330px;
-  height: 255px;
+  width: 329px;
+  height: 121px;
   flex-shrink: 0;
 }
 
 .cabecalho {
-  flex-shrink: 0;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 300px;
   background: #ffff;
   color: #000;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+ 
+body { 
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+  overflow-x: hidden;
+  background-color: #f9f4df;
 }
 
 .tudo {
@@ -20,7 +33,8 @@
   background-color: #f9f4df;
   color: #322a79;
   font: 18px / normal Lato;
-  margin: 0 152px;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .copiar {
@@ -31,32 +45,19 @@
   height: 30px;
   flex-shrink: 0;
   background-color: #fb8484;
-  color: #322a79;
+  color: #322A79;
   text-align: right;
   font-family: Lato;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: 1px solid #322A79;
 }
 
 .copiar:hover {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 151px;
-  height: 30px;
-  flex-shrink: 0;
-  background-color: #fb8470;
-  color: #322a79;
-  text-align: right;
-  font-family: Lato;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  border-radius: 5px;
+  background-color: #fb84849d;
 }
 
 .hr {
@@ -77,6 +78,29 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+}
+
+#peso, #estatura, #pc, #temperaturaAxilar, #fr, #imc {
+  width: 130px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid #322A79;
+  background: #FFF;
+  margin: 5px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group > label {
+  margin-bottom: 5px;
+  flex: 0 0 auto;
 }
 
 .box2 {
@@ -308,14 +332,6 @@
   margin-bottom: 20px;
 }
 
-.deformidades {
-  margin-bottom: 20px;
-}
-
-.malformacao {
-  margin-bottom: 20px;
-}
-
 .pe-torto {
   margin-bottom: 20px;
 }
@@ -353,18 +369,6 @@
 }
 
 .genital-masculina {
-  margin-bottom: 20px;
-}
-
-.hernia-inguinal {
-  margin-bottom: 20px;
-}
-
-.genital-masculina {
-  margin-bottom: 20px;
-}
-
-.hernia-inguinal {
   margin-bottom: 20px;
 }
 
@@ -412,26 +416,153 @@
   border-right: none;
 }
 
-.pernas-braços {
-  margin-bottom: 20px;
-}
-
-.rosto {
-  margin-bottom: 20px;
-}
-
-.cabeca {
-  margin-bottom: 20px;
-}
-
-.la {
-  margin-bottom: 20px;
-}
-
 label {
-    margin-left: 10px;
+  margin-left: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.basicos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 0;
+}
+
+#peso, #estatura, #pc, #temperaturaAxilar, #fr, #imc {
+  width: 130px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid #322A79;
+  background: #FFF;
+  margin: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group > label {
+  margin-right: 20px;
+  flex: 0 0 auto;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .cabecalho {
+    max-width: 1000px;
   }
-  
-  input[type="radio"] {
-    margin-right: 10px;
+
+  .tudo {
+    width: 90%;
   }
+}
+
+@media (max-width: 992px) {
+  body {
+    margin-left: 50px;
+  }
+
+  .cabecalho {
+    max-width: 800px;
+  }
+
+  .img {
+    margin-left: 64px;
+    width: 280px;
+    height: 103px;
+  }
+
+  .tudo {
+    width: 95%;
+  }
+
+  .basicos {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    margin-left: 20px;
+    flex-direction: column;
+  }
+
+  .cabecalho {
+    flex-direction: column;
+    height: auto;
+    max-width: 600px;
+  }
+
+  .img {
+    margin: 20px auto;
+    width: 240px;
+    height: 90px;
+  }
+
+  .tudo {
+    width: 100%;
+  }
+
+  .basicos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #peso, #estatura, #pc, #temperaturaAxilar, #fr, #imc {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-group > label {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cabecalho {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .img {
+    margin: 10px auto;
+    width: 200px;
+    height: 75px;
+  }
+
+  .tudo {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .basicos {
+    width: 100%;
+  }
+
+  .copiar {
+    width: 100px;
+    height: 25px;
+    font-size: 14px;
+  }
+
+  #peso, #estatura, #pc, #temperaturaAxilar, #fr, #imc {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
