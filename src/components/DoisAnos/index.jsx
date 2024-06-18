@@ -148,7 +148,7 @@ function Formulario2Anos() {
         <form onSubmit={handleSubmit}>
         <div className="formulario">
   <h3>2 Anos</h3>
-  <hr className="hr" />
+  <br />
 <div className="form-section">
   <h3>Informações Básicas</h3>
   <div className="basicos">

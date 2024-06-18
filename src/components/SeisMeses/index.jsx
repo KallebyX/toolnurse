@@ -149,6 +149,7 @@ function FormularioSeisMeses() {
 </svg>
 
       <h3>6 Meses</h3>
+      <br />
       <form onSubmit={handleSubmit}>
         {/* Form fields here, structured similarly to the previous forms with inputs for each category */}
         {/* For example: */}

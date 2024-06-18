@@ -162,8 +162,7 @@ function formatDevelopmentMilestone(milestone, value) {
         <form onSubmit={handleSubmit}>
         <div className="formulario">
           <h3>18 Meses</h3>
-          <hr className="hr" />
-          <hr className="hr" />
+          <br />
 <div className="form-section">
   <h3>Informações Básicas</h3>
   <div className="basicos">

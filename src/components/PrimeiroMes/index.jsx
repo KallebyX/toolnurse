@@ -136,7 +136,7 @@ const FormularioUmMes = () => {
   };
 
   return (
-    <div>
+    <div className='all'>
 
    
     
@@ -156,7 +156,7 @@ const FormularioUmMes = () => {
 </div>
     <h3>Primeiro Mês</h3>
     
-    <hr className="hr" />
+    <br />
     <form onSubmit={handleSubmit}>
     <h3>Informações Básicas</h3>
     
@@ -194,7 +194,9 @@ const FormularioUmMes = () => {
         <input type="text" id="fr" name="fr" value={dados.fr} onChange={handleChange} />
       </div>
       </div>
-     
+      <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
 <h3>Pele</h3>
       {/* Pele */}
       <div className="form-group">

@@ -242,7 +242,7 @@ function FormularioRecemNascido() {
       
   
   <h3>Recém nascido</h3>
-
+<br />
   <h3>Informações Básicas</h3>
     <div className='basicos'>
 
@@ -334,7 +334,7 @@ function FormularioRecemNascido() {
     </div>
   </div>
 
-  <div className="form-group">
+  <div className="form-groupk">
     <label>Krammer Zona:</label>
     <div>
       {Array.from({ length: 5 }, (_, i) => (

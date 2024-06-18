@@ -155,7 +155,7 @@ TÓRAX
         <div className="formulario">
           
         <h3>12 Meses</h3>
-        <hr className="hr" />
+        <br />
           {/* Cada seção do formulário seria implementada aqui, similar ao exemplo: */}
           <h3>Informações Básicas</h3>
           <div className='basicos'>
@@ -579,7 +579,7 @@ TÓRAX
   <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
   <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
 </svg>
-  <div className="form-group">
+  <div className="form-groupm">
 
     <h4>Masculina</h4>
     <div className="form-group">

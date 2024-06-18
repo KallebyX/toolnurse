@@ -153,6 +153,7 @@ const handleSubmit = (event) => {
   <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
 </svg>
             <h3>4-5 Meses</h3>
+            <br />
             <form onSubmit={handleSubmit}>
             <h3>Informações Básicas</h3>
             <div className='basicos'>

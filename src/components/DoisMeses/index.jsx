@@ -147,6 +147,7 @@ function FormularioDoisTresMeses() {
       };
       
       return (
+        <div className='all'>
 <div className="tudo">
 <div className="cabecalho">
       <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
@@ -161,7 +162,7 @@ function FormularioDoisTresMeses() {
 </svg>
           <h3>2 - 3 Meses</h3>
           <form onSubmit={handleSubmit}>
-       
+       <br />
           <h3>Informações Básicas</h3>
             <div className='basicos'>
         
@@ -989,6 +990,7 @@ function FormularioDoisTresMeses() {
         </button>
           </form>
         </div>
+      </div>
       );
 }
 

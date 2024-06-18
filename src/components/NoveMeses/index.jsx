@@ -134,7 +134,7 @@ function Formulario9Meses() {
       <form onSubmit={handleSubmit}>
      
         <h3>9 Meses</h3>
-        <hr className="hr" />
+        <br />
         <div className="formulario">
           {/* Campos do formulário */}
           <div className="form-section">
@@ -161,8 +161,11 @@ function Formulario9Meses() {
                 <input type="text" id='fr' name="fr" value={dados.fr} onChange={handleChange} />
               </div>
             </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
+  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
+</svg>
+            <h3>Estado Geral:</h3>
             <div className="form-group">
-              <label>Estado Geral:</label>
               <div>
                 {["Ativo", "Hipoativo", "Letárgico", "Calmo", "Choroso"].map(estado => (
                   <React.Fragment key={estado}>

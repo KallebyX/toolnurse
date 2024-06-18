@@ -6,6 +6,11 @@
   height: 121px;
   flex-shrink: 0;
 }
+.all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .cabecalho {
   display: flex;
@@ -21,13 +26,15 @@
 body { 
   display: flex;
   align-items: center;
-  margin-left: 100px;
+  justify-content: center;
   overflow-x: hidden;
   background-color: #f9f4df;
 }
 
 .tudo {
   border-radius: 5px;
+  align-items: center;
+  justify-content: center;
   display: grid;
   flex-shrink: 0;
   background-color: #f9f4df;
@@ -424,11 +431,22 @@ input[type="radio"] {
   margin-right: 10px;
 }
 
+.form-groupk{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+
+}
+
 .basicos {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 100%;
+  max-width: 990px;
   height: auto;
   margin-top: 20px;
   margin-left: 0;
