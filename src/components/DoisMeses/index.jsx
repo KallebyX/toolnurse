@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import toolNurseImage from '../../assets/toolNurse.jpg'; // Ajuste o caminho conforme necessário
-import Menu from '../Menu'; // Ajuste o caminho conforme necessário
+import AssessmentLayout from '../AssessmentLayout';
 
 function FormularioDoisTresMeses() {
     const [dados, setDados] = useState({
@@ -147,36 +146,23 @@ function FormularioDoisTresMeses() {
       };
       
       return (
-        <div className='all'>
-<div className="tudo">
-<div className="cabecalho">
-      <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
-    
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
-  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
-</svg>
-    <Menu />
-    <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
-  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
-</svg>
-          <h3>2 - 3 Meses</h3>
-          <form onSubmit={handleSubmit}>
+        <AssessmentLayout title="2 - 3 Meses">
+<form onSubmit={handleSubmit}>
        <br />
           <h3>Informações Básicas</h3>
             <div className='basicos'>
         
             <div className="form-group">
             
-            <label>Peso (Kg):</label>
+            <label htmlFor="peso">Peso (Kg):</label>
               <input type="text" name="peso" id='peso' value={dados.peso} onChange={handleChange} />
             </div>
             <div className="form-group">
-              <label>Estatura (cm):</label>
+              <label htmlFor="estatura">Estatura (cm):</label>
               <input type="text" name="estatura" id='estatura' value={dados.estatura} onChange={handleChange} />
             </div>
             <div className="form-group">
-              <label>PC (cm):</label>
+              <label htmlFor="pc">PC (cm):</label>
               <input type="text" id='pc' name="pc" value={dados.pc} onChange={handleChange} />
             </div>
             </div>
@@ -304,16 +290,16 @@ function FormularioDoisTresMeses() {
   </div>
   <div className="form-group">
   <label>Linfonodos cervicais palpáveis:</label><br />
-  <input type="radio" id="linfonodosSim" name="linfonodosCervicaisPalpaveis" value="SIM" checked={dados.linfonodosCervicaisPalpaveis === 'SIM'} onChange={handleChange} /> Sim<br />
-  <input type="radio" id="linfonodosNao" name="linfonodosCervicaisPalpaveis" value="NÃO" checked={dados.linfonodosCervicaisPalpaveis === 'NÃO'} onChange={handleChange} /> Não<br />
+  <label className="tn-option"><input type="radio" id="linfonodosSim" name="linfonodosCervicaisPalpaveis" value="SIM" checked={dados.linfonodosCervicaisPalpaveis === 'SIM'} onChange={handleChange} /> Sim</label><br />
+  <label className="tn-option"><input type="radio" id="linfonodosNao" name="linfonodosCervicaisPalpaveis" value="NÃO" checked={dados.linfonodosCervicaisPalpaveis === 'NÃO'} onChange={handleChange} /> Não</label><br />
 
   {dados.linfonodosCervicaisPalpaveis === 'SIM' && (
     <div>
-      <input type="radio" name="tipoLinfonodoCervical" value="Móvel" checked={dados.tipoLinfonodoCervical === 'Móvel'} onChange={handleChange} /> Móvel<br />
-      <input type="radio" name="tipoLinfonodoCervical" value="Fixo" checked={dados.tipoLinfonodoCervical === 'Fixo'} onChange={handleChange} /> Fixo<br />
-      <input type="radio" name="tipoLinfonodoCervical" value="Fibrobástico" checked={dados.tipoLinfonodoCervical === 'Fibrobástico'} onChange={handleChange} /> Fibrobástico<br />
-      <input type="radio" name="tipoLinfonodoCervical" value="Amolecido" checked={dados.tipoLinfonodoCervical === 'Amolecido'} onChange={handleChange} /> Amolecido<br />
-      <input type="radio" name="tipoLinfonodoCervical" value="Endurecido" checked={dados.tipoLinfonodoCervical === 'Endurecido'} onChange={handleChange} /> Endurecido<br />
+      <label className="tn-option"><input type="radio" name="tipoLinfonodoCervical" value="Móvel" checked={dados.tipoLinfonodoCervical === 'Móvel'} onChange={handleChange} /> Móvel</label><br />
+      <label className="tn-option"><input type="radio" name="tipoLinfonodoCervical" value="Fixo" checked={dados.tipoLinfonodoCervical === 'Fixo'} onChange={handleChange} /> Fixo</label><br />
+      <label className="tn-option"><input type="radio" name="tipoLinfonodoCervical" value="Fibrobástico" checked={dados.tipoLinfonodoCervical === 'Fibrobástico'} onChange={handleChange} /> Fibrobástico</label><br />
+      <label className="tn-option"><input type="radio" name="tipoLinfonodoCervical" value="Amolecido" checked={dados.tipoLinfonodoCervical === 'Amolecido'} onChange={handleChange} /> Amolecido</label><br />
+      <label className="tn-option"><input type="radio" name="tipoLinfonodoCervical" value="Endurecido" checked={dados.tipoLinfonodoCervical === 'Endurecido'} onChange={handleChange} /> Endurecido</label><br />
     </div>
   )}
 </div>
@@ -989,8 +975,7 @@ function FormularioDoisTresMeses() {
           Copiar Dados
         </button>
           </form>
-        </div>
-      </div>
+    </AssessmentLayout>
       );
 }
 

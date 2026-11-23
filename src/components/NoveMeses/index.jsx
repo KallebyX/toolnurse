@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import toolNurseImage from '../../assets/toolNurse.jpg'; // Ajuste o caminho conforme necessário
-import Menu from '../Menu'; // Ajuste o caminho conforme necessário
+import AssessmentLayout from '../AssessmentLayout';
 
 function Formulario9Meses() {
   const [dados, setDados] = useState({
@@ -120,20 +119,10 @@ function Formulario9Meses() {
   };
 
   return (
-    <div className='tudo'>
-      <div className="cabecalho">
-        <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
-  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
-</svg>
-        <Menu />
-        <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
-  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
-</svg>
-      <form onSubmit={handleSubmit}>
+    <AssessmentLayout title="9 Meses">
+<form onSubmit={handleSubmit}>
      
-        <h3>9 Meses</h3>
+        <h3 className="tn-form-age">9 Meses</h3>
         <br />
         <div className="formulario">
           {/* Campos do formulário */}
@@ -141,23 +130,23 @@ function Formulario9Meses() {
             <h3>Informações Básicas</h3>
             <div className='basicos'>
               <div className="form-group">
-                <label>Peso (Kg):</label>
+                <label htmlFor="peso">Peso (Kg):</label>
                 <input type="text" id='peso' name="peso" value={dados.peso} onChange={handleChange} />
               </div>
               <div className="form-group">
-                <label>Estatura (cm):</label>
+                <label htmlFor="estatura">Estatura (cm):</label>
                 <input id='estatura' type="text" name="estatura" value={dados.estatura} onChange={handleChange} />
               </div>
               <div className="form-group">
-                <label>PC (cm):</label>
+                <label htmlFor="pc">PC (cm):</label>
                 <input type="text" id='pc' name="pc" value={dados.pc} onChange={handleChange} />
               </div>
               <div className="form-group">
-                <label>Temperatura Axilar (ºC):</label>
+                <label htmlFor="temperaturaAxilar">Temperatura Axilar (ºC):</label>
                 <input type="text" id='temperaturaAxilar' name="temperatura" value={dados.temperatura} onChange={handleChange} />
               </div>
               <div className="form-group">
-                <label>FR (RPM):</label>
+                <label htmlFor="fr">FR (RPM):</label>
                 <input type="text" id='fr' name="fr" value={dados.fr} onChange={handleChange} />
               </div>
             </div>
@@ -585,7 +574,7 @@ function Formulario9Meses() {
         </div>
         <button className='copiar' type="submit">Copiar</button>
       </form>
-    </div>
+    </AssessmentLayout>
   );
 }
 

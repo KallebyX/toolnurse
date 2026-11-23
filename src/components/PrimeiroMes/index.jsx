@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import toolNurseImage from '../../assets/toolNurse.jpg'; // Ajuste o caminho conforme necessário
-import Menu from '../Menu'; // Ajuste o caminho conforme necessário
+import AssessmentLayout from '../AssessmentLayout';
 
 const FormularioUmMes = () => {
   const [dados, setDados] = useState({
@@ -136,28 +135,8 @@ const FormularioUmMes = () => {
   };
 
   return (
-    <div className='all'>
-
-   
-    
-    <div className="tudo">
-    <div className="cabecalho">
-    <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
-  </div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
-  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
-</svg>
-    <Menu />
-    <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
-  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
-</svg>
-<div>
-  
-</div>
-    <h3>Primeiro Mês</h3>
-    
-    <br />
-    <form onSubmit={handleSubmit}>
+    <AssessmentLayout title="Primeiro Mês">
+<form onSubmit={handleSubmit}>
     <h3>Informações Básicas</h3>
     
       <div className='basicos'>
@@ -263,23 +242,23 @@ const FormularioUmMes = () => {
 <div className="form-group">
   <h3>Cabeça</h3>
   <label>Fontanelas:</label><br />
-  <input type="radio" name="fontanelas" value="Abauladas" checked={dados.fontanelas === 'Abauladas'} onChange={handleChange} /> Abauladas<br />
-  <input type="radio" name="fontanelas" value="Deprimidas" checked={dados.fontanelas === 'Deprimidas'} onChange={handleChange} /> Deprimidas<br />
-  <input type="radio" name="fontanelas" value="Planas" checked={dados.fontanelas === 'Planas'} onChange={handleChange} /> Planas<br />
+  <label className="tn-option"><input type="radio" name="fontanelas" value="Abauladas" checked={dados.fontanelas === 'Abauladas'} onChange={handleChange} /> Abauladas</label><br />
+  <label className="tn-option"><input type="radio" name="fontanelas" value="Deprimidas" checked={dados.fontanelas === 'Deprimidas'} onChange={handleChange} /> Deprimidas</label><br />
+  <label className="tn-option"><input type="radio" name="fontanelas" value="Planas" checked={dados.fontanelas === 'Planas'} onChange={handleChange} /> Planas</label><br />
 </div>
 
 <div className="form-group">
   <label>Linfonodos cervicais palpáveis:</label><br />
-  <input type="radio" id="linfonodosSim" name="linfonodosCervicaisPalpaveis" value="SIM" checked={dados.linfonodosCervicaisPalpaveis === 'SIM'} onChange={handleChange} /> Sim<br />
-  <input type="radio" id="linfonodosNao" name="linfonodosCervicaisPalpaveis" value="NÃO" checked={dados.linfonodosCervicaisPalpaveis === 'NÃO'} onChange={handleChange} /> Não<br />
+  <label className="tn-option"><input type="radio" id="linfonodosSim" name="linfonodosCervicaisPalpaveis" value="SIM" checked={dados.linfonodosCervicaisPalpaveis === 'SIM'} onChange={handleChange} /> Sim</label><br />
+  <label className="tn-option"><input type="radio" id="linfonodosNao" name="linfonodosCervicaisPalpaveis" value="NÃO" checked={dados.linfonodosCervicaisPalpaveis === 'NÃO'} onChange={handleChange} /> Não</label><br />
 
   {dados.linfonodosCervicaisPalpaveis === 'SIM' && (
     <div>
-      <input type="radio" name="tipoLinfonodoCervical" value="Móvel" checked={dados.tipoLinfonodoCervical === 'Móvel'} onChange={handleChange} /> Móvel<br />
-      <input type="radio" name="tipoLinfonodoCervical" value="Fixo" checked={dados.tipoLinfonodoCervical === 'Fixo'} onChange={handleChange} /> Fixo<br />
-      <input type="radio" name="tipoLinfonodoCervical" value="Fibrobástico" checked={dados.tipoLinfonodoCervical === 'Fibrobástico'} onChange={handleChange} /> Fibrobástico<br />
-      <input type="radio" name="tipoLinfonodoCervical" value="Amolecido" checked={dados.tipoLinfonodoCervical === 'Amolecido'} onChange={handleChange} /> Amolecido<br />
-      <input type="radio" name="tipoLinfonodoCervical" value="Endurecido" checked={dados.tipoLinfonodoCervical === 'Endurecido'} onChange={handleChange} /> Endurecido<br />
+      <label className="tn-option"><input type="radio" name="tipoLinfonodoCervical" value="Móvel" checked={dados.tipoLinfonodoCervical === 'Móvel'} onChange={handleChange} /> Móvel</label><br />
+      <label className="tn-option"><input type="radio" name="tipoLinfonodoCervical" value="Fixo" checked={dados.tipoLinfonodoCervical === 'Fixo'} onChange={handleChange} /> Fixo</label><br />
+      <label className="tn-option"><input type="radio" name="tipoLinfonodoCervical" value="Fibrobástico" checked={dados.tipoLinfonodoCervical === 'Fibrobástico'} onChange={handleChange} /> Fibrobástico</label><br />
+      <label className="tn-option"><input type="radio" name="tipoLinfonodoCervical" value="Amolecido" checked={dados.tipoLinfonodoCervical === 'Amolecido'} onChange={handleChange} /> Amolecido</label><br />
+      <label className="tn-option"><input type="radio" name="tipoLinfonodoCervical" value="Endurecido" checked={dados.tipoLinfonodoCervical === 'Endurecido'} onChange={handleChange} /> Endurecido</label><br />
     </div>
   )}
 </div>
@@ -708,8 +687,7 @@ const FormularioUmMes = () => {
           Copiar Dados
         </button>
       </form>
-    </div>
-     </div>
+    </AssessmentLayout>
   );
 };
 
