@@ -5,7 +5,7 @@ LABEL org.opencontainers.image.source="https://github.com/KallebyX/toolnurse" \
     org.opencontainers.image.revision=$VCS_REF
 
 COPY --chown=101:101 dist/ /usr/share/nginx/html/
-COPY deploy/nginx.conf /etc/nginx/conf.d/default.conf
+COPY --chown=101:101 deploy/nginx.conf /etc/nginx/conf.d/default.conf
 USER 101
 EXPOSE 8080
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
