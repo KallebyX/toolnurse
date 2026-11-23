@@ -16,7 +16,8 @@
     "dev": "vite",
     "build": "vite build",
     "start": "npm run dev",
-    "preview": "vite preview --port 80"
+    "preview": "vite preview --port 80",
+    "verify:preservation": "node scripts/verify-preservation.cjs"
   },
   "author": "",
   "license": "ISC"

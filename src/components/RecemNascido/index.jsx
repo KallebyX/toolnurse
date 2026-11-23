@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import toolNurseImage from '../../assets/toolNurse.jpg'; // Ajuste o caminho conforme necessário
-import Menu from '../Menu'; // Ajuste o caminho conforme necessário
-import Footer from '../Footer';
+import AssessmentLayout from '../AssessmentLayout';
 
 function FormularioRecemNascido() {
   const [dados, setDados] = useState({
@@ -226,44 +224,33 @@ function FormularioRecemNascido() {
 
   return (
     
-    <div className='tudo'>
-      <div className="cabecalho">
-        <img className="img" src={toolNurseImage} alt="Tool Nurse Logo" />
-       
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
-  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
-</svg>
-      <Menu />
-      <svg xmlns="http://www.w3.org/2000/svg" width="1049" height="2" viewBox="0 0 1049 2" fill="none">
-  <path d="M0 1H1049" stroke="#FB8484" stroke-width="2"/>
-</svg>
-    <form onSubmit={handleSubmit}>
+    <AssessmentLayout title="Recém nascido">
+<form onSubmit={handleSubmit}>
       
   
-  <h3>Recém nascido</h3>
+  <h3 className="tn-form-age">Recém nascido</h3>
 <br />
   <h3>Informações Básicas</h3>
     <div className='basicos'>
 
   <div className="form-group">
-    <label>Peso (Kg):</label>
+    <label htmlFor="peso">Peso (Kg):</label>
     <input type="text" id='peso' name="peso" value={dados.peso} onChange={handleChange} />
   </div>
   <div className="form-group">
-    <label>Estatura (cm):</label>
+    <label htmlFor="estatura">Estatura (cm):</label>
     <input id='estatura' type="text" name="estatura" value={dados.estatura} onChange={handleChange} />
   </div>
   <div className="form-group">
-    <label>PC (cm):</label>
+    <label htmlFor="pc">PC (cm):</label>
     <input type="text" id='pc' name="pc" value={dados.pc} onChange={handleChange} />
   </div>
   <div className="form-group">
-    <label>Temperatura axilar (ºC):</label>
+    <label htmlFor="temperaturaAxilar">Temperatura axilar (ºC):</label>
     <input type="text"  id='temperaturaAxilar' name="temperaturaAxilar" value={dados.temperaturaAxilar} onChange={handleChange} />
   </div>
   <div className="form-group">
-    <label>FR (RPM):</label>
+    <label htmlFor="fr">FR (RPM):</label>
     <input 
    id='fr' type="text" name="fr" value={dados.fr} onChange={handleChange} />
   </div>
@@ -1087,7 +1074,7 @@ function FormularioRecemNascido() {
           Copiar Dados
         </button>
       </form>
-      </div>
+    </AssessmentLayout>
   );
 }
 

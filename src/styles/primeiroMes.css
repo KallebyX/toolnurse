@@ -1,586 +1,135 @@
-.img {
-  display: flex;
-  margin-top: 70px;
-  margin-left: 128px;
-  width: 329px;
-  height: 121px;
-  flex-shrink: 0;
-}
-.all {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cabecalho {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-  height: 300px;
-  background: #ffff;
-  color: #000;
-  overflow-x: hidden;
-  margin: 0 auto;
-}
- 
-body { 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow-x: hidden;
-  background-color: #f9f4df;
-}
-
-.tudo {
-  border-radius: 5px;
-  align-items: center;
-  justify-content: center;
-  display: grid;
-  flex-shrink: 0;
-  background-color: #f9f4df;
-  color: #322a79;
-  font: 18px / normal Lato;
-  margin: 0 auto;
-  width: 80%;
-}
-
-.copiar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 151px;
-  height: 30px;
-  flex-shrink: 0;
-  background-color: #fb8484;
-  color: #322A79;
-  text-align: right;
-  font-family: Lato;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  border-radius: 10px;
-  border: 1px solid #322A79;
-}
-
-.copiar:hover {
-  background-color: #fb84849d;
-}
-
-.hr {
-  width: 2px;
-  height: 0;
-  flex-shrink: 0;
-  background-color: #fb8484;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-
-.box1 {
-  display: inline-flex;
-  margin-bottom: 20px;
-  margin-right: 10px;
-  align-items: center;
-  align-content: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
-#peso, #estatura, #pc, #temperaturaAxilar, #fr, #imc {
-  width: 130px;
-  height: 30px;
-  flex-shrink: 0;
-  border-radius: 5px;
-  border: 1px solid #322A79;
-  background: #FFF;
-  margin: 5px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.form-group > label {
-  margin-bottom: 5px;
-  flex: 0 0 auto;
-}
-
-.box2 {
-  display: inline-flex;
-  margin-bottom: 20px;
-  margin-right: 10px;
-  align-items: flex-end;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-
-.boxm {
-  display: grid;
-}
-
-.tem {
-  margin-left: 63px;
-  margin-right: 100px;
-}
-
-.fr {
-  margin-right: 138px;
-}
-
-.identificacao {
-  border-top: 2px solid #fb8484;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-}
-
-.exameFisico {
-  margin-top: 20px;
-  border-top: 2px solid #fb8484;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-}
-
-.identAll {
-  display: grid;
-  margin-bottom: 20px;
-  margin-right: 10px;
-  align-items: start;
-  flex-direction: column-reverse;
-  flex-wrap: nowrap;
-  justify-items: start;
-  justify-content: start;
-  margin-top: 10px;
-}
-
-.geral {
-  margin-bottom: 20px;
-}
-
-.pele {
-  margin-bottom: 20px;
-}
-
-.krammer {
-  margin-bottom: 20px;
-}
-
-.millium {
-  margin-bottom: 20px;
-}
-
-.hemangioma {
-  margin-bottom: 20px;
-}
-
-.manchas {
-  margin-bottom: 20px;
-}
-
-.eritema {
-  margin-bottom: 20px;
-}
-
-.cabeca {
-  display: grid;
-  margin-bottom: 20px;
-  margin-right: 10px;
-  align-items: start;
-  flex-direction: column-reverse;
-  flex-wrap: nowrap;
-  justify-items: start;
-  justify-content: start;
-  margin-top: 10px;
-}
-
-.fontenelas {
-  margin-bottom: 20px;
-}
-
-.bossa {
-  margin-bottom: 20px;
-}
-
-.cefalo {
-  margin-bottom: 20px;
-}
-
-.linfonodos {
-  margin-bottom: 20px;
-}
-
-.pescoco {
-  margin-top: 0px;
-  border-top: 2px solid #fb8484;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-}
-
-.torcicolo {
-  margin-bottom: 20px;
-}
-
-.deformidades {
-  margin-bottom: 20px;
-}
-
-.palpeavel {
-  margin-bottom: 20px;
-}
-
-.axilar {
-  margin-bottom: 20px;
-}
-
-.mamilos {
-  margin-bottom: 20px;
-}
-
-.pulmonar {
-  margin-bottom: 20px;
-}
-
-.retracao {
-  margin-bottom: 20px;
-}
-
-.gemidos {
-  margin-bottom: 20px;
-}
-
-.estridor {
-  margin-bottom: 20px;
-}
-
-.reforco {
-  margin-bottom: 20px;
-}
-
-.asculta {
-  margin-bottom: 20px;
-}
-
-.abdome {
-  margin-top: 0px;
-  border-top: 2px solid #fb8484;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-}
-
-.abs {
-  margin-bottom: 20px;
-}
-
-.hernia {
-  margin-bottom: 20px;
-}
-
-.ruidos {
-  margin-bottom: 20px;
-}
-
-.coto {
-  margin-bottom: 20px;
-}
-
-.secrecao {
-  margin-bottom: 20px;
-}
-
-.hiperemia {
-  margin-bottom: 20px;
-}
-
-.odor {
-  margin-bottom: 20px;
-}
-
-.granuloma {
-  margin-bottom: 20px;
-}
-
-.dorap {
-  margin-bottom: 20px;
-}
-
-.membros {
-  margin-top: 0px;
-  border-top: 2px solid #fb8484;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-}
-
-.membros-superiores {
-  margin-bottom: 20px;
-}
-
-.deformidadess {
-  margin-bottom: 20px;
-}
-
-.malformacao {
-  margin-bottom: 20px;
-}
-
-.linha-palmar {
-  margin-bottom: 20px;
-}
-
-.membros-inferiores {
-  margin-bottom: 20px;
-}
-
-.pe-torto {
-  margin-bottom: 20px;
-}
-
-.polidactilia {
-  margin-bottom: 20px;
-}
-
-.genitalia {
-  margin-top: 0px;
-  border-top: 2px solid #fb8484;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-}
-
-.genital-feminina {
-  margin-bottom: 20px;
-}
-
-.pequenos-labios {
-  margin-bottom: 20px;
-}
-
-.secrecao {
-  margin-bottom: 20px;
-}
-
-.sinequia {
-  margin-bottom: 20px;
-}
-
-.hernia-inguinal {
-  margin-bottom: 20px;
-}
-
-.genital-masculina {
-  margin-bottom: 20px;
-}
-
-.hidrocele {
-  margin-bottom: 20px;
-}
-
-.fimose {
-  margin-bottom: 20px;
-}
-
-.testiculos {
-  margin-bottom: 20px;
-}
-
-.meato-urinario {
-  margin-bottom: 20px;
-}
-
-.orificio {
-  margin-top: 0px;
-  border-top: 2px solid #fb8484;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-}
-
-.anomalias {
-  margin-bottom: 20px;
-}
-
-.fissuras {
-  margin-bottom: 20px;
-}
-
-.assaduras {
-  margin-bottom: 20px;
-}
-
-.marcos {
-  margin-top: 0px;
-  border-top: 2px solid #fb8484;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-}
-
-label {
-  margin-left: 10px;
-}
-
-input[type="radio"] {
-  margin-right: 10px;
-}
-
-.form-groupk{
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px;
-  margin-bottom: 10px;
-
-}
-
-.basicos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 990px;
-  height: auto;
-  margin-top: 20px;
-  margin-left: 0;
-}
-
-#peso, #estatura, #pc, #temperaturaAxilar, #fr, #imc {
-  width: 130px;
-  height: 30px;
-  flex-shrink: 0;
-  border-radius: 5px;
-  border: 1px solid #322A79;
-  background: #FFF;
-  margin: 10px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.form-group > label {
-  margin-right: 20px;
-  flex: 0 0 auto;
-}
-
-/* Responsividade */
-@media (max-width: 1200px) {
-  .cabecalho {
-    max-width: 1000px;
-  }
-
-  .tudo {
-    width: 90%;
-  }
-}
-
-@media (max-width: 992px) {
-  body {
-    margin-left: 50px;
-  }
-
-  .cabecalho {
-    max-width: 800px;
-  }
-
-  .img {
-    margin-left: 64px;
-    width: 280px;
-    height: 103px;
-  }
-
-  .tudo {
-    width: 95%;
-  }
-
-  .basicos {
-    justify-content: space-around;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    margin-left: 20px;
-    flex-direction: column;
-  }
-
-  .cabecalho {
-    flex-direction: column;
-    height: auto;
-    max-width: 600px;
-  }
-
-  .img {
-    margin: 20px auto;
-    width: 240px;
-    height: 90px;
-  }
-
-  .tudo {
-    width: 100%;
-  }
-
-  .basicos {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #peso, #estatura, #pc, #temperaturaAxilar, #fr, #imc {
-    width: 100%;
-    margin: 5px 0;
-  }
-
-  .form-group {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .form-group > label {
-    margin-bottom: 5px;
-  }
-}
-
-@media (max-width: 576px) {
-  .cabecalho {
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  .img {
-    margin: 10px auto;
-    width: 200px;
-    height: 75px;
-  }
-
-  .tudo {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .basicos {
-    width: 100%;
-  }
-
-  .copiar {
-    width: 100px;
-    height: 25px;
-    font-size: 14px;
-  }
-
-  #peso, #estatura, #pc, #temperaturaAxilar, #fr, #imc {
-    width: 100%;
-    margin: 5px 0;
-  }
-}
+:root {
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --tn-navy: #322a79;
+  --tn-coral: #fb8484;
+  --tn-ink: #302e40;
+  --tn-muted: #6c687b;
+  --tn-line: #e5e3eb;
+  --tn-page: #f7f7fa;
+  color: var(--tn-ink);
+  background: var(--tn-page);
+}
+
+* { box-sizing: border-box; }
+body { min-width: 280px; margin: 0; background: var(--tn-page); color: var(--tn-ink); }
+button, input, select, textarea { font: inherit; }
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid #6350bd; outline-offset: 4px; }
+::selection { background: #e6ddfa; color: #241e58; }
+.tn-skip-link { position: fixed; z-index: 100; top: .5rem; left: 1rem; padding: .9rem 1.2rem; border-radius: 10px; background: var(--tn-navy); color: #fff; font-weight: 700; transform: translateY(-160%); }
+.tn-skip-link:focus { transform: translateY(0); }
+.tn-site-header { border-top: 4px solid var(--tn-coral); border-bottom: 1px solid var(--tn-line); background: #fff; }
+.tn-site-header-inner { width: min(100% - 4rem, 1280px); min-height: 112px; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-block: 1.15rem; }
+.tn-brand { display: inline-flex; border-radius: 6px; }
+.tn-brand img { display: block; width: 186px; max-width: 100%; height: auto; }
+.tn-header-caption { display: flex; align-items: center; gap: .85rem; font-size: .74rem; line-height: 1.6; color: var(--tn-muted); }
+.tn-header-caption strong { font-weight: 700; color: var(--tn-ink); }
+.tn-caption-icon { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 41px; height: 41px; background: #f2eff9; color: var(--tn-navy); border-radius: 12px; }
+.tn-workspace { display: grid; grid-template-columns: 246px minmax(0, 1fr); gap: 32px; width: min(100% - 4rem, 1280px); margin: 32px auto 64px; align-items: start; }
+.tn-sidebar { position: sticky; top: 24px; min-width: 0; }
+.tn-assessment { min-width: 0; }
+.tn-assessment:focus { outline: none; }
+.tn-eyebrow { color: #71627f; margin: 0; font-size: .72rem; font-weight: 800; line-height: 1.65; letter-spacing: .075em; text-transform: uppercase; }
+.tn-assessment-heading { padding: 8px 0 26px; }
+.tn-title-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .75rem 1rem; margin-block: .65rem .75rem; }
+.tn-assessment h1 { color: var(--tn-navy); font-size: clamp(1.8rem, 2.7vw, 2.5rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.2; margin: 0; }
+.tn-assessment-tag { display: inline-flex; align-items: center; gap: .5rem; border: 1px solid #e7dac5; background: #fffaf0; color: #80652d; border-radius: 100px; padding: .45rem .7rem; font-size: .67rem; font-weight: 700; line-height: 1.4; }
+.tn-assessment-tag > span { width: 5px; height: 5px; border-radius: 100%; background: #a68235; }
+.tn-assessment-description { max-width: 620px; margin: 0; color: var(--tn-muted); font-size: .9rem; line-height: 1.8; }
+.tn-assessment-description strong { color: #5e5471; font-weight: 700; }
+.tn-form-content { border: 1px solid var(--tn-line); border-radius: 18px; background: #fff; padding: 26px; box-shadow: 0 4px 20px rgb(44 36 73 / 2%); }
+
+/* Arrange the original controls without changing their values or clinical order. */
+.tn-assessment form, .tn-assessment .formulario { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; min-width: 0; margin: 0; }
+.tn-assessment .formulario { grid-column: 1 / -1; }
+.tn-assessment form > h3, .tn-assessment .formulario > h3,
+.tn-assessment form > .basicos, .tn-assessment form > .form-section,
+.tn-assessment form > .formulario-section, .tn-assessment form > .formulario,
+.tn-assessment form > .copiar { grid-column: 1 / -1; }
+.tn-assessment h3 { display: flex; align-items: baseline; gap: .65rem; margin: 23px 0 4px; color: var(--tn-navy); font-size: 1.05rem; font-weight: 800; line-height: 1.5; letter-spacing: -.015em; }
+.tn-assessment h3::before { content: ''; display: inline-block; width: 5px; height: 16px; border-radius: 4px; background: var(--tn-coral); flex-shrink: 0; align-self: center; }
+.tn-assessment form > h3:first-child, .tn-assessment .formulario > h3:first-child { margin-top: 0; }
+.tn-assessment .tn-form-age { display: none; }
+.tn-assessment .form-section, .tn-assessment .formulario-section { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; min-width: 0; }
+.tn-assessment .form-section > h3, .tn-assessment .formulario-section > h3,
+.tn-assessment .form-section > .basicos, .tn-assessment .formulario-section > .basicos { grid-column: 1 / -1; }
+.tn-assessment .basicos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; min-width: 0; padding-block: 6px 8px; }
+.tn-assessment .form-group, .tn-assessment .form-groupm, .tn-assessment .form-groupk {
+  min-width: 0; padding: 16px; border: 1px solid #eae7f0; border-radius: 12px; margin: 0;
+  background: #fcfbfe; color: #514b60; font-size: .9375rem; line-height: 2.1;
+  overflow-wrap: anywhere;
+}
+.tn-assessment .form-group > label:first-child, .tn-assessment .form-groupm > label:first-child,
+.tn-assessment .form-groupk > label:first-child { color: #4b405e; font-weight: 700; }
+.tn-assessment .form-group > label:first-child:not(:has(input)) { display: block; line-height: 1.6; margin-bottom: 9px; }
+.tn-assessment .form-group > label:first-child + br { display: none; }
+.tn-assessment .form-group > h3 { margin: 0 0 14px; }
+.tn-assessment .form-group > div { min-width: 0; }
+.tn-assessment label { cursor: pointer; }
+.tn-assessment label:has(input[type='radio']), .tn-assessment label:has(input[type='checkbox']) { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; max-width: 100%; vertical-align: middle; margin: 2px 9px 2px 0; padding: 3px 1px; line-height: 1.55; font-weight: 400; }
+.tn-assessment input[type='radio'], .tn-assessment input[type='checkbox'] { flex-shrink: 0; width: 18px; height: 18px; margin: 10px 8px 10px 0; accent-color: var(--tn-navy); vertical-align: middle; cursor: pointer; }
+.tn-assessment label input[type='radio'], .tn-assessment label input[type='checkbox'] { margin: 0; }
+.tn-assessment input[type='radio'] + label, .tn-assessment input[type='checkbox'] + label { display: inline; font-weight: 400; color: #514b60; line-height: 2.65; margin-right: 12px; vertical-align: middle; }
+.tn-assessment input:not([type='radio']):not([type='checkbox']), .tn-assessment select, .tn-assessment textarea {
+  display: block; width: 100%; max-width: 100%; min-width: 0; min-height: 46px; margin: 7px 0 0;
+  border: 1px solid #988ca7; border-radius: 8px; padding: .65rem .7rem; color: #373044;
+  background: #fff; font-size: 1rem; line-height: 1.4; transition: border-color .15s, box-shadow .15s;
+}
+.tn-assessment input:not([type='radio']):not([type='checkbox']):focus, .tn-assessment select:focus, .tn-assessment textarea:focus { outline: none; border-color: #7865b1; box-shadow: 0 0 0 3px #eee9f8; }
+.tn-assessment .basicos .form-group { padding: 14px; }
+.tn-assessment .basicos label { font-size: .875rem; }
+.tn-assessment svg[viewBox='0 0 1049 2'] { display: none; }
+.tn-assessment form > br, .tn-assessment .formulario > br { display: none; }
+.tn-assessment .copiar { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; width: fit-content; max-width: 100%; justify-self: end; gap: .6rem; padding: .85rem 1.4rem; border: 1px solid var(--tn-navy); border-radius: 10px; margin-top: 18px; background: var(--tn-navy); color: #fff; font-size: .875rem; font-weight: 700; line-height: 1.4; box-shadow: 0 3px 7px rgb(50 42 121 / 9%); }
+.tn-assessment .copiar:hover { background: #49408f; border-color: #49408f; }
+.tn-assessment .copiar:active { transform: translateY(1px); }
+
+@media (max-width: 1099px) {
+  .tn-workspace { grid-template-columns: 224px minmax(0, 1fr); gap: 22px; }
+  .tn-form-content { padding: 20px; }
+  .tn-assessment .basicos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 899px) {
+  .tn-site-header-inner { width: min(100% - 2rem, 1280px); min-height: 94px; padding-block: .9rem; gap: 1rem; }
+  .tn-brand img { width: 158px; }
+  .tn-header-caption { font-size: .65rem; gap: .6rem; }
+  .tn-caption-icon { width: 34px; height: 34px; border-radius: 10px; }
+  .tn-workspace { display: block; width: min(100% - 2rem, 1280px); margin: 20px auto 40px; }
+  .tn-sidebar { position: sticky; top: 0; z-index: 20; margin-bottom: 24px; padding-block: 8px; background: var(--tn-page); }
+  .tn-assessment-heading { padding: 0 0 20px; }
+  .tn-assessment h1 { font-size: 2rem; }
+  .tn-form-content { padding: 20px; }
+}
+@media (max-width: 599px) {
+  .tn-header-caption { display: none; }
+  .tn-site-header-inner { min-height: 88px; }
+  .tn-brand img { width: 155px; }
+  .tn-assessment-heading { padding-bottom: 20px; }
+  .tn-assessment h1 { font-size: 1.8rem; }
+  .tn-assessment-description { font-size: .86rem; line-height: 1.75; }
+  .tn-title-row { align-items: flex-start; gap: .7rem; }
+  .tn-assessment-tag { padding: .4rem .6rem; font-size: .61rem; }
+  .tn-form-content { padding: 14px; border-radius: 14px; }
+  .tn-assessment form, .tn-assessment .formulario, .tn-assessment .form-section,
+  .tn-assessment .formulario-section, .tn-assessment .basicos { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .tn-assessment .form-group, .tn-assessment .form-groupm, .tn-assessment .form-groupk { padding: 14px; font-size: .9375rem; border-radius: 10px; }
+  .tn-assessment .basicos .form-group { padding: 14px; }
+  .tn-assessment .basicos label { font-size: .9375rem; }
+  .tn-assessment .copiar { width: 100%; justify-self: stretch; margin-top: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+@media print {
+  .tn-site-header, .tn-sidebar, .tn-footer, .tn-skip-link, .tn-assessment .copiar { display: none; }
+  .tn-workspace { display: block; width: 100%; margin: 0; }
+  .tn-form-content { border: 0; padding: 0; box-shadow: none; }
+  .tn-assessment .form-group { break-inside: avoid; }
+}
+.tn-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+
+.tn-assessment input, .tn-assessment select, .tn-assessment textarea { scroll-margin-top: 110px; }
