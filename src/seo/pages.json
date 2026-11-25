@@ -1,0 +1,52 @@
+{
+  "/": {
+    "title": "ToolNurse | Recém-nascido — Avaliação de enfermagem",
+    "description": "ToolNurse: apoio à avaliação de enfermagem do recém-nascido na puericultura e na Atenção Primária à Saúde. Acesse os roteiros por faixa etária.",
+    "canonicalPath": "/"
+  },
+  "/recem": {
+    "title": "ToolNurse | Recém-nascido — Avaliação de enfermagem",
+    "description": "ToolNurse: apoio à avaliação de enfermagem do recém-nascido na puericultura e na Atenção Primária à Saúde. Acesse os roteiros por faixa etária.",
+    "canonicalPath": "/"
+  },
+  "/ummes": {
+    "title": "ToolNurse | Primeiro mês — Avaliação de enfermagem",
+    "description": "Roteiro ToolNurse de apoio à avaliação de enfermagem no primeiro mês de vida, para o acompanhamento infantil na Atenção Primária à Saúde."
+  },
+  "/doismeses": {
+    "title": "ToolNurse | 2 a 3 meses — Avaliação de enfermagem",
+    "description": "Roteiro ToolNurse de apoio à avaliação de enfermagem de crianças de 2 a 3 meses na puericultura e na Atenção Primária à Saúde."
+  },
+  "/quatromeses": {
+    "title": "ToolNurse | 4 a 5 meses — Avaliação de enfermagem",
+    "description": "Roteiro ToolNurse de apoio à avaliação de enfermagem de crianças de 4 a 5 meses na puericultura e na Atenção Primária à Saúde."
+  },
+  "/seismeses": {
+    "title": "ToolNurse | 6 meses — Avaliação de enfermagem",
+    "description": "Roteiro ToolNurse de apoio à avaliação de enfermagem de crianças aos 6 meses na puericultura e na Atenção Primária à Saúde."
+  },
+  "/novemeses": {
+    "title": "ToolNurse | 9 meses — Avaliação de enfermagem",
+    "description": "Roteiro ToolNurse de apoio à avaliação de enfermagem de crianças aos 9 meses na puericultura e na Atenção Primária à Saúde."
+  },
+  "/dozemeses": {
+    "title": "ToolNurse | 12 meses — Avaliação de enfermagem",
+    "description": "Roteiro ToolNurse de apoio à avaliação de enfermagem de crianças aos 12 meses na puericultura e na Atenção Primária à Saúde."
+  },
+  "/dezoitomeses": {
+    "title": "ToolNurse | 18 meses — Avaliação de enfermagem",
+    "description": "Roteiro ToolNurse de apoio à avaliação de enfermagem de crianças aos 18 meses na puericultura e na Atenção Primária à Saúde."
+  },
+  "/doisanos": {
+    "title": "ToolNurse | 2 anos — Avaliação de enfermagem",
+    "description": "Roteiro ToolNurse de apoio à avaliação de enfermagem de crianças aos 2 anos na puericultura e na Atenção Primária à Saúde."
+  },
+  "/como-utilizar": {
+    "title": "Como utilizar o ToolNurse | Guia da plataforma",
+    "description": "Aprenda a utilizar o ToolNurse: escolha a faixa etária, preencha a avaliação de enfermagem, revise os dados e copie o registro para o prontuário."
+  },
+  "/sobre": {
+    "title": "Sobre o projeto | ToolNurse",
+    "description": "Conheça o ToolNurse, projeto desenvolvido no contexto da iniciação tecnológica na Universidade Franciscana para apoiar a enfermagem na puericultura."
+  }
+}

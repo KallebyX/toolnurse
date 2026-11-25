@@ -1,5 +1,6 @@
-// Functional baseline: c222276. Presentation-only changes may alter classes and
-// wrappers, but must preserve routes, state, clinical options and copy handlers.
+// Clinical baseline: c222276. Classes and wrappers may change, but state, clinical
+// options and copy handlers must remain identical. Route expectations also include
+// the authorized 2026-11-25 newborn home and informational pages.
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');

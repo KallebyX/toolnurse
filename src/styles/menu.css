@@ -11,6 +11,10 @@
 .tn-age-link.is-active { background: var(--tn-navy); color: #fff; border-color: var(--tn-navy); box-shadow: 0 3px 8px rgb(50 42 121 / 10%); }
 .tn-age-link.is-active .tn-age-number { background: rgb(255 255 255 / 14%); color: #f5edff; }
 .tn-nav-note { display: flex; align-items: flex-start; gap: .7rem; border-top: 1px solid var(--tn-line); margin-top: 1.25rem; padding: 1.1rem .25rem .1rem; }
+.tn-resource-links { display: grid; gap: .25rem; border-top: 1px solid var(--tn-line); margin-top: 1rem; padding-top: .75rem; }
+.tn-resource-links a { display: flex; align-items: center; gap: .7rem; min-height: 44px; padding: .55rem .7rem; border-radius: 9px; color: #55536c; font-size: .84rem; font-weight: 700; text-decoration: none; }
+.tn-resource-links svg { flex-shrink: 0; }
+.tn-resource-links a:hover, .tn-resource-links a[aria-current='page'] { background: #f0ecf9; color: var(--tn-navy); }
 .tn-nav-note p { margin: 0; font-size: .76rem; color: var(--tn-muted); line-height: 1.65; }
 .tn-note-line { display: block; flex: none; width: 3px; height: 28px; background: var(--tn-coral); border-radius: 3px; margin-top: .1rem; }
 @media (max-width: 899px) {
@@ -22,9 +26,11 @@
   .tn-age-toggle-copy strong { font-size: .98rem; }
   .tn-age-toggle svg { transition: transform .15s; }
   .tn-age-toggle svg.is-open { transform: rotate(180deg); }
-  .tn-age-links { display: none; padding-top: .65rem; margin-top: .35rem; border-top: 1px solid var(--tn-line); }
-  .tn-age-links.is-expanded { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tn-navigation-links { display: none; padding-top: .65rem; margin-top: .35rem; border-top: 1px solid var(--tn-line); }
+  .tn-navigation-links.is-expanded { display: block; }
+  .tn-age-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tn-resource-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tn-age-link { min-height: 50px; padding: .6rem; font-size: .8rem; gap: .5rem; }
   .tn-age-link > svg { display: none; }
 }
-@media (max-width: 359px) { .tn-age-links.is-expanded { grid-template-columns: 1fr; } }
+@media (max-width: 359px) { .tn-age-links, .tn-resource-links { grid-template-columns: 1fr; } }

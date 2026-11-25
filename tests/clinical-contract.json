@@ -2,7 +2,11 @@
   "__routes": [
     {
       "path": "/",
-      "component": "PrimeiroMes"
+      "component": "RecemNascido"
+    },
+    {
+      "path": "/como-utilizar",
+      "component": "ComoUtilizar"
     },
     {
       "path": "/dezoitomeses",
@@ -35,6 +39,10 @@
     {
       "path": "/seismeses",
       "component": "SeisMeses"
+    },
+    {
+      "path": "/sobre",
+      "component": "SobreProjeto"
     },
     {
       "path": "/ummes",
