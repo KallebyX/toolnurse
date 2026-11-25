@@ -10,12 +10,16 @@ import DozeMeses from '../components/DozeMeses';
 import DezoitoMeses from '../components/DezoitoMeses';
 import DoisAnos from '../components/DoisAnos';
 import Footer from '../components/Footer';
+import ComoUtilizar from '../pages/ComoUtilizar';
+import SobreProjeto from '../pages/SobreProjeto';
+import PageMetadata from '../components/PageMetadata';
 
 const Routes = () => {
     return (
         <Router>
+            <PageMetadata />
             <RouterRoutes>
-                <Route path="/" element={<PrimeiroMes />} />
+                <Route path="/" element={<RecemNascido />} />
                 <Route path='/recem' element={<RecemNascido />} />
                 <Route path="/ummes" element={<PrimeiroMes />} />
                 <Route path="/doismeses" element={<DoisMeses />} />
@@ -25,6 +29,8 @@ const Routes = () => {
                 <Route path="/dozemeses" element={<DozeMeses />} />
                 <Route path="/dezoitomeses" element={<DezoitoMeses />} />
                 <Route path="/doisanos" element={<DoisAnos />} />
+                <Route path="/como-utilizar" element={<ComoUtilizar />} />
+                <Route path="/sobre" element={<SobreProjeto />} />
             </RouterRoutes>
             <Footer />
         </Router>
