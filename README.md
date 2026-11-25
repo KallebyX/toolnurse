@@ -21,7 +21,7 @@
 **ToolNurse** é uma aplicação web desenvolvida para auxiliar profissionais de enfermagem em atendimentos de puericultura e outras ações de saúde da família.  
 Com uma interface clara, responsiva e intuitiva, o sistema permite consulta ágil a protocolos, instrumentos e informações relevantes à prática clínica da Atenção Primária.
 
-Desenvolvido no contexto de iniciação tecnológica na Universidade Franciscana (UFN), o projeto tem como foco o impacto social, inovação educacional e acessibilidade.
+O ToolNurse teve origem na dissertação de Laura Taís Loureiro Simas, defendida em 2023 no Mestrado Profissional em Saúde Materno-Infantil da Universidade Franciscana (UFN), com orientação de Mara Regina Caino Teixeira Marchiori e coorientação de Luiz Fernando Rodrigues Júnior. O desenvolvimento reuniu contribuições da enfermagem, engenharia biomédica, computação e design. A equipe e as publicações estão disponíveis na [página Sobre o projeto](https://toolnurse.ufn.edu.br/sobre).
 
 ---
 
@@ -124,7 +124,7 @@ GitHub: @KallebyX
 
 💡 Agradecimentos
 
-Projeto desenvolvido com apoio da Universidade Franciscana (UFN), no contexto da Iniciação Tecnológica em Saúde Materno-Infantil.
+Projeto desenvolvido com apoio da Universidade Franciscana (UFN), no contexto do Mestrado Profissional em Saúde Materno-Infantil e com colaboração interdisciplinar.
 Agradecimento especial à equipe envolvida, orientadores e todos os profissionais de saúde que inspiram soluções com propósito.
 
 ⸻
