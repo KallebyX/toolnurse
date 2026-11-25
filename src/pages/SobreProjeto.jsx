@@ -2,7 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import AssessmentLayout from '../components/AssessmentLayout';
 import InformationIcon from './InformationIcon';
+import { projectTeam, publications, researchSources } from '../data/project';
 import '../styles/information.css';
+
+const sourceUrl = source => typeof source === 'string' ? source : source.url;
 
 export default function SobreProjeto() {
   return <AssessmentLayout
@@ -24,11 +27,37 @@ export default function SobreProjeto() {
 
     <section className="tn-info-panel" aria-labelledby="tn-about-origin">
       <div className="tn-info-section-heading"><span className="tn-info-icon"><InformationIcon name="book" /></span><h2 id="tn-about-origin">Origem e desenvolvimento</h2></div>
-      <p>O projeto foi desenvolvido no contexto da Iniciação Tecnológica em Saúde Materno-Infantil, com apoio da <a href="https://site.ufn.edu.br/" target="_blank" rel="noopener noreferrer">Universidade Franciscana (UFN)</a>. A proposta aproxima tecnologia, educação e cuidado na atenção à saúde.</p>
-      <dl className="tn-info-credits">
-        <div><dt>Desenvolvimento</dt><dd>Kalleby Evangelho Mota</dd></div>
-        <div><dt>Contexto acadêmico</dt><dd>Universidade Franciscana</dd></div>
-      </dl>
+      <p>O ToolNurse nasceu da dissertação de mestrado de <strong>Laura Taís Loureiro Simas</strong>, defendida em 2023 no Mestrado Profissional em Saúde Materno-Infantil da <a href="https://site.ufn.edu.br/" target="_blank" rel="noopener noreferrer">Universidade Franciscana (UFN)</a>, sob orientação de <strong>Mara Regina Caino Teixeira Marchiori</strong> e coorientação de <strong>Luiz Fernando Rodrigues Júnior</strong>.</p>
+      <p>A pesquisa contou com apoio da CAPES e do COFEN, por meio do Edital nº 08/2021. O desenvolvimento reúne contribuições da enfermagem, engenharia biomédica, computação e design para aproximar a tecnologia das necessidades do cuidado infantil.</p>
+    </section>
+
+    <section className="tn-info-panel" aria-labelledby="tn-about-team">
+      <div className="tn-info-section-heading"><span className="tn-info-icon"><InformationIcon name="people" /></span><h2 id="tn-about-team">Equipe e colaborações</h2></div>
+      <p>Conheça as pessoas que contribuíram para a pesquisa e o desenvolvimento do ToolNurse.</p>
+      <ul className="tn-team-grid">
+        {projectTeam.map(person => <li className="tn-team-card" key={person.name}>
+          <h3>{person.name}</h3>
+          <p>{person.role}</p>
+        </li>)}
+      </ul>
+      <p className="tn-research-source-note">Créditos e participações descritos na <a href={sourceUrl(researchSources.dissertation)} target="_blank" rel="noopener noreferrer">dissertação de mestrado</a>, no <a href={sourceUrl(researchSources.cbeb)} target="_blank" rel="noopener noreferrer">artigo publicado no CBEB</a> e na <a href={sourceUrl(researchSources.review)} target="_blank" rel="noopener noreferrer">revisão integrativa</a>.</p>
+    </section>
+
+    <section className="tn-info-panel" aria-labelledby="tn-about-publications">
+      <div className="tn-info-section-heading"><span className="tn-info-icon"><InformationIcon name="book" /></span><h2 id="tn-about-publications">Publicações e pesquisa</h2></div>
+      <p>Acesse os trabalhos relacionados à criação e ao desenvolvimento da plataforma.</p>
+      <ul className="tn-publication-list">
+        {publications.map(publication => <li key={publication.id}>
+          <article className="tn-publication-card" aria-labelledby={`tn-publication-${publication.id}`}>
+            <div className="tn-publication-meta"><span>{publication.kind}</span><span>{publication.year}</span></div>
+            <h3 id={`tn-publication-${publication.id}`}>{publication.title}</h3>
+            <p className="tn-publication-authors">{Array.isArray(publication.authors) ? publication.authors.join('; ') : publication.authors}</p>
+            <p className="tn-publication-venue">{publication.venue}</p>
+            {publication.description && <p className="tn-publication-description">{publication.description}</p>}
+            <a className="tn-publication-link" href={publication.url} target="_blank" rel="noopener noreferrer" aria-label={`${publication.linkLabel}: ${publication.title}`}>{publication.linkLabel}<InformationIcon name="external" /></a>
+          </article>
+        </li>)}
+      </ul>
     </section>
 
     <aside className="tn-info-callout" aria-labelledby="tn-about-practice">
