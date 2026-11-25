@@ -1,7 +1,7 @@
 {
-  "name": "vite-project",
+  "name": "toolnurse",
   "version": "1.0.0",
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "description": "Apoio à avaliação de enfermagem na puericultura e na Atenção Primária à Saúde.",
   "main": "vite.config.js",
   "dependencies": {
     "react": "^18.2.0",
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/build-route-pages.cjs",
     "start": "npm run dev",
     "preview": "vite preview --port 80",
     "verify:preservation": "node scripts/verify-preservation.cjs"
